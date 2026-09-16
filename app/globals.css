@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --ivory: #f8f1ea;
+  --cream: #fff8f2;
+  --blush: #e8b4b8;
+  --rose: #c45c6a;
+  --wine: #7a2e3a;
+  --espresso: #2c1810;
+  --mocha: #5c3d32;
+  --champagne: #d4b896;
+  --sand: #ead9c8;
+}
+
+@theme inline {
+  --color-ivory: var(--ivory);
+  --color-cream: var(--cream);
+  --color-blush: var(--blush);
+  --color-rose: var(--rose);
+  --color-wine: var(--wine);
+  --color-espresso: var(--espresso);
+  --color-mocha: var(--mocha);
+  --color-champagne: var(--champagne);
+  --color-sand: var(--sand);
+  --color-background: var(--ivory);
+  --color-foreground: var(--espresso);
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ivory);
+  color: var(--espresso);
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-cormorant), "Cormorant Garamond", ui-serif, Georgia,
+    serif;
+  font-weight: 500;
+}
+
+::selection {
+  background: var(--blush);
+  color: var(--espresso);
+}
