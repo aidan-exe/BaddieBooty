@@ -18,13 +18,13 @@ export default function AboutPage() {
       <h1 className="mt-3 font-display text-5xl leading-tight text-ink">
         Built for baddies in recovery.
       </h1>
-      <div className="relative mt-8 aspect-[16/10] overflow-hidden rounded-[1.75rem] bg-brand-tint">
+      <div className="relative mt-8 overflow-hidden rounded-[1.75rem] bg-brand">
         <Image
-          src="/brand/studio-raina.jpg"
-          alt="Baddie Booty brand photography from the live store"
-          fill
-          sizes="(max-width: 768px) 100vw, 768px"
-          className="object-cover"
+          src="/brand/logo.png"
+          alt="Baddie Booty logo — Curvas Ampulheta"
+          width={1760}
+          height={1333}
+          className="mx-auto h-auto w-full max-w-md"
         />
       </div>
       <div className="mt-8 space-y-5 text-base leading-8 text-muted">

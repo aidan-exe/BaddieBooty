@@ -78,15 +78,44 @@ export default function HomePage() {
           </div>
           <div className="relative">
             <div className="overflow-hidden rounded-[2rem] bg-brand-header shadow-2xl">
-              <div className="relative aspect-[5/4]">
-                <Image
-                  src="/brand/studio-raina.jpg"
-                  alt="Baddie Booty studio photography from the live store"
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover"
-                />
+              <div className="grid grid-cols-2 gap-1.5 p-1.5">
+                <Link
+                  href="/shop/full-body-post-surgery-seamless-faja"
+                  className="relative col-span-2 aspect-[4/3] overflow-hidden rounded-[1.4rem] bg-white"
+                >
+                  <Image
+                    src="/products/seamless-faja.png"
+                    alt="Full Body Post-Surgery Seamless Faja"
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    className="object-cover object-top"
+                  />
+                </Link>
+                <Link
+                  href="/shop/post-surgical-compression-bra"
+                  className="relative aspect-square overflow-hidden rounded-[1.25rem] bg-white"
+                >
+                  <Image
+                    src="/products/compression-bra.jpg"
+                    alt="Post-surgical compression bra"
+                    fill
+                    sizes="(max-width: 1024px) 50vw, 20vw"
+                    className="object-cover object-top"
+                  />
+                </Link>
+                <Link
+                  href="/shop/high-compression-stage-3-waist-trainer"
+                  className="relative aspect-square overflow-hidden rounded-[1.25rem] bg-white"
+                >
+                  <Image
+                    src="/products/waist-trainer.jpg"
+                    alt="Stage 3 waist trainer"
+                    fill
+                    sizes="(max-width: 1024px) 50vw, 20vw"
+                    className="object-cover object-top"
+                  />
+                </Link>
               </div>
               <div className="p-6 text-white sm:p-8">
                 <p className="font-display text-3xl leading-tight">
