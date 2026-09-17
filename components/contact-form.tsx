@@ -28,7 +28,7 @@ export function ContactForm({ initialProduct = "" }: { initialProduct?: string }
           Thanks, {name}. Nothing was sent.
         </h2>
         <p className="mt-2 text-sm leading-6 text-muted">
-          This is a client-side preview only — no backend, no inbox. Reach Tiara
+          This is a client-side preview only. Nothing is sent to an inbox. Reach Tiara
           on {site.phoneDisplay} or {site.email} for a real conversation.
         </p>
         <button
@@ -51,7 +51,7 @@ export function ContactForm({ initialProduct = "" }: { initialProduct?: string }
         Preview enquiry
       </p>
       <p className="text-sm leading-6 text-muted">
-        Looks like a real form. It does not send — use call, WhatsApp, or email
+        Looks like a real form. It does not send. Use call, WhatsApp, or email
         for the studio.
       </p>
       <label className="block space-y-1.5 text-sm font-medium text-ink">
@@ -104,7 +104,7 @@ export function ContactForm({ initialProduct = "" }: { initialProduct?: string }
           name="message"
           rows={5}
           className="w-full rounded-xl border border-ink/10 bg-ivory px-4 py-2.5 text-base font-normal outline-none ring-brand/30 focus:ring-2"
-          placeholder="Tell Tiara where you are in recovery — no medical details required."
+          placeholder="Tell Tiara where you are in recovery. No medical details required."
         />
       </label>
       <button

@@ -16,7 +16,7 @@ export function SiteFooter() {
             className="h-9 w-auto brightness-0 invert"
           />
           <p className="max-w-sm text-sm leading-5 text-lavender">
-            Compression, fajas, bras, boards, and pillows for recovery — from a
+            Compression, fajas, bras, boards, and pillows for recovery, from a
             Salt Rock studio that calls you Baddie on purpose.
           </p>
         </div>
@@ -85,7 +85,7 @@ export function SiteFooter() {
             {site.designer} for Baddie Booty (owner Tiara). It is{" "}
             <strong>not the live store</strong>. A WooCommerce rebuild with
             secure checkout, payments, and South African shipping is a{" "}
-            <strong>paid engagement</strong> — not included in this preview.
+            <strong>paid engagement</strong>, not included in this preview.
           </p>
           <p className="text-xs text-brand-mist">
             Product photos, logo, and lifestyle images are Baddie Booty brand

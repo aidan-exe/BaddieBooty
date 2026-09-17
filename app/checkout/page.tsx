@@ -68,7 +68,7 @@ export default function CheckoutPage() {
     <div className="mx-auto grid max-w-6xl gap-6 px-5 py-8 lg:grid-cols-[1fr_0.9fr]">
       <div>
         <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand">
-          Proposal demo — no payment
+          Proposal demo. No payment.
         </p>
         <h1 className="mt-2 font-display text-3xl">Checkout walkthrough</h1>
         <p className="mt-2 text-sm leading-6 text-muted">

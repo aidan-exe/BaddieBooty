@@ -52,7 +52,7 @@ export function ProductPurchase({ product }: { product: Product }) {
         </button>
       </div>
       <p className="text-xs leading-5 text-muted">
-        Proposal demo bag — this browser only. Checkout does not process
+        Proposal demo bag, this browser only. Checkout does not process
         payment.
       </p>
     </div>

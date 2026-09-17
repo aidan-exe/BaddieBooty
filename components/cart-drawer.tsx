@@ -40,7 +40,7 @@ export function CartDrawer() {
         <div className="flex-1 overflow-y-auto px-5 py-4">
           {lines.length === 0 ? (
             <p className="text-sm leading-6 text-muted">
-              Nothing in the demo bag yet. Add a piece from the shop — this cart
+              Nothing in the demo bag yet. Add a piece from the shop. This cart
               lives in your browser only.
             </p>
           ) : (
@@ -106,7 +106,7 @@ export function CartDrawer() {
             </span>
           </div>
           <p className="mt-2 text-xs leading-5 text-muted">
-            Proposal demo — no payment is processed. Courier rates land with a
+            Proposal demo. No payment is processed. Courier rates land with a
             paid rebuild.
           </p>
           <div className="mt-4 flex flex-col gap-2">

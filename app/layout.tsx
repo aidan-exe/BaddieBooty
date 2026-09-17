@@ -24,7 +24,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "Baddie Booty — Proposal Concept",
+    default: "Baddie Booty proposal concept",
     template: "%s · Baddie Booty",
   },
   description:
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
   applicationName: "Baddie Booty Proposal",
   authors: [{ name: site.designer }],
   openGraph: {
-    title: "Baddie Booty — Proposal Concept",
+    title: "Baddie Booty proposal concept",
     description:
-      "Fresh take on the Baddie Booty shop experience — recovery-care, clearer UX, demo bag only.",
+      "A calmer Baddie Booty shop experience: recovery care, clearer UX, demo bag only.",
     locale: "en_ZA",
     type: "website",
   },

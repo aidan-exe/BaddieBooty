@@ -44,7 +44,7 @@ export const products: Product[] = [
       "https://baddiebooty.co.za/product/post-surgery-liposuction-ab-board/",
     wearNotes: [
       "Wear under a faja as your practitioner advises.",
-      "One-size board — message the studio if you want pairing help.",
+      "One-size board. Message the studio if you want pairing help.",
     ],
   },
   {
@@ -55,10 +55,10 @@ export const products: Product[] = [
     bestseller: true,
     blurb: "Soft, steady support across the chest and upper back.",
     detail:
-      "A recovery-care bra with a posture-minded cut and front-closure feel. Sizes follow the live shop range. Confirm staging with your care team — this is not a clinical device.",
+      "A recovery-care bra with a posture-minded cut and front-closure feel. Sizes follow the live shop range. Confirm staging with your care team. This is not a clinical device.",
     image: "/products/compression-bra.jpg",
     imageAlt: "Adjustable front-closure compression vest by Baddie Booty",
-    stage: "Stage 1–2",
+    stage: "Stages 1 and 2",
     sizes: garmentSizes,
     sourceUrl:
       "https://baddiebooty.co.za/product/baddie-booty-post-surgical-compression-bra-posture-corrector/",
@@ -75,7 +75,7 @@ export const products: Product[] = [
     bestseller: true,
     blurb: "A shaped cushion for sitting more comfortably after a BBL.",
     detail:
-      "Meant for how you sit at home — not a medical device. Follow your surgeon’s sitting guidance first. Image from the current Baddie Booty store.",
+      "Meant for how you sit at home, not a medical device. Follow your surgeon’s sitting guidance first. Image from the current Baddie Booty store.",
     image: "/products/support-pillow.jpg",
     imageAlt: "Butt Lift Support Pillow from Baddie Booty",
     stage: "Accessory",
@@ -103,7 +103,7 @@ export const products: Product[] = [
       "https://baddiebooty.co.za/product/stage-1-full-body-post-surgery-bodysuit/",
     wearNotes: [
       "Seamless full-body hold for early recovery wardrobes.",
-      "Size using the live S–3XL range — WhatsApp if you need a read.",
+      "Size using the live S to 3XL range. WhatsApp if you need a read.",
     ],
   },
   {
@@ -134,10 +134,10 @@ export const products: Product[] = [
     bestseller: true,
     blurb: "A sculpting bodysuit with firm tummy control for later-stage wear.",
     detail:
-      "Closer to daily shapewear energy — still recovery-aware. Not a substitute for clinical advice.",
+      "Closer to daily shapewear energy, still recovery-aware. Not a substitute for clinical advice.",
     image: "/products/tummy-bodysuit.jpg",
     imageAlt: "Extreme Tummy Control Girdle Corset Bodysuit",
-    stage: "Stage 2–3",
+    stage: "Stages 2 and 3",
     sizes: garmentSizes,
     sourceUrl:
       "https://baddiebooty.co.za/product/extreme-tummy-control-girdle-corset-bodysuit/",
@@ -182,7 +182,7 @@ export const products: Product[] = [
     sourceUrl:
       "https://baddiebooty.co.za/product/high-compression-stage-3-faja-waist-trainer/",
     wearNotes: [
-      "Later-stage waist trainer — not first-week wear.",
+      "Later-stage waist trainer, not first-week wear.",
       "Confirm with your practitioner before sizing down.",
     ],
   },

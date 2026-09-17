@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Proposal copy for Baddie Booty — a Salt Rock recovery-care studio for compression and shapewear.",
+    "Proposal copy for Baddie Booty, a Salt Rock recovery care studio for compression and shapewear.",
 };
 
 export default function AboutPage() {
@@ -21,7 +21,7 @@ export default function AboutPage() {
       <div className="relative mt-5 overflow-hidden rounded-2xl bg-brand">
         <Image
           src="/brand/logo.png"
-          alt="Baddie Booty logo — Curvas Ampulheta"
+          alt="Baddie Booty logo, Curvas Ampulheta"
           width={1760}
           height={1333}
           className="mx-auto h-auto w-full max-w-xs"
@@ -30,18 +30,17 @@ export default function AboutPage() {
       <div className="mt-5 space-y-3 text-sm leading-6 text-muted">
         <p>
           Baddie Booty is a post-op compression and shapewear studio in{" "}
-          {site.location}. The voice is warm on purpose: Hey Baddie — because
-          recovery is already a lot, and the wardrobe should feel like backup,
-          not a lecture.
+          {site.location}. The voice is warm on purpose. Recovery is already a
+          lot, so the wardrobe should feel like backup, not a lecture.
         </p>
         <p>
           This about page is proposal copy written for a concept site. It keeps
           the brand’s care, curves, and catalogue energy without repeating the
-          live store word-for-word, and without inventing clinical results.
+          live store word for word, and without inventing clinical results.
         </p>
         <p>
           The pieces span post-surgery fajas, compression bras, abdominal
-          boards, BBL pillows, bodysuits, and later-stage waist trainers. Some
+          boards, BBL pillows, bodysuits, and later stage waist trainers. Some
           baddies are newly post-op. Some want daily shapewear. The shop should
           make that difference obvious on a phone.
         </p>
@@ -52,7 +51,7 @@ export default function AboutPage() {
         <p className="mt-2 text-sm leading-6 text-muted">
           Compression can feel supportive. It is not a guarantee of surgical
           outcome, circulation change, or risk reduction. Follow your surgeon.
-          Baddie Booty is recovery-care retail — a studio that helps you choose
+          Baddie Booty is recovery care retail: a studio that helps you choose
           garments, not a clinic.
         </p>
       </section>
@@ -62,9 +61,9 @@ export default function AboutPage() {
         <p className="text-sm leading-6 text-muted">
           The live store already has the heart. A paid engagement would carry
           that catalogue into a calmer Next.js shop: exact brand purple, real
-          photography, product pages, a working bag, and South African shipping
-          — replacing the current WooCommerce friction without losing the Baddie
-          voice.
+          photography, product pages, a working bag, and South African shipping.
+          That replaces the current WooCommerce friction without losing the
+          Baddie voice.
         </p>
         <p className="text-sm leading-6 text-muted">
           This preview stops before payments on purpose. Owner Tiara can walk

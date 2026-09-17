@@ -4,17 +4,10 @@ import { ProductCard } from "@/components/product-card";
 import { bestsellers } from "@/lib/products";
 import { site } from "@/lib/site";
 
-const trust = [
-  { title: "Salt Rock studio", body: "A South African shop you can call." },
-  { title: "Stage-aware edit", body: "Fajas, bras, boards, pillows." },
-  { title: "Talk to Tiara", body: "WhatsApp-ready sizing help." },
-  { title: "Demo bag", body: "Add, update, remove — no live pay." },
-];
-
 const benefits = [
   {
     title: "Holds your curves",
-    body: "Compression photographed from her catalogue — not a generic mannequin story.",
+    body: "Catalogue photos of real compression, not a generic mannequin story.",
   },
   {
     title: "Rest, then rise",
@@ -61,7 +54,7 @@ export default function HomePage() {
               {site.greeting}
             </h1>
             <p className="mt-3 max-w-md text-sm leading-6 text-muted">
-              Compression and shapewear for every defined curve — calmer shop,
+              Compression and shapewear for every defined curve. Calmer shop,
               real photos, a bag you can use on a phone.
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
@@ -97,22 +90,6 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="border-y border-sand bg-cream">
-        <div className="mx-auto grid max-w-6xl gap-4 px-5 py-4 sm:grid-cols-2 lg:grid-cols-4">
-          {trust.map((item) => (
-            <div key={item.title} className="flex gap-2">
-              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
-              <div>
-                <p className="text-sm font-semibold text-brand-header">
-                  {item.title}
-                </p>
-                <p className="text-xs leading-5 text-muted">{item.body}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </section>
 

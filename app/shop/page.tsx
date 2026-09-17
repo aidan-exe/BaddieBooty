@@ -5,7 +5,7 @@ import { readCategory } from "@/lib/products";
 export const metadata: Metadata = {
   title: "Shop",
   description:
-    "Browse Baddie Booty compression, bras, boards & pillows, and bodysuits. Proposal concept — demo bag only.",
+    "Browse Baddie Booty compression, bras, boards and pillows, and bodysuits. Proposal concept, demo bag only.",
 };
 
 export default async function ShopPage({
@@ -26,7 +26,7 @@ export default async function ShopPage({
           <h1 className="mt-1 font-display text-3xl text-ink">Shop recovery wear</h1>
         </div>
         <p className="max-w-md text-sm leading-5 text-muted">
-          Real catalogue photos. Demo bag only — no live payment.
+          Real catalogue photos. Demo bag only. No live payment.
         </p>
       </div>
       <div className="mt-5">

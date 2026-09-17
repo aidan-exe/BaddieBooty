@@ -1,4 +1,4 @@
-# Baddie Booty — proposal concept
+# Baddie Booty proposal concept
 
 A Next.js App Router concept site by **Aidan Lottering** for Baddie Booty (owner Tiara). It is **not** the live store at [baddiebooty.co.za](https://baddiebooty.co.za/).
 
