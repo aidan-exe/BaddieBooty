@@ -20,21 +20,21 @@ export function ContactForm({ initialProduct = "" }: { initialProduct?: string }
 
   if (submitted) {
     return (
-      <div className="rounded-[1.75rem] border border-sand bg-cream px-6 py-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-rose">
+      <div className="rounded-2xl border border-sand bg-cream px-5 py-6">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand">
           Concept form
         </p>
-        <h2 className="mt-3 font-display text-3xl text-espresso">
+        <h2 className="mt-2 font-display text-2xl text-ink">
           Thanks, {name}. Nothing was sent.
         </h2>
-        <p className="mt-3 text-sm leading-6 text-mocha">
-          This is a client-side preview only — no backend, no inbox. Reach Tiara
+        <p className="mt-2 text-sm leading-6 text-muted">
+          This is a client-side preview only. Nothing is sent to an inbox. Reach Tiara
           on {site.phoneDisplay} or {site.email} for a real conversation.
         </p>
         <button
           type="button"
           onClick={() => setSubmitted(false)}
-          className="mt-6 inline-flex min-h-11 items-center rounded-full border border-espresso/15 px-5 text-sm font-semibold"
+          className="mt-4 inline-flex min-h-10 items-center rounded-full border border-ink/15 px-5 text-sm font-semibold"
         >
           Reset preview form
         </button>
@@ -45,49 +45,49 @@ export function ContactForm({ initialProduct = "" }: { initialProduct?: string }
   return (
     <form
       onSubmit={onSubmit}
-      className="space-y-4 rounded-[1.75rem] border border-sand bg-cream p-5 sm:p-7"
+      className="space-y-3 rounded-2xl border border-sand bg-cream p-4 sm:p-5"
     >
-      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-rose">
+      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">
         Preview enquiry
       </p>
-      <p className="text-sm leading-6 text-mocha">
-        Looks like a real form. It does not send — use call, WhatsApp, or email
+      <p className="text-sm leading-6 text-muted">
+        Looks like a real form. It does not send. Use call, WhatsApp, or email
         for the studio.
       </p>
-      <label className="block space-y-1.5 text-sm font-medium text-espresso">
+      <label className="block space-y-1.5 text-sm font-medium text-ink">
         Name
         <input
           required
           name="name"
           autoComplete="name"
-          className="min-h-12 w-full rounded-2xl border border-espresso/10 bg-ivory px-4 text-base font-normal outline-none ring-wine/30 focus:ring-2"
+          className="min-h-10 w-full rounded-xl border border-ink/10 bg-ivory px-4 text-base font-normal outline-none ring-brand/30 focus:ring-2"
         />
       </label>
-      <label className="block space-y-1.5 text-sm font-medium text-espresso">
+      <label className="block space-y-1.5 text-sm font-medium text-ink">
         Email
         <input
           required
           type="email"
           name="email"
           autoComplete="email"
-          className="min-h-12 w-full rounded-2xl border border-espresso/10 bg-ivory px-4 text-base font-normal outline-none ring-wine/30 focus:ring-2"
+          className="min-h-10 w-full rounded-xl border border-ink/10 bg-ivory px-4 text-base font-normal outline-none ring-brand/30 focus:ring-2"
         />
       </label>
-      <label className="block space-y-1.5 text-sm font-medium text-espresso">
+      <label className="block space-y-1.5 text-sm font-medium text-ink">
         Phone
         <input
           type="tel"
           name="phone"
           autoComplete="tel"
-          className="min-h-12 w-full rounded-2xl border border-espresso/10 bg-ivory px-4 text-base font-normal outline-none ring-wine/30 focus:ring-2"
+          className="min-h-10 w-full rounded-xl border border-ink/10 bg-ivory px-4 text-base font-normal outline-none ring-brand/30 focus:ring-2"
         />
       </label>
-      <label className="block space-y-1.5 text-sm font-medium text-espresso">
+      <label className="block space-y-1.5 text-sm font-medium text-ink">
         Piece you are curious about
         <select
           name="product"
           defaultValue={selected}
-          className="min-h-12 w-full rounded-2xl border border-espresso/10 bg-ivory px-4 text-base font-normal outline-none ring-wine/30 focus:ring-2"
+          className="min-h-10 w-full rounded-xl border border-ink/10 bg-ivory px-4 text-base font-normal outline-none ring-brand/30 focus:ring-2"
         >
           <option value="">Not sure yet</option>
           {products.map((product) => (
@@ -97,19 +97,19 @@ export function ContactForm({ initialProduct = "" }: { initialProduct?: string }
           ))}
         </select>
       </label>
-      <label className="block space-y-1.5 text-sm font-medium text-espresso">
+      <label className="block space-y-1.5 text-sm font-medium text-ink">
         Message
         <textarea
           required
           name="message"
           rows={5}
-          className="w-full rounded-2xl border border-espresso/10 bg-ivory px-4 py-3 text-base font-normal outline-none ring-wine/30 focus:ring-2"
-          placeholder="Tell Tiara where you are in recovery — no medical details required."
+          className="w-full rounded-xl border border-ink/10 bg-ivory px-4 py-2.5 text-base font-normal outline-none ring-brand/30 focus:ring-2"
+          placeholder="Tell Tiara where you are in recovery. No medical details required."
         />
       </label>
       <button
         type="submit"
-        className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-wine text-sm font-semibold text-ivory sm:w-auto sm:px-8"
+        className="inline-flex min-h-10 w-full items-center justify-center rounded-full bg-brand text-sm font-semibold text-white sm:w-auto sm:px-8"
       >
         Show preview confirmation
       </button>
