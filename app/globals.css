@@ -1,31 +1,41 @@
 @import "tailwindcss";
 
 :root {
-  --ivory: #f8f1ea;
-  --cream: #fff8f2;
-  --blush: #e8b4b8;
-  --rose: #c45c6a;
-  --wine: #7a2e3a;
-  --espresso: #2c1810;
-  --mocha: #5c3d32;
-  --champagne: #d4b896;
-  --sand: #ead9c8;
+  /* Exact brand purples from baddiebooty.co.za computed/CSS:
+     --theme_accent: #966bb3 (links, product titles, buttons, best-seller divider)
+     #headerwrap background-color: #966ab3
+     Instagram accent: #9245d6
+     Woo tint backgrounds: #e9e6ed / #cfc8d8
+     Homepage lavender tint: #f5caf5 */
+  --brand: #966bb3;
+  --brand-header: #966ab3;
+  --brand-bright: #9245d6;
+  --brand-tint: #e9e6ed;
+  --brand-mist: #cfc8d8;
+  --lavender: #f5caf5;
+  --ivory: #fbf8fd;
+  --cream: #f7f2fa;
+  --ink: #1c1a1b;
+  --muted: #5c4d66;
+  --sand: #e4d8ec;
 }
 
 @theme inline {
+  --color-brand: var(--brand);
+  --color-brand-header: var(--brand-header);
+  --color-brand-bright: var(--brand-bright);
+  --color-brand-tint: var(--brand-tint);
+  --color-brand-mist: var(--brand-mist);
+  --color-lavender: var(--lavender);
   --color-ivory: var(--ivory);
   --color-cream: var(--cream);
-  --color-blush: var(--blush);
-  --color-rose: var(--rose);
-  --color-wine: var(--wine);
-  --color-espresso: var(--espresso);
-  --color-mocha: var(--mocha);
-  --color-champagne: var(--champagne);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
   --color-sand: var(--sand);
   --color-background: var(--ivory);
-  --color-foreground: var(--espresso);
-  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --color-foreground: var(--ink);
+  --font-sans: var(--font-public-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
 }
 
 html {
@@ -34,17 +44,16 @@ html {
 
 body {
   background: var(--ivory);
-  color: var(--espresso);
+  color: var(--ink);
   font-family: var(--font-sans);
 }
 
 .font-display {
-  font-family: var(--font-cormorant), "Cormorant Garamond", ui-serif, Georgia,
-    serif;
-  font-weight: 500;
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
 }
 
 ::selection {
-  background: var(--blush);
-  color: var(--espresso);
+  background: var(--brand);
+  color: #fff;
 }

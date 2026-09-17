@@ -1,11 +1,11 @@
 export function ProposalBanner() {
   return (
-    <div className="bg-espresso px-4 py-2.5 text-center text-[12px] leading-5 text-ivory sm:text-sm">
+    <div className="bg-ink px-4 py-2.5 text-center text-[12px] leading-5 text-white sm:text-sm">
       <p>
         Proposal concept by{" "}
         <span className="font-semibold">Aidan</span> for Baddie Booty — not the
         live store.{" "}
-        <span className="text-blush">
+        <span className="text-lavender">
           Payments, shipping, and WooCommerce rebuild are a paid engagement.
         </span>
       </p>

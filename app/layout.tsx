@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
+import { Poppins, Public_Sans } from "next/font/google";
+import { CartDrawer } from "@/components/cart-drawer";
+import { CartProvider } from "@/components/cart-provider";
 import { MobileDock } from "@/components/mobile-dock";
 import { ProposalBanner } from "@/components/proposal-banner";
 import { SiteFooter } from "@/components/site-footer";
@@ -7,16 +9,16 @@ import { SiteHeader } from "@/components/site-header";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const plusJakarta = Plus_Jakarta_Sans({
+const publicSans = Public_Sans({
   subsets: ["latin"],
-  variable: "--font-plus-jakarta",
+  variable: "--font-public-sans",
   display: "swap",
 });
 
-const cormorant = Cormorant_Garamond({
+const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-cormorant",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
   display: "swap",
 });
 
@@ -33,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Baddie Booty — Proposal Concept",
     description:
-      "Fresh take on the Baddie Booty shop experience — recovery-care, clearer UX, no live checkout.",
+      "Fresh take on the Baddie Booty shop experience — recovery-care, clearer UX, demo bag only.",
     locale: "en_ZA",
     type: "website",
   },
@@ -43,22 +45,25 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en-ZA"
-      className={`${plusJakarta.variable} ${plusJakarta.className} ${cormorant.variable} h-full antialiased`}
+      className={`${publicSans.variable} ${publicSans.className} ${poppins.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-ivory pb-24 font-sans text-espresso md:pb-0">
-        <a
-          href="#content"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-wine focus:px-4 focus:py-2 focus:text-ivory"
-        >
-          Skip to content
-        </a>
-        <ProposalBanner />
-        <SiteHeader />
-        <main id="content" className="flex-1">
-          {children}
-        </main>
-        <SiteFooter />
-        <MobileDock />
+      <body className="flex min-h-full flex-col bg-ivory pb-24 font-sans text-ink md:pb-0">
+        <CartProvider>
+          <a
+            href="#content"
+            className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-brand focus:px-4 focus:py-2 focus:text-white"
+          >
+            Skip to content
+          </a>
+          <ProposalBanner />
+          <SiteHeader />
+          <main id="content" className="flex-1">
+            {children}
+          </main>
+          <SiteFooter />
+          <MobileDock />
+          <CartDrawer />
+        </CartProvider>
       </body>
     </html>
   );

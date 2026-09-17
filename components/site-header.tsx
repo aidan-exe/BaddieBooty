@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useState } from "react";
+import { CartIconButton } from "@/components/add-to-cart";
 import { Logo } from "@/components/logo";
 import { nav, site } from "@/lib/site";
 
@@ -33,7 +34,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-sand/70 bg-ivory/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3.5">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
         <Logo compact />
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
           {nav.map((item) => {
@@ -47,8 +48,8 @@ export function SiteHeader() {
                 href={item.href}
                 className={`min-h-11 rounded-full px-4 py-2 text-sm font-semibold transition ${
                   active
-                    ? "bg-wine text-ivory"
-                    : "text-espresso hover:bg-sand/70"
+                    ? "bg-brand text-white"
+                    : "text-ink hover:bg-brand-tint"
                 }`}
               >
                 {item.label}
@@ -56,42 +57,37 @@ export function SiteHeader() {
             );
           })}
         </nav>
-        <div className="hidden items-center gap-2 lg:flex">
-          <a
-            href={`tel:${site.phoneTel}`}
-            className="inline-flex min-h-11 items-center rounded-full border border-espresso/15 px-4 text-sm font-semibold text-espresso"
-          >
-            Call
-          </a>
+        <div className="flex items-center gap-2">
           <a
             href={site.whatsapp}
-            className="inline-flex min-h-11 items-center rounded-full bg-wine px-4 text-sm font-semibold text-ivory"
+            className="hidden min-h-11 items-center rounded-full bg-brand px-4 text-sm font-semibold text-white lg:inline-flex"
             target="_blank"
             rel="noreferrer"
           >
             WhatsApp
           </a>
+          <CartIconButton />
+          <button
+            type="button"
+            className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-ink/10 bg-cream lg:hidden"
+            aria-expanded={open}
+            aria-controls={menuId}
+            onClick={() => setOpen(!open)}
+          >
+            <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
+            <span className="flex flex-col gap-1.5" aria-hidden="true">
+              <span
+                className={`block h-0.5 w-5 bg-ink transition ${open ? "translate-y-2 rotate-45" : ""}`}
+              />
+              <span
+                className={`block h-0.5 w-5 bg-ink transition ${open ? "opacity-0" : ""}`}
+              />
+              <span
+                className={`block h-0.5 w-5 bg-ink transition ${open ? "-translate-y-2 -rotate-45" : ""}`}
+              />
+            </span>
+          </button>
         </div>
-        <button
-          type="button"
-          className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-espresso/15 bg-cream lg:hidden"
-          aria-expanded={open}
-          aria-controls={menuId}
-          onClick={() => setOpen(!open)}
-        >
-          <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
-          <span className="flex flex-col gap-1.5" aria-hidden="true">
-            <span
-              className={`block h-0.5 w-5 bg-espresso transition ${open ? "translate-y-2 rotate-45" : ""}`}
-            />
-            <span
-              className={`block h-0.5 w-5 bg-espresso transition ${open ? "opacity-0" : ""}`}
-            />
-            <span
-              className={`block h-0.5 w-5 bg-espresso transition ${open ? "-translate-y-2 -rotate-45" : ""}`}
-            />
-          </span>
-        </button>
       </div>
       {open ? (
         <div
@@ -103,24 +99,17 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="flex min-h-12 items-center rounded-2xl bg-cream px-4 text-base font-semibold text-espresso"
+                className="flex min-h-12 items-center rounded-2xl bg-cream px-4 text-base font-semibold text-ink"
+                onClick={() => setOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
             <a
               href={`tel:${site.phoneTel}`}
-              className="flex min-h-12 items-center rounded-2xl bg-wine px-4 text-base font-semibold text-ivory"
+              className="flex min-h-12 items-center rounded-2xl bg-brand px-4 text-base font-semibold text-white"
             >
               Call {site.phoneDisplay}
-            </a>
-            <a
-              href={site.whatsapp}
-              className="flex min-h-12 items-center rounded-2xl border border-wine/30 px-4 text-base font-semibold text-wine"
-              target="_blank"
-              rel="noreferrer"
-            >
-              WhatsApp Tiara
             </a>
           </nav>
         </div>

@@ -21,28 +21,28 @@ export default async function ContactPage({
     : "";
   return (
     <div className="mx-auto max-w-6xl px-5 py-12">
-      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-rose">
+      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">
         Salt Rock studio
       </p>
-      <h1 className="mt-3 font-display text-5xl text-espresso">
+      <h1 className="mt-3 font-display text-5xl text-ink">
         Come through, Baddie.
       </h1>
-      <p className="mt-4 max-w-2xl text-base leading-7 text-mocha">
+      <p className="mt-4 max-w-2xl text-base leading-7 text-muted">
         Call, WhatsApp, or email the studio. The form on this page is a
         client-side UI only — it does not hit a server.
       </p>
 
       <div className="mt-10 grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
-        <aside className="h-fit space-y-5 rounded-[1.75rem] bg-espresso p-6 text-ivory sm:p-8">
+        <aside className="h-fit space-y-5 rounded-[1.75rem] bg-brand-header p-6 text-white sm:p-8">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-champagne">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-lavender">
               Location
             </p>
             <p className="mt-2 text-lg">{site.location}</p>
-            <p className="text-sm text-blush">{site.country}</p>
+            <p className="text-sm text-brand-mist">{site.country}</p>
           </div>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-champagne">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-lavender">
               Phone
             </p>
             <a
@@ -53,7 +53,7 @@ export default async function ContactPage({
             </a>
           </div>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-champagne">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-lavender">
               Email
             </p>
             <a
@@ -67,12 +67,12 @@ export default async function ContactPage({
             href={site.whatsapp}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex min-h-12 items-center rounded-full bg-ivory px-5 text-sm font-semibold text-wine"
+            className="inline-flex min-h-12 items-center rounded-full bg-white px-5 text-sm font-semibold text-brand"
           >
             Open WhatsApp
           </a>
         </aside>
-          <ContactForm initialProduct={initialProduct} />
+        <ContactForm initialProduct={initialProduct} />
       </div>
     </div>
   );
