@@ -20,20 +20,20 @@ export default async function ContactPage({
     ? slug
     : "";
   return (
-    <div className="mx-auto max-w-6xl px-5 py-12">
-      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">
+    <div className="mx-auto max-w-6xl px-5 py-8">
+      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand">
         Salt Rock studio
       </p>
-      <h1 className="mt-3 font-display text-5xl text-ink">
+      <h1 className="mt-2 font-display text-3xl text-ink sm:text-4xl">
         Come through, Baddie.
       </h1>
-      <p className="mt-4 max-w-2xl text-base leading-7 text-muted">
+      <p className="mt-2 max-w-2xl text-sm leading-6 text-muted">
         Call, WhatsApp, or email the studio. The form on this page is a
         client-side UI only — it does not hit a server.
       </p>
 
-      <div className="mt-10 grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
-        <aside className="h-fit space-y-5 rounded-[1.75rem] bg-brand-header p-6 text-white sm:p-8">
+      <div className="mt-6 grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
+        <aside className="h-fit space-y-4 rounded-2xl bg-brand-header p-5 text-white">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-lavender">
               Location
@@ -67,7 +67,7 @@ export default async function ContactPage({
             href={site.whatsapp}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex min-h-12 items-center rounded-full bg-white px-5 text-sm font-semibold text-brand"
+            className="inline-flex min-h-10 items-center rounded-full bg-white px-5 text-sm font-semibold text-brand"
           >
             Open WhatsApp
           </a>

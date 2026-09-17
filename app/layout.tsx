@@ -47,7 +47,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en-ZA"
       className={`${publicSans.variable} ${publicSans.className} ${poppins.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-ivory pb-24 font-sans text-ink md:pb-0">
+      <body className="flex min-h-full flex-col bg-ivory pb-16 font-sans text-ink md:pb-0">
         <CartProvider>
           <a
             href="#content"

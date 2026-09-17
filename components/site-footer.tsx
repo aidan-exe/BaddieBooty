@@ -6,16 +6,16 @@ import { site } from "@/lib/site";
 export function SiteFooter() {
   return (
     <footer className="mt-auto bg-brand-header text-white">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-3">
-        <div className="space-y-4">
+      <div className="mx-auto grid max-w-6xl gap-8 px-5 py-8 md:grid-cols-3">
+        <div className="space-y-3">
           <Image
             src="/brand/logo-long.png"
             alt="Baddie Booty"
             width={1313}
             height={525}
-            className="h-12 w-auto brightness-0 invert"
+            className="h-9 w-auto brightness-0 invert"
           />
-          <p className="max-w-sm text-sm leading-6 text-lavender">
+          <p className="max-w-sm text-sm leading-5 text-lavender">
             Compression, fajas, bras, boards, and pillows for recovery — from a
             Salt Rock studio that calls you Baddie on purpose.
           </p>
@@ -78,9 +78,9 @@ export function SiteFooter() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-white/10 px-5 py-8">
-        <div className="mx-auto max-w-6xl space-y-3 text-sm leading-6 text-lavender">
-          <p className="rounded-2xl bg-white/10 px-4 py-4 text-white">
+      <div className="border-t border-white/10 px-5 py-4">
+        <div className="mx-auto max-w-6xl space-y-2 text-sm leading-5 text-lavender">
+          <p className="rounded-xl bg-white/10 px-3 py-3 text-white">
             This website is a <strong>proposal concept</strong> by{" "}
             {site.designer} for Baddie Booty (owner Tiara). It is{" "}
             <strong>not the live store</strong>. A WooCommerce rebuild with

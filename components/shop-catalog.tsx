@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ProductCard } from "@/components/product-card";
+import { ProductCard, productGridClass } from "@/components/product-card";
 import { categories, products, type CategoryId } from "@/lib/products";
 import { useMemo } from "react";
 
@@ -15,9 +15,9 @@ export function ShopCatalog({ category }: { category: CategoryId }) {
   );
 
   return (
-    <div className="space-y-8">
-      <div className="sticky top-[4.25rem] z-30 -mx-5 bg-ivory/95 px-5 py-3 backdrop-blur-md md:static md:mx-0 md:bg-transparent md:px-0 md:py-0">
-        <div className="flex gap-2 overflow-x-auto pb-1">
+    <div className="space-y-4">
+      <div className="sticky top-[3.5rem] z-30 -mx-5 bg-ivory/95 px-5 py-2 backdrop-blur-md md:static md:mx-0 md:bg-transparent md:px-0 md:py-0">
+        <div className="flex gap-1.5 overflow-x-auto pb-1">
           {categories.map((item) => {
             const active = category === item.id;
             const href =
@@ -27,7 +27,7 @@ export function ShopCatalog({ category }: { category: CategoryId }) {
                 key={item.id}
                 href={href}
                 scroll={false}
-                className={`inline-flex min-h-11 shrink-0 items-center rounded-full px-4 text-sm font-semibold ${
+                className={`inline-flex min-h-9 shrink-0 items-center rounded-full px-3 text-xs font-semibold ${
                   active
                     ? "bg-brand text-white"
                     : "border border-ink/10 bg-cream text-ink"
@@ -40,26 +40,25 @@ export function ShopCatalog({ category }: { category: CategoryId }) {
         </div>
       </div>
 
-      <p className="text-sm text-muted">
-        {visible.length} piece{visible.length === 1 ? "" : "s"} · tap a photo for
-        the product page, then add to the demo bag. No live payment in this
-        concept.
+      <p className="text-xs text-muted">
+        {visible.length} piece{visible.length === 1 ? "" : "s"} · tap for the
+        product page, then add to the demo bag.
       </p>
 
       {visible.length === 0 ? (
-        <div className="rounded-3xl border border-dashed border-sand bg-cream px-6 py-16 text-center">
-          <p className="font-display text-3xl text-ink">
+        <div className="rounded-2xl border border-dashed border-sand bg-cream px-5 py-10 text-center">
+          <p className="font-display text-2xl text-ink">
             Nothing in this edit yet
           </p>
-          <p className="mt-2 text-sm text-muted">Try another category.</p>
+          <p className="mt-1 text-sm text-muted">Try another category.</p>
         </div>
       ) : (
-        <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+        <div className={productGridClass}>
           {visible.map((product, index) => (
             <ProductCard
               key={product.slug}
               product={product}
-              priority={index < 2}
+              priority={index < 4}
             />
           ))}
         </div>

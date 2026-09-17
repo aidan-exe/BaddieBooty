@@ -17,17 +17,19 @@ export default async function ShopPage({
   const category = readCategory(params.category);
 
   return (
-    <div className="mx-auto max-w-6xl px-5 py-12">
-      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">
-        The edit
-      </p>
-      <h1 className="mt-3 font-display text-5xl text-ink">Shop recovery wear</h1>
-      <p className="mt-4 max-w-2xl text-base leading-7 text-muted">
-        Clearer categories, real catalogue photos, and product pages with size
-        and stage. Add to a demo bag — checkout is labelled as a proposal demo
-        and does not take payment.
-      </p>
-      <div className="mt-10">
+    <div className="mx-auto max-w-6xl px-5 py-6">
+      <div className="flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand">
+            The edit
+          </p>
+          <h1 className="mt-1 font-display text-3xl text-ink">Shop recovery wear</h1>
+        </div>
+        <p className="max-w-md text-sm leading-5 text-muted">
+          Real catalogue photos. Demo bag only — no live payment.
+        </p>
+      </div>
+      <div className="mt-5">
         <ShopCatalog category={category} />
       </div>
     </div>

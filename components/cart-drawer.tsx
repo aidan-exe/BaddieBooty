@@ -113,14 +113,14 @@ export function CartDrawer() {
             <Link
               href="/checkout"
               onClick={closeDrawer}
-              className="inline-flex min-h-12 items-center justify-center rounded-full bg-brand px-5 text-sm font-semibold text-white"
+              className="inline-flex min-h-10 items-center justify-center rounded-full bg-brand px-5 text-sm font-semibold text-white"
             >
               Demo checkout
             </Link>
             <Link
               href="/cart"
               onClick={closeDrawer}
-              className="inline-flex min-h-11 items-center justify-center rounded-full border border-ink/10 px-5 text-sm font-semibold"
+              className="inline-flex min-h-9 items-center justify-center rounded-full border border-ink/10 px-5 text-sm font-semibold"
             >
               View bag
             </Link>

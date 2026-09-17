@@ -1,6 +1,6 @@
 export function ProposalBanner() {
   return (
-    <div className="bg-ink px-4 py-2.5 text-center text-[12px] leading-5 text-white sm:text-sm">
+    <div className="bg-ink px-4 py-1.5 text-center text-[11px] leading-4 text-white sm:text-xs">
       <p>
         Proposal concept by{" "}
         <span className="font-semibold">Aidan</span> for Baddie Booty — not the

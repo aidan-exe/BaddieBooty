@@ -34,9 +34,9 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-sand/70 bg-ivory/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-2">
         <Logo compact />
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-0.5 lg:flex" aria-label="Primary">
           {nav.map((item) => {
             const active =
               item.href === "/"
@@ -46,7 +46,7 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`min-h-11 rounded-full px-4 py-2 text-sm font-semibold transition ${
+                className={`min-h-9 rounded-full px-3 py-1.5 text-sm font-semibold transition ${
                   active
                     ? "bg-brand text-white"
                     : "text-ink hover:bg-brand-tint"
@@ -60,7 +60,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-2">
           <a
             href={site.whatsapp}
-            className="hidden min-h-11 items-center rounded-full bg-brand px-4 text-sm font-semibold text-white lg:inline-flex"
+            className="hidden min-h-9 items-center rounded-full bg-brand px-3 text-sm font-semibold text-white lg:inline-flex"
             target="_blank"
             rel="noreferrer"
           >
@@ -69,7 +69,7 @@ export function SiteHeader() {
           <CartIconButton />
           <button
             type="button"
-            className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-ink/10 bg-cream lg:hidden"
+            className="inline-flex min-h-9 min-w-9 items-center justify-center rounded-full border border-ink/10 bg-cream lg:hidden"
             aria-expanded={open}
             aria-controls={menuId}
             onClick={() => setOpen(!open)}
@@ -92,14 +92,14 @@ export function SiteHeader() {
       {open ? (
         <div
           id={menuId}
-          className="border-t border-sand bg-ivory px-5 py-6 lg:hidden"
+          className="border-t border-sand bg-ivory px-5 py-4 lg:hidden"
         >
-          <nav className="flex flex-col gap-2" aria-label="Mobile">
+          <nav className="flex flex-col gap-1.5" aria-label="Mobile">
             {nav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="flex min-h-12 items-center rounded-2xl bg-cream px-4 text-base font-semibold text-ink"
+                className="flex min-h-10 items-center rounded-xl bg-cream px-4 text-sm font-semibold text-ink"
                 onClick={() => setOpen(false)}
               >
                 {item.label}
@@ -107,7 +107,7 @@ export function SiteHeader() {
             ))}
             <a
               href={`tel:${site.phoneTel}`}
-              className="flex min-h-12 items-center rounded-2xl bg-brand px-4 text-base font-semibold text-white"
+              className="flex min-h-10 items-center rounded-xl bg-brand px-4 text-sm font-semibold text-white"
             >
               Call {site.phoneDisplay}
             </a>

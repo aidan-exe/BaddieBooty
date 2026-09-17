@@ -8,10 +8,12 @@ export function AddToCart({
   product,
   size,
   label = "Add to bag",
+  compact = false,
 }: {
   product: Product;
   size: string;
   label?: string;
+  compact?: boolean;
 }) {
   const { addItem } = useCart();
   const [pulse, setPulse] = useState(false);
@@ -28,9 +30,13 @@ export function AddToCart({
       type="button"
       onClick={add}
       disabled={!size}
-      className="inline-flex min-h-12 flex-1 items-center justify-center rounded-full bg-brand px-6 text-sm font-semibold text-white transition hover:bg-brand-header disabled:cursor-not-allowed disabled:opacity-50"
+      className={`inline-flex flex-1 items-center justify-center rounded-full bg-brand font-semibold text-white transition hover:bg-brand-header disabled:cursor-not-allowed disabled:opacity-50 ${
+        compact
+          ? "min-h-9 px-2 text-xs"
+          : "min-h-10 px-5 text-sm"
+      }`}
     >
-      {pulse ? "Added to bag" : label}
+      {pulse ? "Added" : label}
     </button>
   );
 }
@@ -43,7 +49,7 @@ export function CartIconButton() {
     <button
       type="button"
       onClick={openDrawer}
-      className="relative inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-ink/10 bg-cream text-sm font-semibold"
+      className="relative inline-flex min-h-9 min-w-9 items-center justify-center rounded-full border border-ink/10 bg-cream text-sm font-semibold"
       aria-label={`Open bag, ${count} items`}
     >
       <BagIcon />

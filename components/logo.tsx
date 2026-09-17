@@ -13,7 +13,7 @@ export function Logo({ compact = false }: { compact?: boolean }) {
         alt=""
         width={1760}
         height={1333}
-        className="h-11 w-auto sm:h-12"
+        className="h-9 w-auto sm:h-10"
         priority
       />
       {compact ? (

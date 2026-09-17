@@ -11,30 +11,30 @@ export default function CartPage() {
     useCart();
 
   return (
-    <div className="mx-auto max-w-4xl px-5 py-12">
-      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">
+    <div className="mx-auto max-w-4xl px-5 py-8">
+      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand">
         Demo bag
       </p>
-      <h1 className="mt-3 font-display text-5xl text-ink">Your bag</h1>
-      <p className="mt-4 max-w-2xl text-base leading-7 text-muted">
+      <h1 className="mt-2 font-display text-3xl text-ink">Your bag</h1>
+      <p className="mt-2 max-w-2xl text-sm leading-6 text-muted">
         Qty update and remove work in this browser. Checkout is a proposal demo
         and does not process payment.
       </p>
 
       {!ready ? (
-        <p className="mt-10 text-sm text-muted">Loading bag…</p>
+        <p className="mt-6 text-sm text-muted">Loading bag…</p>
       ) : lines.length === 0 ? (
-        <div className="mt-10 rounded-[1.75rem] border border-dashed border-sand bg-cream px-6 py-16 text-center">
-          <p className="font-display text-3xl">Bag is empty</p>
+        <div className="mt-6 rounded-2xl border border-dashed border-sand bg-cream px-5 py-10 text-center">
+          <p className="font-display text-2xl">Bag is empty</p>
           <Link
             href="/shop"
-            className="mt-6 inline-flex min-h-12 items-center rounded-full bg-brand px-7 text-sm font-semibold text-white"
+            className="mt-4 inline-flex min-h-10 items-center rounded-full bg-brand px-5 text-sm font-semibold text-white"
           >
             Browse the shop
           </Link>
         </div>
       ) : (
-        <div className="mt-10 space-y-4">
+        <div className="mt-6 space-y-3">
           {lines.map((line) => {
             const product = lineProduct(line);
             if (!product) return null;
@@ -58,12 +58,12 @@ export default function CartPage() {
                 <div className="flex flex-1 flex-col">
                   <Link
                     href={`/shop/${product.slug}`}
-                    className="font-display text-2xl leading-tight hover:text-brand"
+                    className="font-display text-lg leading-tight hover:text-brand"
                   >
                     {product.name}
                   </Link>
                   <p className="mt-1 text-sm text-muted">Size {line.size}</p>
-                  <p className="mt-2 font-display text-2xl text-brand">
+                  <p className="mt-1 font-display text-xl text-brand">
                     {formatZar(product.price * line.qty)}
                   </p>
                   <div className="mt-4 flex flex-wrap items-center gap-3">
@@ -94,13 +94,13 @@ export default function CartPage() {
               <button
                 type="button"
                 onClick={openDrawer}
-                className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/30 px-6 text-sm font-semibold"
+                className="inline-flex min-h-10 items-center justify-center rounded-full border border-white/30 px-5 text-sm font-semibold"
               >
                 Open drawer
               </button>
               <Link
                 href="/checkout"
-                className="inline-flex min-h-12 items-center justify-center rounded-full bg-white px-6 text-sm font-semibold text-brand"
+                className="inline-flex min-h-10 items-center justify-center rounded-full bg-white px-5 text-sm font-semibold text-brand"
               >
                 Demo checkout
               </Link>
