@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { DeviceFrame } from "@/components/device-frame";
 import { ProductCard } from "@/components/product-card";
 import { bestsellers } from "@/lib/products";
 import { site } from "@/lib/site";
@@ -146,13 +145,6 @@ export default function HomePage() {
             Recovery-care products, not medical treatment. Follow your surgeon.
           </p>
         </div>
-      </section>
-
-      <section className="px-5 pb-2 pt-8" aria-label="Baddie Booty shop">
-        <DeviceFrame
-          src="/brand/site-preview.png"
-          alt="Baddie Booty shop on a laptop"
-        />
       </section>
 
       <section className="px-5 py-8">
