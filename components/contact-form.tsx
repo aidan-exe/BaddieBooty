@@ -21,10 +21,10 @@ export function ContactForm({ initialProduct = "" }: { initialProduct?: string }
   if (submitted) {
     return (
       <div className="rounded-2xl border border-sand bg-cream px-5 py-6">
-        <h2 className="font-display text-2xl text-ink">Thanks, {name}.</h2>
+        <h2 className="font-display text-2xl text-ink">Nothing was sent, {name}.</h2>
         <p className="mt-2 text-sm leading-6 text-muted">
-          For a faster reply, call or WhatsApp Tiara on {site.phoneDisplay}, or
-          email {site.email}.
+          This form does not deliver a message. Call or WhatsApp Tiara on{" "}
+          {site.phoneDisplay}, or email {site.email}.
         </p>
         <button
           type="button"
@@ -44,6 +44,10 @@ export function ContactForm({ initialProduct = "" }: { initialProduct?: string }
     >
       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">
         Message the studio
+      </p>
+      <p className="text-sm leading-6 text-muted">
+        This form does not send. Call or WhatsApp Tiara on {site.phoneDisplay},
+        or email {site.email}.
       </p>
       <label className="block space-y-1.5 text-sm font-medium text-ink">
         Name
