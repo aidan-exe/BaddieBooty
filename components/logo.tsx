@@ -1,33 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export function Logo({ compact = false }: { compact?: boolean }) {
+export function Logo() {
   return (
     <Link
       href="/"
-      className="group inline-flex items-center gap-2.5 text-ink"
       aria-label="Baddie Booty home"
+      className="inline-flex shrink-0 items-center rounded-2xl bg-black/10 px-3 py-1.5 ring-2 ring-white/80"
     >
       <Image
-        src="/brand/logo.png"
+        src="/brand/logo-wordmark.png"
         alt=""
-        width={1760}
-        height={1333}
+        width={1296}
+        height={484}
+        preload
         className="h-9 w-auto sm:h-10"
-        priority
       />
-      {compact ? (
-        <span className="sr-only">Baddie Booty</span>
-      ) : (
-        <span className="hidden leading-none sm:block">
-          <span className="block font-display text-lg tracking-wide">
-            Baddie Booty
-          </span>
-          <span className="mt-1 block text-[10px] font-semibold uppercase tracking-[0.22em] text-brand">
-            Recovery care
-          </span>
-        </span>
-      )}
     </Link>
   );
 }
