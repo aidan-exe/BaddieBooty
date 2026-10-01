@@ -11,7 +11,8 @@ import {
 } from "react";
 import { getProduct, type Product } from "@/lib/products";
 
-export const CART_STORAGE_KEY = "baddie-proposal-cart-v1";
+export const CART_STORAGE_KEY = "baddie-booty-cart-v1";
+const LEGACY_CART_STORAGE_KEY = "baddie-proposal-cart-v1";
 
 export type CartLine = {
   slug: string;
@@ -47,7 +48,9 @@ function isLine(value: unknown): value is CartLine {
 
 function readStore(): CartLine[] {
   try {
-    const raw = localStorage.getItem(CART_STORAGE_KEY);
+    const raw =
+      localStorage.getItem(CART_STORAGE_KEY) ??
+      localStorage.getItem(LEGACY_CART_STORAGE_KEY);
     if (!raw) return [];
     const parsed: unknown = JSON.parse(raw);
     if (!Array.isArray(parsed)) return [];

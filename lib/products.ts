@@ -35,7 +35,7 @@ export const products: Product[] = [
     bestseller: true,
     blurb: "A firm abdominal board for structured rest while you recover.",
     detail:
-      "Designed to sit smoothly under a faja. Choose with Tiara if you are pairing it with a stage 1 or stage 2 garment. Photography from the live Baddie Booty catalogue.",
+      "Designed to sit smoothly under a faja. Choose with Tiara if you are pairing it with a stage 1 or stage 2 garment.",
     image: "/products/ab-board.jpg",
     imageAlt: "Post Surgery Liposuction AB Board from Baddie Booty",
     stage: "Accessory",
@@ -55,7 +55,7 @@ export const products: Product[] = [
     bestseller: true,
     blurb: "Soft, steady support across the chest and upper back.",
     detail:
-      "A recovery-care bra with a posture-minded cut and front-closure feel. Sizes follow the live shop range. Confirm staging with your care team. This is not a clinical device.",
+      "A recovery-care bra with a posture-minded cut and front-closure feel. Confirm the stage with your care team. This is not a clinical device.",
     image: "/products/compression-bra.jpg",
     imageAlt: "Adjustable front-closure compression vest by Baddie Booty",
     stage: "Stages 1 and 2",
@@ -75,7 +75,7 @@ export const products: Product[] = [
     bestseller: true,
     blurb: "A shaped cushion for sitting more comfortably after a BBL.",
     detail:
-      "Meant for how you sit at home, not a medical device. Follow your surgeon’s sitting guidance first. Image from the current Baddie Booty store.",
+      "Meant for how you sit at home, not a medical device. Follow your surgeon’s sitting guidance first.",
     image: "/products/support-pillow.jpg",
     imageAlt: "Butt Lift Support Pillow from Baddie Booty",
     stage: "Accessory",
@@ -94,7 +94,7 @@ export const products: Product[] = [
     bestseller: true,
     blurb: "Seamless full-body compression that follows every defined curve.",
     detail:
-      "A studio staple for post-op days. Live checkout, variants, and South African shipping arrive with a paid WooCommerce rebuild. Photo from baddiebooty.co.za.",
+      "A studio staple for post-op days: seamless full-body compression that follows every defined curve.",
     image: "/products/seamless-faja.png",
     imageAlt: "Full Body Post-Surgery Seamless Faja",
     stage: "Stage 1",
@@ -103,7 +103,7 @@ export const products: Product[] = [
       "https://baddiebooty.co.za/product/stage-1-full-body-post-surgery-bodysuit/",
     wearNotes: [
       "Seamless full-body hold for early recovery wardrobes.",
-      "Size using the live S to 3XL range. WhatsApp if you need a read.",
+      "Sizes run S to 3XL. WhatsApp if you need a read.",
     ],
   },
   {
@@ -114,7 +114,7 @@ export const products: Product[] = [
     bestseller: false,
     blurb: "A second board option for abdominal compression and rest.",
     detail:
-      "Pair with a faja for a smoother front. Prices shown match the live catalogue. Photography from the current store.",
+      "Pair with a faja for a smoother front while you rest.",
     image: "/products/abdominal-board.png",
     imageAlt: "Post Surgery Abdominal Compression Board",
     stage: "Accessory",
@@ -154,7 +154,7 @@ export const products: Product[] = [
     bestseller: false,
     blurb: "Mid-thigh faja with a lift-minded cut through the hips.",
     detail:
-      "From the current shop. Mid-thigh length with a levanta-cola cut. Photo from the live product page.",
+      "Mid-thigh length with a levanta-cola cut through the hips.",
     image: "/products/levanta-cola.jpg",
     imageAlt: "Levanta Cola Compression Faja (Mid-Thigh)",
     stage: "Stage 2",

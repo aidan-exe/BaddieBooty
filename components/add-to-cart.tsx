@@ -49,12 +49,12 @@ export function CartIconButton() {
     <button
       type="button"
       onClick={openDrawer}
-      className="relative inline-flex min-h-9 min-w-9 items-center justify-center rounded-full border border-ink/10 bg-cream text-sm font-semibold"
+      className="relative inline-flex min-h-9 min-w-9 items-center justify-center rounded-full border border-white/25 bg-white/10 text-sm font-semibold text-white"
       aria-label={`Open bag, ${count} items`}
     >
       <BagIcon />
       {count > 0 ? (
-        <span className="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-brand px-1 text-[10px] font-bold text-white">
+        <span className="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-white px-1 text-[10px] font-bold text-brand-header">
           {count}
         </span>
       ) : null}

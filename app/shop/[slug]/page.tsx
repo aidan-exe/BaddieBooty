@@ -90,19 +90,9 @@ export default async function ProductPage({ params }: PageProps) {
             >
               WhatsApp for size help
             </a>
-            <span className="text-brand-mist">·</span>
-            <a
-              href={product.sourceUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="text-muted underline-offset-4 hover:underline"
-            >
-              Live store listing
-            </a>
           </div>
           <p className="mt-3 text-xs leading-5 text-muted">
             Recovery-care retail, not medical treatment. Follow your surgeon.
-            Photo sourced from baddiebooty.co.za for this proposal.
           </p>
         </div>
       </div>

@@ -41,8 +41,7 @@ export function ShopCatalog({ category }: { category: CategoryId }) {
       </div>
 
       <p className="text-xs text-muted">
-        {visible.length} piece{visible.length === 1 ? "" : "s"} · tap for the
-        product page, then add to the demo bag.
+        {visible.length} piece{visible.length === 1 ? "" : "s"}
       </p>
 
       {visible.length === 0 ? (

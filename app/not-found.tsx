@@ -8,8 +8,8 @@ export default function NotFound() {
       </p>
       <h1 className="mt-2 font-display text-3xl">That page took a rest day.</h1>
       <p className="mt-3 text-sm text-muted">
-        This proposal includes Home, Shop, product pages, Bag, Demo checkout,
-        About, and Contact.
+        Head back to the shop, or message the studio if you were looking for a
+        piece.
       </p>
       <Link
         href="/"

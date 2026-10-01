@@ -7,19 +7,11 @@ import { lineProduct, useCart } from "@/components/cart-provider";
 import { formatZar } from "@/lib/site";
 
 export default function CartPage() {
-  const { lines, setQty, removeItem, subtotal, itemCount, openDrawer, ready } =
-    useCart();
+  const { lines, setQty, removeItem, subtotal, itemCount, ready } = useCart();
 
   return (
     <div className="mx-auto max-w-4xl px-5 py-8">
-      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand">
-        Demo bag
-      </p>
-      <h1 className="mt-2 font-display text-3xl text-ink">Your bag</h1>
-      <p className="mt-2 max-w-2xl text-sm leading-6 text-muted">
-        Qty update and remove work in this browser. Checkout is a proposal demo
-        and does not process payment.
-      </p>
+      <h1 className="font-display text-3xl text-ink">Your bag</h1>
 
       {!ready ? (
         <p className="mt-6 text-sm text-muted">Loading bag…</p>
@@ -91,18 +83,17 @@ export default function CartPage() {
               <p className="font-display text-3xl">{formatZar(subtotal)}</p>
             </div>
             <div className="flex flex-col gap-2 sm:flex-row">
-              <button
-                type="button"
-                onClick={openDrawer}
+              <Link
+                href="/shop"
                 className="inline-flex min-h-10 items-center justify-center rounded-full border border-white/30 px-5 text-sm font-semibold"
               >
-                Open drawer
-              </button>
+                Continue shopping
+              </Link>
               <Link
                 href="/checkout"
                 className="inline-flex min-h-10 items-center justify-center rounded-full bg-white px-5 text-sm font-semibold text-brand"
               >
-                Demo checkout
+                Checkout
               </Link>
             </div>
           </div>

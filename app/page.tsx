@@ -54,8 +54,8 @@ export default function HomePage() {
               {site.greeting}
             </h1>
             <p className="mt-3 max-w-md text-sm leading-6 text-muted">
-              Compression and shapewear for every defined curve. Calmer shop,
-              real photos, a bag you can use on a phone.
+              Compression and shapewear for every defined curve, from a Salt
+              Rock studio.
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
               <Link
@@ -143,7 +143,6 @@ export default function HomePage() {
           </div>
           <p className="mt-4 text-xs leading-5 text-brand-mist">
             Recovery-care products, not medical treatment. Follow your surgeon.
-            This proposal does not make clinical promises.
           </p>
         </div>
       </section>
@@ -153,8 +152,8 @@ export default function HomePage() {
           <div>
             <h2 className="font-display text-2xl">Ready when you are, Baddie.</h2>
             <p className="mt-1 max-w-xl text-sm leading-6 text-lavender">
-              Open a product, add it to the demo bag. Cards and courier rates
-              land with the paid rebuild.
+              Find your piece, then message the studio if you want a hand with
+              size.
             </p>
           </div>
           <Link
