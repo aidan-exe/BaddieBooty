@@ -32,6 +32,20 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
   applicationName: "Baddie Booty Proposal",
   authors: [{ name: site.designer }],
+  icons: {
+    icon: [
+      { url: "/brand/favicon.ico", sizes: "any" },
+      { url: "/brand/tab-icon.png", type: "image/png", sizes: "192x192" },
+      { url: "/brand/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      {
+        url: "/brand/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
+    ],
+  },
   openGraph: {
     title: "Baddie Booty proposal concept",
     description:
