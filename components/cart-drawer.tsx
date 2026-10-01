@@ -40,8 +40,7 @@ export function CartDrawer() {
         <div className="flex-1 overflow-y-auto px-5 py-4">
           {lines.length === 0 ? (
             <p className="text-sm leading-6 text-muted">
-              Nothing in the demo bag yet. Add a piece from the shop. This cart
-              lives in your browser only.
+              Your bag is empty. Add a piece from the shop.
             </p>
           ) : (
             <ul className="space-y-4">
@@ -106,8 +105,7 @@ export function CartDrawer() {
             </span>
           </div>
           <p className="mt-2 text-xs leading-5 text-muted">
-            Proposal demo. No payment is processed. Courier rates land with a
-            paid rebuild.
+            Shipping is confirmed with the studio.
           </p>
           <div className="mt-4 flex flex-col gap-2">
             <Link
@@ -115,7 +113,7 @@ export function CartDrawer() {
               onClick={closeDrawer}
               className="inline-flex min-h-10 items-center justify-center rounded-full bg-brand px-5 text-sm font-semibold text-white"
             >
-              Demo checkout
+              Checkout
             </Link>
             <Link
               href="/cart"

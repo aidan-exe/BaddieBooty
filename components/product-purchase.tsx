@@ -51,10 +51,6 @@ export function ProductPurchase({ product }: { product: Product }) {
           Add {qty} to bag
         </button>
       </div>
-      <p className="text-xs leading-5 text-muted">
-        Proposal demo bag, this browser only. Checkout does not process
-        payment.
-      </p>
     </div>
   );
 }

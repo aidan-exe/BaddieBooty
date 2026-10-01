@@ -3,7 +3,6 @@ import { Poppins, Public_Sans } from "next/font/google";
 import { CartDrawer } from "@/components/cart-drawer";
 import { CartProvider } from "@/components/cart-provider";
 import { MobileDock } from "@/components/mobile-dock";
-import { ProposalBanner } from "@/components/proposal-banner";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { site } from "@/lib/site";
@@ -24,14 +23,14 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "Baddie Booty proposal concept",
+    default: "Baddie Booty",
     template: "%s · Baddie Booty",
   },
   description:
-    "A proposal concept website by Aidan for Baddie Booty: post-op compression and shapewear from Salt Rock, KwaZulu-Natal. Not the live store.",
+    "Post-op compression and shapewear from Baddie Booty in Salt Rock, KwaZulu-Natal.",
   robots: { index: false, follow: false },
-  applicationName: "Baddie Booty Proposal",
-  authors: [{ name: site.designer }],
+  applicationName: "Baddie Booty",
+  authors: [{ name: site.name }],
   icons: {
     icon: [
       { url: "/brand/favicon.ico", sizes: "any" },
@@ -47,9 +46,9 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Baddie Booty proposal concept",
+    title: "Baddie Booty",
     description:
-      "A calmer Baddie Booty shop experience: recovery care, clearer UX, demo bag only.",
+      "Compression, fajas, bras, boards, and pillows for recovery, from Salt Rock.",
     locale: "en_ZA",
     type: "website",
   },
@@ -69,7 +68,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           >
             Skip to content
           </a>
-          <ProposalBanner />
           <SiteHeader />
           <main id="content" className="flex-1">
             {children}

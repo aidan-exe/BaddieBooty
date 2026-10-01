@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Demo checkout",
-  description:
-    "Proposal demo checkout for Baddie Booty. Does not process payment.",
+  title: "Checkout",
+  description: "Checkout at Baddie Booty. This form does not charge a card.",
 };
 
 export default function CheckoutLayout({

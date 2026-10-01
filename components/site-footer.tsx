@@ -39,7 +39,7 @@ export function SiteFooter() {
             </li>
             <li>
               <Link href="/cart" className="hover:text-lavender">
-                Demo bag
+                Bag
               </Link>
             </li>
           </ul>
@@ -60,36 +60,13 @@ export function SiteFooter() {
                 {site.email}
               </a>
             </li>
-            <li>
-              <a
-                className="hover:text-lavender"
-                href={site.liveStore}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Live store (current)
-              </a>
-            </li>
           </ul>
         </div>
       </div>
       <div className="border-t border-white/10 px-5 py-3">
-        <div className="mx-auto max-w-6xl space-y-1.5 text-xs leading-5 text-lavender">
-          <p>
-            This website is a <strong className="text-white">proposal concept</strong>{" "}
-            by {site.designer} for Baddie Booty (owner Tiara). It is{" "}
-            <strong className="text-white">not the live store</strong>. A
-            WooCommerce rebuild with secure checkout, payments, and South African
-            shipping is a{" "}
-            <strong className="text-white">paid engagement</strong>, not included
-            in this preview.
-          </p>
-          <p className="text-[11px] text-brand-mist">
-            Product photos, logo, and lifestyle images are Baddie Booty brand
-            assets sourced from baddiebooty.co.za for this client proposal only.
-            Catalogue names and ZAR prices follow the current shop.
-          </p>
-        </div>
+        <p className="mx-auto max-w-6xl text-[11px] text-brand-mist">
+          © 2026 Baddie Booty · {site.location}
+        </p>
       </div>
       <div className="border-t border-white/10 px-5 py-3">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3">

@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Proposal copy for Baddie Booty, a Salt Rock recovery care studio for compression and shapewear.",
+    "Baddie Booty is a Salt Rock studio for post-op compression and shapewear.",
 };
 
 export default function AboutPage() {
@@ -34,15 +34,10 @@ export default function AboutPage() {
           lot, so the wardrobe should feel like backup, not a lecture.
         </p>
         <p>
-          This about page is proposal copy written for a concept site. It keeps
-          the brand’s care, curves, and catalogue energy without repeating the
-          live store word for word, and without inventing clinical results.
-        </p>
-        <p>
           The pieces span post-surgery fajas, compression bras, abdominal
           boards, BBL pillows, bodysuits, and later stage waist trainers. Some
-          baddies are newly post-op. Some want daily shapewear. The shop should
-          make that difference obvious on a phone.
+          baddies are newly post-op. Some want daily shapewear. The shop makes
+          that difference obvious on a phone.
         </p>
       </div>
 
@@ -57,17 +52,10 @@ export default function AboutPage() {
       </section>
 
       <section className="mt-8 space-y-3">
-        <h2 className="font-display text-2xl">Why rebuild the site</h2>
+        <h2 className="font-display text-2xl">Talk to the studio</h2>
         <p className="text-sm leading-6 text-muted">
-          The live store already has the heart. A paid engagement would carry
-          that catalogue into a calmer Next.js shop: exact brand purple, real
-          photography, product pages, a working bag, and South African shipping.
-          That replaces the current WooCommerce friction without losing the
-          Baddie voice.
-        </p>
-        <p className="text-sm leading-6 text-muted">
-          This preview stops before payments on purpose. Owner Tiara can walk
-          the pages, feel the tone, and decide what a rebuild should include.
+          Size, stage, and pairing questions go to Tiara. Call, WhatsApp, or
+          email {site.email}. The shop is here when you are ready to choose.
         </p>
       </section>
 
@@ -75,7 +63,7 @@ export default function AboutPage() {
         href="/contact"
         className="mt-6 inline-flex min-h-10 items-center rounded-full bg-brand px-5 text-sm font-semibold text-white"
       >
-        Talk through a rebuild
+        Contact the studio
       </Link>
     </div>
   );

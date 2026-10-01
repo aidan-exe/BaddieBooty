@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Baddie Booty in Salt Rock, KwaZulu-Natal. Phone, email, and a concept enquiry form.",
+    "Contact Baddie Booty in Salt Rock, KwaZulu-Natal. Phone, email, and WhatsApp.",
 };
 
 export default async function ContactPage({
@@ -28,8 +28,7 @@ export default async function ContactPage({
         Come through, Baddie.
       </h1>
       <p className="mt-2 max-w-2xl text-sm leading-6 text-muted">
-        Call, WhatsApp, or email the studio. The form on this page is a
-        client-side UI only. It does not hit a server.
+        Call, WhatsApp, or email the studio. We are in Salt Rock.
       </p>
 
       <div className="mt-6 grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">

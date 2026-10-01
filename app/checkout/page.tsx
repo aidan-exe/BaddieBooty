@@ -22,14 +22,10 @@ export default function CheckoutPage() {
   if (done) {
     return (
       <div className="mx-auto max-w-xl px-5 py-10 text-center">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand">
-          Proposal demo
-        </p>
-        <h1 className="mt-2 font-display text-3xl">Nothing was charged, {name}.</h1>
+        <h1 className="font-display text-3xl">Nothing was charged, {name}.</h1>
         <p className="mt-3 text-sm leading-6 text-muted">
-          This checkout is a walkthrough only. No payment, no order, no courier
-          booking. Message Tiara on {site.phoneDisplay} to order on the live
-          store.
+          Call or WhatsApp Tiara on {site.phoneDisplay} and she will confirm
+          delivery with you.
         </p>
         <Link
           href="/shop"
@@ -53,7 +49,7 @@ export default function CheckoutPage() {
     return (
       <div className="mx-auto max-w-xl px-5 py-10 text-center">
         <h1 className="font-display text-3xl">Bag is empty</h1>
-        <p className="mt-2 text-sm text-muted">Add a piece before the demo checkout.</p>
+        <p className="mt-2 text-sm text-muted">Add a piece before checkout.</p>
         <Link
           href="/shop"
           className="mt-5 inline-flex min-h-10 items-center rounded-full bg-brand px-5 text-sm font-semibold text-white"
@@ -67,14 +63,9 @@ export default function CheckoutPage() {
   return (
     <div className="mx-auto grid max-w-6xl gap-6 px-5 py-8 lg:grid-cols-[1fr_0.9fr]">
       <div>
-        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand">
-          Proposal demo. No payment.
-        </p>
-        <h1 className="mt-2 font-display text-3xl">Checkout walkthrough</h1>
+        <h1 className="font-display text-3xl">Checkout</h1>
         <p className="mt-2 text-sm leading-6 text-muted">
-          Looks like a checkout. Submitting this form does not take a card, EFT,
-          or SnapScan. Use it to feel the path; order on the live store or
-          WhatsApp Tiara.
+          Tell us where to reach you. Placing this order does not charge a card.
         </p>
         <form onSubmit={onSubmit} className="mt-5 space-y-3">
           <label className="block space-y-1.5 text-sm font-medium">
@@ -109,7 +100,7 @@ export default function CheckoutPage() {
             type="submit"
             className="inline-flex min-h-10 w-full items-center justify-center rounded-full bg-brand text-sm font-semibold text-white sm:w-auto sm:px-8"
           >
-            Place demo order
+            Place order
           </button>
         </form>
       </div>
@@ -152,8 +143,7 @@ export default function CheckoutPage() {
           </span>
         </div>
         <p className="mt-3 text-xs leading-5 text-muted">
-          Shipping is not calculated here. SA courier rates come with the paid
-          rebuild.
+          Shipping is confirmed with the studio before anything is sent.
         </p>
       </aside>
     </div>

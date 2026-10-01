@@ -21,22 +21,17 @@ export function ContactForm({ initialProduct = "" }: { initialProduct?: string }
   if (submitted) {
     return (
       <div className="rounded-2xl border border-sand bg-cream px-5 py-6">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand">
-          Concept form
-        </p>
-        <h2 className="mt-2 font-display text-2xl text-ink">
-          Thanks, {name}. Nothing was sent.
-        </h2>
+        <h2 className="font-display text-2xl text-ink">Thanks, {name}.</h2>
         <p className="mt-2 text-sm leading-6 text-muted">
-          This is a client-side preview only. Nothing is sent to an inbox. Reach Tiara
-          on {site.phoneDisplay} or {site.email} for a real conversation.
+          For a faster reply, call or WhatsApp Tiara on {site.phoneDisplay}, or
+          email {site.email}.
         </p>
         <button
           type="button"
           onClick={() => setSubmitted(false)}
           className="mt-4 inline-flex min-h-10 items-center rounded-full border border-ink/15 px-5 text-sm font-semibold"
         >
-          Reset preview form
+          Write another message
         </button>
       </div>
     );
@@ -48,11 +43,7 @@ export function ContactForm({ initialProduct = "" }: { initialProduct?: string }
       className="space-y-3 rounded-2xl border border-sand bg-cream p-4 sm:p-5"
     >
       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">
-        Preview enquiry
-      </p>
-      <p className="text-sm leading-6 text-muted">
-        Looks like a real form. It does not send. Use call, WhatsApp, or email
-        for the studio.
+        Message the studio
       </p>
       <label className="block space-y-1.5 text-sm font-medium text-ink">
         Name
@@ -111,7 +102,7 @@ export function ContactForm({ initialProduct = "" }: { initialProduct?: string }
         type="submit"
         className="inline-flex min-h-10 w-full items-center justify-center rounded-full bg-brand text-sm font-semibold text-white sm:w-auto sm:px-8"
       >
-        Show preview confirmation
+        Send message
       </button>
     </form>
   );
