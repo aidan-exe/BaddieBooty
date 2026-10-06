@@ -2,15 +2,15 @@
 
 import Link from "next/link";
 import { ProductCard, productGridClass } from "@/components/product-card";
-import { categories, products, type CategoryId } from "@/lib/products";
+import { categories, products } from "@/lib/products";
 import { useMemo } from "react";
 
-export function ShopCatalog({ category }: { category: CategoryId }) {
+export function ShopCatalog({ category }: { category: string }) {
   const visible = useMemo(
     () =>
       category === "all"
         ? products
-        : products.filter((product) => product.category === category),
+        : products.filter((product) => product.categories.includes(category)),
     [category],
   );
 

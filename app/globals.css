@@ -57,3 +57,52 @@ body {
   background: var(--brand);
   color: #fff;
 }
+
+.product-copy p,
+.product-copy ul,
+.product-copy ol,
+.product-copy h2,
+.product-copy h3,
+.product-copy h4 {
+  margin-top: 0.75rem;
+}
+
+.product-copy > :first-child {
+  margin-top: 0;
+}
+
+.product-copy ul,
+.product-copy ol {
+  padding-left: 1.25rem;
+}
+
+.product-copy ul {
+  list-style: disc;
+}
+
+.product-copy ol {
+  list-style: decimal;
+}
+
+.product-copy li + li {
+  margin-top: 0.25rem;
+}
+
+.product-copy h2,
+.product-copy h3,
+.product-copy h4,
+.product-copy strong {
+  color: var(--ink);
+}
+
+.product-copy a {
+  color: var(--brand);
+  font-weight: 600;
+}
+
+.product-copy img {
+  margin-top: 1rem;
+  height: auto;
+  max-width: 100%;
+  border-radius: 1rem;
+}

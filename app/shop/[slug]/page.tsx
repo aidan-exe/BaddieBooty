@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ProductCard, productGridClass } from "@/components/product-card";
+import { ProductCopy } from "@/components/product-copy";
+import { ProductGallery } from "@/components/product-gallery";
 import { ProductPurchase } from "@/components/product-purchase";
 import {
   categoryLabel,
   getProduct,
+  plainText,
   products,
   relatedProducts,
 } from "@/lib/products";
-import { formatZar, site } from "@/lib/site";
+import { site } from "@/lib/site";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -26,9 +28,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const product = getProduct(slug);
   if (!product) return { title: "Piece not found" };
+  const description =
+    plainText(product.shortDescription) || plainText(product.description) || product.name;
   return {
     title: product.name,
-    description: product.blurb,
+    description: description.slice(0, 160),
   };
 }
 
@@ -44,40 +48,42 @@ export default async function ProductPage({ params }: PageProps) {
         <Link href="/shop" className="font-semibold text-brand hover:underline">
           Shop
         </Link>
+        {product.category ? (
+          <>
+            <span className="px-2">/</span>
+            <Link
+              href={`/shop?category=${product.category}`}
+              className="font-semibold text-brand hover:underline"
+            >
+              {categoryLabel(product.category)}
+            </Link>
+          </>
+        ) : null}
         <span className="px-2">/</span>
         <span>{product.name}</span>
       </nav>
 
       <div className="mt-4 grid items-start gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="relative h-[22rem] overflow-hidden rounded-2xl bg-brand-tint lg:sticky lg:top-16 lg:h-[28rem]">
-          <Image
-            src={product.image}
-            alt={product.imageAlt}
-            fill
-            priority
-            sizes="(max-width: 1024px) 100vw, 40vw"
-            className="object-cover object-top"
-          />
+        <div className="lg:sticky lg:top-16">
+          <ProductGallery images={product.images} name={product.name} />
         </div>
         <div>
           <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-bright">
-            {categoryLabel(product.category)} · {product.stage}
+            {product.categories.map((slug, index) => (
+              <span key={slug}>
+                {index > 0 ? <span className="px-1.5 text-sand">·</span> : null}
+                <Link href={`/shop?category=${slug}`} className="hover:underline">
+                  {categoryLabel(slug)}
+                </Link>
+              </span>
+            ))}
           </p>
           <h1 className="mt-1.5 font-display text-3xl leading-tight text-ink">
             {product.name}
           </h1>
-          <p className="mt-2 font-display text-3xl text-brand">
-            {formatZar(product.price)}
-          </p>
-          <p className="mt-3 text-sm leading-6 text-muted">{product.detail}</p>
-          <ul className="mt-4 space-y-1.5 text-sm leading-5 text-ink">
-            {product.wearNotes.map((note) => (
-              <li key={note} className="flex gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
-                <span>{note}</span>
-              </li>
-            ))}
-          </ul>
+          {product.shortDescription ? (
+            <ProductCopy html={product.shortDescription} className="mt-3 text-ink" />
+          ) : null}
           <div className="mt-5 rounded-2xl border border-sand bg-cream p-4">
             <ProductPurchase product={product} />
           </div>
@@ -96,6 +102,13 @@ export default async function ProductPage({ params }: PageProps) {
           </p>
         </div>
       </div>
+
+      {product.description ? (
+        <section className="mt-10 max-w-3xl">
+          <h2 className="font-display text-2xl text-ink">Description</h2>
+          <ProductCopy html={product.description} className="mt-3" />
+        </section>
+      ) : null}
 
       <section className="mt-10">
         <h2 className="font-display text-2xl">You may also like</h2>

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useCart, lineProduct } from "@/components/cart-provider";
+import { lineUnitPrice } from "@/lib/products";
 import { formatZar } from "@/lib/site";
 
 export function CartDrawer() {
@@ -73,9 +74,9 @@ export function CartDrawer() {
                       >
                         {product.name}
                       </Link>
-                      <p className="mt-1 text-xs text-muted">Size {line.size}</p>
+                      <p className="mt-1 text-xs text-muted">{line.size}</p>
                       <p className="mt-1 text-sm font-semibold text-brand">
-                        {formatZar(product.price)}
+                        {formatZar(lineUnitPrice(product, line.size))}
                       </p>
                       <div className="mt-2 flex items-center gap-2">
                         <QtyControl

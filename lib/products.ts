@@ -1,197 +1,92 @@
-export const categories = [
-  { id: "all", label: "All" },
-  { id: "compression", label: "Compression" },
-  { id: "bras", label: "Bras" },
-  { id: "boards-pillows", label: "Boards & Pillows" },
-  { id: "bodysuits", label: "Bodysuits" },
-] as const;
+import catalogJson from "@/data/catalog.json";
 
-export type CategoryId = (typeof categories)[number]["id"];
-
-export type Product = {
-  slug: string;
-  name: string;
-  price: number;
-  category: Exclude<CategoryId, "all">;
-  bestseller: boolean;
-  blurb: string;
-  detail: string;
-  image: string;
-  imageAlt: string;
-  stage: string;
-  sizes: string[];
-  sourceUrl: string;
-  wearNotes: string[];
+export type CatalogImage = {
+  src: string;
+  alt: string;
+  fit: "cover" | "contain";
 };
 
-const garmentSizes = ["S", "M", "L", "XL", "2XL", "3XL"];
+export type CatalogAttribute = {
+  name: string;
+  options: string[];
+};
 
-export const products: Product[] = [
-  {
-    slug: "post-surgery-liposuction-ab-board",
-    name: "Post Surgery Liposuction AB Board",
-    price: 600,
-    category: "boards-pillows",
-    bestseller: true,
-    blurb: "A firm abdominal board for structured rest while you recover.",
-    detail:
-      "Designed to sit smoothly under a faja. Choose with Tiara if you are pairing it with a stage 1 or stage 2 garment.",
-    image: "/products/ab-board.jpg",
-    imageAlt: "Post Surgery Liposuction AB Board from Baddie Booty",
-    stage: "Accessory",
-    sizes: ["One size"],
-    sourceUrl:
-      "https://baddiebooty.co.za/product/post-surgery-liposuction-ab-board/",
-    wearNotes: [
-      "Wear under a faja as your practitioner advises.",
-      "One-size board. Message the studio if you want pairing help.",
-    ],
-  },
-  {
-    slug: "post-surgical-compression-bra",
-    name: "Post-Surgical Compression Bra & Posture Corrector",
-    price: 699,
-    category: "bras",
-    bestseller: true,
-    blurb: "Soft, steady support across the chest and upper back.",
-    detail:
-      "A recovery-care bra with a posture-minded cut and front-closure feel. Confirm the stage with your care team. This is not a clinical device.",
-    image: "/products/compression-bra.jpg",
-    imageAlt: "Adjustable front-closure compression vest by Baddie Booty",
-    stage: "Stages 1 and 2",
-    sizes: garmentSizes,
-    sourceUrl:
-      "https://baddiebooty.co.za/product/baddie-booty-post-surgical-compression-bra-posture-corrector/",
-    wearNotes: [
-      "Front-closure style for easier on-and-off during early days.",
-      "Ask Tiara if you are between sizes or wearing drains.",
-    ],
-  },
-  {
-    slug: "butt-lift-support-pillow",
-    name: "Butt Lift Support Pillow",
-    price: 950,
-    category: "boards-pillows",
-    bestseller: true,
-    blurb: "A shaped cushion for sitting more comfortably after a BBL.",
-    detail:
-      "Meant for how you sit at home, not a medical device. Follow your surgeon’s sitting guidance first.",
-    image: "/products/support-pillow.jpg",
-    imageAlt: "Butt Lift Support Pillow from Baddie Booty",
-    stage: "Accessory",
-    sizes: ["One size"],
-    sourceUrl: "https://baddiebooty.co.za/product/butt-lift-support-pillow/",
-    wearNotes: [
-      "Use as a sitting cushion, not as treatment.",
-      "Follow your surgeon’s sitting and travel rules first.",
-    ],
-  },
-  {
-    slug: "full-body-post-surgery-seamless-faja",
-    name: "Full Body Post-Surgery Seamless Faja",
-    price: 800,
-    category: "compression",
-    bestseller: true,
-    blurb: "Seamless full-body compression that follows every defined curve.",
-    detail:
-      "A studio staple for post-op days: seamless full-body compression that follows every defined curve.",
-    image: "/products/seamless-faja.png",
-    imageAlt: "Full Body Post-Surgery Seamless Faja",
-    stage: "Stage 1",
-    sizes: garmentSizes,
-    sourceUrl:
-      "https://baddiebooty.co.za/product/stage-1-full-body-post-surgery-bodysuit/",
-    wearNotes: [
-      "Seamless full-body hold for early recovery wardrobes.",
-      "Sizes run S to 3XL. WhatsApp if you need a read.",
-    ],
-  },
-  {
-    slug: "post-surgery-abdominal-compression-board",
-    name: "Post Surgery Abdominal Compression Board",
-    price: 600,
-    category: "boards-pillows",
-    bestseller: false,
-    blurb: "A second board option for abdominal compression and rest.",
-    detail:
-      "Pair with a faja for a smoother front while you rest.",
-    image: "/products/abdominal-board.png",
-    imageAlt: "Post Surgery Abdominal Compression Board",
-    stage: "Accessory",
-    sizes: ["One size"],
-    sourceUrl:
-      "https://baddiebooty.co.za/product/post-surgery-abdominal-compression-board/",
-    wearNotes: [
-      "Slide under a garment for a flatter front while you rest.",
-      "Not a substitute for surgical aftercare.",
-    ],
-  },
-  {
-    slug: "extreme-tummy-control-girdle-bodysuit",
-    name: "Extreme Tummy Control Girdle Corset Bodysuit",
-    price: 800,
-    category: "bodysuits",
-    bestseller: true,
-    blurb: "A sculpting bodysuit with firm tummy control for later-stage wear.",
-    detail:
-      "Closer to daily shapewear energy, still recovery-aware. Not a substitute for clinical advice.",
-    image: "/products/tummy-bodysuit.jpg",
-    imageAlt: "Extreme Tummy Control Girdle Corset Bodysuit",
-    stage: "Stages 2 and 3",
-    sizes: garmentSizes,
-    sourceUrl:
-      "https://baddiebooty.co.za/product/extreme-tummy-control-girdle-corset-bodysuit/",
-    wearNotes: [
-      "Firm tummy control for later-stage or daily shapewear days.",
-      "If you are newly post-op, ask before jumping to this hold.",
-    ],
-  },
-  {
-    slug: "levanta-cola-compression-faja",
-    name: "Levanta Cola Compression Faja (Mid-Thigh)",
-    price: 750,
-    category: "compression",
-    bestseller: false,
-    blurb: "Mid-thigh faja with a lift-minded cut through the hips.",
-    detail:
-      "Mid-thigh length with a levanta-cola cut through the hips.",
-    image: "/products/levanta-cola.jpg",
-    imageAlt: "Levanta Cola Compression Faja (Mid-Thigh)",
-    stage: "Stage 2",
-    sizes: garmentSizes,
-    sourceUrl:
-      "https://baddiebooty.co.za/product/baddie-booty-levanta-cola-compression-faja-mid-thigh/",
-    wearNotes: [
-      "Mid-thigh length with a lift-minded hip cut.",
-      "Message the studio for colour and size confirmation.",
-    ],
-  },
-  {
-    slug: "high-compression-stage-3-waist-trainer",
-    name: "High Compression Stage 3 Waist Trainer",
-    price: 1190,
-    category: "compression",
-    bestseller: true,
-    blurb: "Stage 3 waist training with a cinched, hourglass-minded hold.",
-    detail:
-      "Intended for later recovery stages when your practitioner says you are ready. Confirm staging with your care team.",
-    image: "/products/waist-trainer.jpg",
-    imageAlt: "High Compression Stage 3 Faja Waist Trainer",
-    stage: "Stage 3",
-    sizes: garmentSizes,
-    sourceUrl:
-      "https://baddiebooty.co.za/product/high-compression-stage-3-faja-waist-trainer/",
-    wearNotes: [
-      "Later-stage waist trainer, not first-week wear.",
-      "Confirm with your practitioner before sizing down.",
-    ],
-  },
+export type CatalogVariant = {
+  id: number;
+  attributes: Record<string, string>;
+  label: string;
+  price: number;
+  regularPrice: number;
+  salePrice: number | null;
+  onSale: boolean;
+  inStock: boolean;
+  purchasable: boolean;
+  stockText: string;
+  sku: string;
+};
+
+export type CatalogCategory = {
+  id: number;
+  slug: string;
+  name: string;
+  description: string;
+  parent: number;
+  count: number;
+};
+
+export type Product = {
+  id: number;
+  slug: string;
+  name: string;
+  sourceUrl: string;
+  price: number;
+  regularPrice: number;
+  salePrice: number | null;
+  maxPrice: number;
+  onSale: boolean;
+  inStock: boolean;
+  purchasable: boolean;
+  stockText: string;
+  sku: string;
+  bestseller: boolean;
+  category: string;
+  categories: string[];
+  shortDescription: string;
+  description: string;
+  images: CatalogImage[];
+  image: string;
+  imageAlt: string;
+  attributes: CatalogAttribute[];
+  variants: CatalogVariant[];
+  sizes: string[];
+};
+
+export type Catalog = {
+  source: string;
+  syncedAt: string;
+  liveProductCount: number;
+  liveCategoryCount: number;
+  categories: CatalogCategory[];
+  products: Product[];
+  unmirrored: { product: string; url?: string; reason: string }[];
+};
+
+export const catalog = catalogJson as Catalog;
+
+export const categories = [
+  { id: "all", label: "All", description: "" },
+  ...catalog.categories.map((category) => ({
+    id: category.slug,
+    label: category.name,
+    description: category.description,
+  })),
 ];
 
-export function readCategory(value: string | null | undefined): CategoryId {
-  return categories.some((item) => item.id === value)
-    ? (value as CategoryId)
-    : "all";
+export const products: Product[] = catalog.products;
+
+export function readCategory(value: string | null | undefined) {
+  if (!value || value === "all") return "all";
+  return categories.some((item) => item.id === value) ? value : "all";
 }
 
 export function bestsellers() {
@@ -200,6 +95,14 @@ export function bestsellers() {
 
 export function getProduct(slug: string) {
   return products.find((product) => product.slug === slug);
+}
+
+export function categoryLabel(slug: string) {
+  return categories.find((category) => category.id === slug)?.label ?? slug;
+}
+
+export function categoryDescription(slug: string) {
+  return categories.find((category) => category.id === slug)?.description ?? "";
 }
 
 export function relatedProducts(slug: string, limit = 3) {
@@ -214,15 +117,35 @@ export function relatedProducts(slug: string, limit = 3) {
   return [...same, ...rest].slice(0, limit);
 }
 
-export function categoryLabel(category: Product["category"]) {
-  switch (category) {
-    case "compression":
-      return "Compression";
-    case "bras":
-      return "Bras";
-    case "boards-pillows":
-      return "Boards & Pillows";
-    case "bodysuits":
-      return "Bodysuits";
-  }
+export function defaultVariant(product: Product) {
+  return (
+    product.variants.find((variant) => variant.purchasable && variant.inStock) ??
+    product.variants[0]
+  );
+}
+
+export function variantFor(product: Product, selected: Record<string, string>) {
+  if (product.attributes.length === 0) return product.variants[0];
+  return product.variants.find((variant) =>
+    product.attributes.every(
+      (attribute) => variant.attributes[attribute.name] === selected[attribute.name],
+    ),
+  );
+}
+
+export function lineUnitPrice(product: Product, size: string) {
+  return product.variants.find((variant) => variant.label === size)?.price ?? product.price;
+}
+
+export function plainText(html: string) {
+  return html
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&#(\d+);/g, (_, num: string) => String.fromCodePoint(Number(num)))
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#8217;|&rsquo;/g, "’")
+    .replace(/&#8211;|&ndash;/g, "–")
+    .replace(/\s+/g, " ")
+    .trim();
 }

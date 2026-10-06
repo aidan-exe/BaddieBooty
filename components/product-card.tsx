@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { ProductPhoto } from "@/components/product-photo";
+import { ProductPrice } from "@/components/product-price";
 import { QuickAdd } from "@/components/quick-add";
 import type { Product } from "@/lib/products";
 import { categoryLabel } from "@/lib/products";
-import { formatZar } from "@/lib/site";
 
 export const productGridClass =
   "grid grid-cols-2 gap-3 lg:grid-cols-3 xl:grid-cols-4";
@@ -32,9 +32,11 @@ export function ProductCard({
             Best seller
           </p>
         ) : null}
-        <p className="absolute bottom-2 left-2 rounded-full bg-brand px-2 py-0.5 text-[10px] font-semibold text-white">
-          {product.stage}
-        </p>
+        {!product.inStock ? (
+          <p className="absolute bottom-2 left-2 rounded-full bg-ink/80 px-2 py-0.5 text-[10px] font-semibold text-white">
+            Out of stock
+          </p>
+        ) : null}
       </Link>
       <div className="flex flex-1 flex-col gap-1.5 p-3">
         <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-brand-bright">
@@ -46,7 +48,7 @@ export function ProductCard({
           </Link>
         </h3>
         <p className="mt-auto pt-1 font-display text-lg text-brand">
-          {formatZar(product.price)}
+          <ProductPrice product={product} />
         </p>
         <div className="flex gap-1.5">
           <Link
