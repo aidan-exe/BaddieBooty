@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { lineProduct, useCart } from "@/components/cart-provider";
+import { lineUnitPrice } from "@/lib/products";
 import { formatZar, site } from "@/lib/site";
 
 export default function CheckoutPage() {
@@ -130,7 +131,7 @@ export default function CheckoutPage() {
                   </p>
                 </div>
                 <p className="text-sm font-semibold text-brand">
-                  {formatZar(product.price * line.qty)}
+                  {formatZar(lineUnitPrice(product, line.size) * line.qty)}
                 </p>
               </li>
             );

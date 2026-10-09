@@ -1,0 +1,3217 @@
+{
+  "source": "https://baddiebooty.co.za",
+  "syncedAt": "2026-10-06T08:42:26.492Z",
+  "liveProductCount": 23,
+  "liveCategoryCount": 6,
+  "categories": [
+    {
+      "id": 21,
+      "slug": "bbl-accessories",
+      "name": "BBL Accessories",
+      "description": "",
+      "parent": 0,
+      "count": 7
+    },
+    {
+      "id": 16,
+      "slug": "bbl-post-op-recovery",
+      "name": "BBL Post- op recovery",
+      "description": "",
+      "parent": 0,
+      "count": 13
+    },
+    {
+      "id": 20,
+      "slug": "best-sellers",
+      "name": "Best Sellers",
+      "description": "",
+      "parent": 0,
+      "count": 20
+    },
+    {
+      "id": 17,
+      "slug": "daily-shapewear",
+      "name": "Daily Shapewear",
+      "description": "",
+      "parent": 0,
+      "count": 8
+    },
+    {
+      "id": 53,
+      "slug": "raina",
+      "name": "Raina",
+      "description": "",
+      "parent": 0,
+      "count": 1
+    },
+    {
+      "id": 54,
+      "slug": "raina-blended-wigs-and-luxury-scents",
+      "name": "Raina- Hair & Scents",
+      "description": "Elevate your everyday look with seamless blended wigs that offer natural movement, realistic volume, and zero hassle, paired with an exclusive collection of luxury scents.",
+      "parent": 53,
+      "count": 1
+    }
+  ],
+  "products": [
+    {
+      "id": 1339,
+      "slug": "ultrasnatch-hourglass-bodysuit",
+      "name": "UltraSnatch Hourglass Bodysuit",
+      "sourceUrl": "https://baddiebooty.co.za/product/ultrasnatch-hourglass-bodysuit/",
+      "price": 800,
+      "regularPrice": 800,
+      "salePrice": null,
+      "maxPrice": 800,
+      "onSale": false,
+      "inStock": true,
+      "purchasable": true,
+      "stockText": "1 in stock (can be backordered)",
+      "sku": "",
+      "bestseller": true,
+      "category": "bbl-post-op-recovery",
+      "categories": [
+        "bbl-post-op-recovery",
+        "best-sellers",
+        "daily-shapewear"
+      ],
+      "shortDescription": "<p>The UltraSnatch Hourglass Bodysuit is your go-to shapewear for a sleek, confident look. Designed with firm compression and adjustable front closures, it cinches the waist while smoothing the midsection for a beautifully defined hourglass shape. Comfortable enough for daily wear and discreet under clothing, it’s the perfect blend of support, style, and confidence.</p>",
+      "description": "<p>Meet your new curve-defining essential. The UltraSnatch Hourglass Bodysuit is designed to sculpt your waist, smooth your midsection, and enhance your natural silhouette with confident support. Featuring a firm-control waist trainer panel with adjustable hook-and-eye closures, this bodysuit helps create a beautifully snatched hourglass shape under any outfit.</p>\n<p>Crafted from breathable, stretch fabric, it hugs your body comfortably while maintaining flexibility for all-day wear. The supportive shoulder straps help improve posture and provide gentle lift, while the lace-trim leg openings add a feminine, elegant finish. Whether you&#8217;re dressing up for a special occasion or looking for everyday smoothing, this bodysuit delivers sleek results you can see and feel.</p>\n<p><strong>Key Features:</strong></p>\n<ul>\n<li>\n<p>Strong waist-snatching compression</p>\n</li>\n<li>\n<p>Adjustable front hook-and-eye closure</p>\n</li>\n<li>\n<p>Smooth, breathable stretch material</p>\n</li>\n<li>\n<p>Supportive shoulder straps for added lift</p>\n</li>\n<li>\n<p>Feminine lace leg detailing</p>\n</li>\n<li>\n<p>Discreet under clothing</p>\n</li>\n<li>\n<p>Suitable for everyday wear or special events</p>\n</li>\n</ul>\n<p>Slip into UltraSnatch and step out with unstoppable confidence.</p>",
+      "images": [
+        {
+          "src": "/products/ultrasnatch-hourglass-bodysuit/01-02-IMG_3864.jpg",
+          "alt": "UltraSnatch Hourglass Bodysuit",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/ultrasnatch-hourglass-bodysuit/02-02-IMG_3862.jpg",
+          "alt": "UltraSnatch Hourglass Bodysuit",
+          "fit": "cover"
+        }
+      ],
+      "image": "/products/ultrasnatch-hourglass-bodysuit/01-02-IMG_3864.jpg",
+      "imageAlt": "UltraSnatch Hourglass Bodysuit",
+      "attributes": [
+        {
+          "name": "Black",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": -1,
+          "attributes": {
+            "Black": "S"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Unavailable",
+          "sku": "",
+          "label": "S"
+        },
+        {
+          "id": 1341,
+          "attributes": {
+            "Black": "M"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "Available on back-order",
+          "sku": "",
+          "label": "M"
+        },
+        {
+          "id": 1342,
+          "attributes": {
+            "Black": "L"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "1 in stock (can be backordered)",
+          "sku": "",
+          "label": "L"
+        },
+        {
+          "id": 1343,
+          "attributes": {
+            "Black": "XL"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "Available on back-order",
+          "sku": "",
+          "label": "XL"
+        },
+        {
+          "id": 1344,
+          "attributes": {
+            "Black": "2XL"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "1 in stock",
+          "sku": "",
+          "label": "2XL"
+        },
+        {
+          "id": 1345,
+          "attributes": {
+            "Black": "3XL"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "1 in stock (can be backordered)",
+          "sku": "",
+          "label": "3XL"
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ]
+    },
+    {
+      "id": 1312,
+      "slug": "baddie-booty-compression-bra",
+      "name": "Baddie Booty | Post-Surgical Compression Bra & Posture Corrector",
+      "sourceUrl": "https://baddiebooty.co.za/product/baddie-booty-compression-bra/",
+      "price": 699,
+      "regularPrice": 699,
+      "salePrice": null,
+      "maxPrice": 699,
+      "onSale": false,
+      "inStock": true,
+      "purchasable": true,
+      "stockText": "",
+      "sku": "",
+      "bestseller": true,
+      "category": "bbl-post-op-recovery",
+      "categories": [
+        "bbl-post-op-recovery",
+        "best-sellers",
+        "daily-shapewear"
+      ],
+      "shortDescription": "<p>Support your recovery with the <b>Baddie Booty compression bra</b>. This vest helps you heal faster and improves your posture instantly. It features an adjustable front closure and breathable fabric for all-day comfort. Get the medical-grade support you need today.</p>",
+      "description": "<p>Healing after surgery requires the right support. Fortunately, the <b>Baddie Booty compression bra</b> provides everything you need for a smooth recovery. This vest combines medical-grade compression with a stylish design.</p>\n<p><b>Maximum Support and Comfort</b> First, the front-hook closure makes this bra very easy to put on. You can adjust the hooks to find your perfect fit as swelling decreases. Additionally, the wireless design prevents irritation on sensitive skin. Because the fabric is breathable, you will stay cool and dry throughout the day.</p>\n<p><b>Improve Your Posture Instantly</b> Besides recovery, this vest also works as an excellent posture corrector. The back features reinforced X-straps. These straps gently pull your shoulders back to align your spine. Consequently, you will experience less back pain and a more confident silhouette.</p>\n<p><b>Why Baddie Booty is the Best Choice:</b></p>\n<ul>\n<li>\n<p><b>Surgery Recovery:</b> Perfect for breast augmentation, lifts, or reductions.</p>\n</li>\n<li>\n<p><b>Easy Adjustments:</b> Use the three rows of hooks to customize your compression.</p>\n</li>\n<li>\n<p><b>No Digging:</b> The wide shoulder straps distribute weight evenly for better comfort.</p>\n</li>\n<li>\n<p><b>Invisible Look:</b> Wear it under your clothes for a seamless, &#8220;snatched&#8221; appearance.</p>\n</li>\n</ul>\n<p>In conclusion, the Baddie Booty vest is an essential tool for your health. Whether you are at home or back at work, this bra supports your body every step of the way.</p>\n<div>\n<div>\n</div>\n</div>",
+      "images": [
+        {
+          "src": "/products/baddie-booty-compression-bra/01-01-fcccfd8b-d7e3-416e-9dd5-b98e0a9535d5.jpg",
+          "alt": "Baddie Booty compression bra for post-surgical recovery and daily posture correction.",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/baddie-booty-compression-bra/02-01-PHOTO-2024-05-13-09-06-51.jpg",
+          "alt": "Baddie Booty compression bra post-surgical posture corrector",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/baddie-booty-compression-bra/03-01-21d22d1c-eb8b-46fd-8fe0-8af304cc0e2e.jpg",
+          "alt": "Close-up of the adjustable front hook-and-eye closure on a Baddie Booty compression bra.",
+          "fit": "cover"
+        }
+      ],
+      "image": "/products/baddie-booty-compression-bra/01-01-fcccfd8b-d7e3-416e-9dd5-b98e0a9535d5.jpg",
+      "imageAlt": "Baddie Booty compression bra for post-surgical recovery and daily posture correction.",
+      "attributes": [
+        {
+          "name": "Black",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 1313,
+          "attributes": {
+            "Black": "S"
+          },
+          "price": 699,
+          "regularPrice": 699,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "S"
+        },
+        {
+          "id": 1314,
+          "attributes": {
+            "Black": "M"
+          },
+          "price": 699,
+          "regularPrice": 699,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "M"
+        },
+        {
+          "id": 1315,
+          "attributes": {
+            "Black": "L"
+          },
+          "price": 699,
+          "regularPrice": 699,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "L"
+        },
+        {
+          "id": 1316,
+          "attributes": {
+            "Black": "XL"
+          },
+          "price": 699,
+          "regularPrice": 699,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "XL"
+        },
+        {
+          "id": 1317,
+          "attributes": {
+            "Black": "2XL"
+          },
+          "price": 699,
+          "regularPrice": 699,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "2XL"
+        },
+        {
+          "id": 1318,
+          "attributes": {
+            "Black": "3XL"
+          },
+          "price": 699,
+          "regularPrice": 699,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "3XL"
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ]
+    },
+    {
+      "id": 1258,
+      "slug": "baddie-booty-post-surgical-compression-bra-posture-corrector",
+      "name": "Baddie Booty | Post-Surgical Compression Bra & Posture Corrector",
+      "sourceUrl": "https://baddiebooty.co.za/product/baddie-booty-post-surgical-compression-bra-posture-corrector/",
+      "price": 699,
+      "regularPrice": 699,
+      "salePrice": null,
+      "maxPrice": 699,
+      "onSale": false,
+      "inStock": true,
+      "purchasable": true,
+      "stockText": "",
+      "sku": "",
+      "bestseller": true,
+      "category": "bbl-post-op-recovery",
+      "categories": [
+        "bbl-post-op-recovery",
+        "best-sellers",
+        "daily-shapewear"
+      ],
+      "shortDescription": "<p>Support your recovery with the <b>Baddie Booty compression bra</b>. This vest helps you heal faster and improves your posture instantly. It features an adjustable front closure and breathable fabric for all-day comfort. Get the medical-grade support you need today.</p>",
+      "description": "<p>Healing after surgery requires the right support. Fortunately, the <b>Baddie Booty compression bra</b> provides everything you need for a smooth recovery. This vest combines medical-grade compression with a stylish design.</p>\n<p><b>Maximum Support and Comfort</b> First, the front-hook closure makes this bra very easy to put on. You can adjust the hooks to find your perfect fit as swelling decreases. Additionally, the wireless design prevents irritation on sensitive skin. Because the fabric is breathable, you will stay cool and dry throughout the day.</p>\n<p><b>Improve Your Posture Instantly</b> Besides recovery, this vest also works as an excellent posture corrector. The back features reinforced X-straps. These straps gently pull your shoulders back to align your spine. Consequently, you will experience less back pain and a more confident silhouette.</p>\n<p><b>Why Baddie Booty is the Best Choice:</b></p>\n<ul>\n<li>\n<p><b>Surgery Recovery:</b> Perfect for breast augmentation, lifts, or reductions.</p>\n</li>\n<li>\n<p><b>Easy Adjustments:</b> Use the three rows of hooks to customize your compression.</p>\n</li>\n<li>\n<p><b>No Digging:</b> The wide shoulder straps distribute weight evenly for better comfort.</p>\n</li>\n<li>\n<p><b>Invisible Look:</b> Wear it under your clothes for a seamless, &#8220;snatched&#8221; appearance.</p>\n</li>\n</ul>\n<p>In conclusion, the Baddie Booty vest is an essential tool for your health. Whether you are at home or back at work, this bra supports your body every step of the way.</p>\n<div>\n<div>\n</div>\n</div>",
+      "images": [
+        {
+          "src": "/products/baddie-booty-post-surgical-compression-bra-posture-corrector/01-01-7dc2931c-1e1e-4b96-a8aa-1e94b795c2a4.jpg",
+          "alt": "Baddie Booty post-surgical compression bra with front closure and posture support straps.",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/baddie-booty-post-surgical-compression-bra-posture-corrector/02-01-IMG_3823.jpg",
+          "alt": "Baddie Booty compression bra back view showing reinforced X-shaped posture corrector straps for spinal alignment.",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/baddie-booty-post-surgical-compression-bra-posture-corrector/03-01-50b4f45d-7ba1-4aa8-b783-81628aed5b04.jpg",
+          "alt": "Baddie Booty compression bra for post-surgical recovery and daily posture correction.",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/baddie-booty-post-surgical-compression-bra-posture-corrector/04-01-cca91b6d-459b-4dd9-b6d9-bfb5ebcf7397.jpg",
+          "alt": "Close-up of the adjustable front hook-and-eye closure on a Baddie Booty compression bra.",
+          "fit": "cover"
+        }
+      ],
+      "image": "/products/baddie-booty-post-surgical-compression-bra-posture-corrector/01-01-7dc2931c-1e1e-4b96-a8aa-1e94b795c2a4.jpg",
+      "imageAlt": "Baddie Booty post-surgical compression bra with front closure and posture support straps.",
+      "attributes": [
+        {
+          "name": "Beige",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 1302,
+          "attributes": {
+            "Beige": "S"
+          },
+          "price": 699,
+          "regularPrice": 699,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "S"
+        },
+        {
+          "id": 1303,
+          "attributes": {
+            "Beige": "M"
+          },
+          "price": 699,
+          "regularPrice": 699,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "M"
+        },
+        {
+          "id": 1304,
+          "attributes": {
+            "Beige": "L"
+          },
+          "price": 699,
+          "regularPrice": 699,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "L"
+        },
+        {
+          "id": 1305,
+          "attributes": {
+            "Beige": "XL"
+          },
+          "price": 699,
+          "regularPrice": 699,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "XL"
+        },
+        {
+          "id": 1306,
+          "attributes": {
+            "Beige": "2XL"
+          },
+          "price": 699,
+          "regularPrice": 699,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "2XL"
+        },
+        {
+          "id": 1307,
+          "attributes": {
+            "Beige": "3XL"
+          },
+          "price": 699,
+          "regularPrice": 699,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "3XL"
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ]
+    },
+    {
+      "id": 1200,
+      "slug": "baddie-booty-levanta-cola-compression-faja-mid-thigh",
+      "name": "Baddie Booty – Levanta Cola Compression Faja (Mid-Thigh)",
+      "sourceUrl": "https://baddiebooty.co.za/product/baddie-booty-levanta-cola-compression-faja-mid-thigh/",
+      "price": 750,
+      "regularPrice": 750,
+      "salePrice": null,
+      "maxPrice": 750,
+      "onSale": false,
+      "inStock": true,
+      "purchasable": true,
+      "stockText": "",
+      "sku": "",
+      "bestseller": true,
+      "category": "bbl-post-op-recovery",
+      "categories": [
+        "bbl-post-op-recovery",
+        "best-sellers"
+      ],
+      "shortDescription": "<p>Designed for BBL, lipo, tummy tuck and postpartum recovery, it shapes the waist, lifts the butt, smooths the tummy, and sculpts your curves with ultra-firm, comfortable compression.</p>",
+      "description": "<p>Step into smooth, sculpted curves with the Levanta Cola Stage 2 Compression Faja — designed for baddies who want a snatched waist, lifted hips, and all-day comfort during recovery or daily wear.</p>\n<p>This mid-thigh bodysuit gives strong, targeted compression to define your waist, flatten the tummy, and contour your silhouette without suffocating or rolling down. It features a front hook-and-eye closure for adjustable shaping and a soft, stretchy upper body for comfort and mobility.</p>\n<p>Perfect for:</p>\n<ul>\n<li>\n<p>BBL recovery – supports hip and butt volume without flattening</p>\n</li>\n<li>\n<p>Liposuction &amp; tummy tuck – reduces swelling and helps shape your results</p>\n</li>\n<li>\n<p>Postpartum healing – offers gentle support for the abdomen and back</p>\n</li>\n<li>\n<p>Everyday sculpting – smooths curves under any outfit</p>\n</li>\n</ul>\n<p>Key Benefits:<br />✔️ Shapes the waist &amp; flattens the tummy<br />✔️ Enhances and lifts the hips &amp; butt<br />✔️ Breathable mesh thighs with lace trim<br />✔️ Adjustable front hooks for a snug but comfortable fit<br />✔️ Smooths back and side bulges<br />✔️ Perfect balance of firmness + stretch</p>\n<p>Feel supported, sculpted, and confident — the Levanta Cola keeps your curves sitting right.</p>",
+      "images": [
+        {
+          "src": "/products/baddie-booty-levanta-cola-compression-faja-mid-thigh/01-11-IMG_5626.jpg",
+          "alt": "Baddie Booty – Levanta Cola Compression Faja (Mid-Thigh)",
+          "fit": "cover"
+        }
+      ],
+      "image": "/products/baddie-booty-levanta-cola-compression-faja-mid-thigh/01-11-IMG_5626.jpg",
+      "imageAlt": "Baddie Booty – Levanta Cola Compression Faja (Mid-Thigh)",
+      "attributes": [
+        {
+          "name": "Black",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 1201,
+          "attributes": {
+            "Black": "S"
+          },
+          "price": 750,
+          "regularPrice": 750,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "S"
+        },
+        {
+          "id": 1202,
+          "attributes": {
+            "Black": "M"
+          },
+          "price": 750,
+          "regularPrice": 750,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "M"
+        },
+        {
+          "id": 1203,
+          "attributes": {
+            "Black": "L"
+          },
+          "price": 750,
+          "regularPrice": 750,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "L"
+        },
+        {
+          "id": 1204,
+          "attributes": {
+            "Black": "XL"
+          },
+          "price": 750,
+          "regularPrice": 750,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "XL"
+        },
+        {
+          "id": 1205,
+          "attributes": {
+            "Black": "2XL"
+          },
+          "price": 750,
+          "regularPrice": 750,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "2XL"
+        },
+        {
+          "id": 1206,
+          "attributes": {
+            "Black": "3XL"
+          },
+          "price": 750,
+          "regularPrice": 750,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "3XL"
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ]
+    },
+    {
+      "id": 1129,
+      "slug": "liposuction-tummy-tuck-bodysuit-girdle",
+      "name": "Liposuction & Tummy Tuck Bodysuit Girdle",
+      "sourceUrl": "https://baddiebooty.co.za/product/liposuction-tummy-tuck-bodysuit-girdle/",
+      "price": 800,
+      "regularPrice": 800,
+      "salePrice": null,
+      "maxPrice": 800,
+      "onSale": false,
+      "inStock": false,
+      "purchasable": false,
+      "stockText": "Out of stock",
+      "sku": "",
+      "bestseller": true,
+      "category": "bbl-post-op-recovery",
+      "categories": [
+        "bbl-post-op-recovery",
+        "best-sellers",
+        "daily-shapewear"
+      ],
+      "shortDescription": "",
+      "description": "<p>Recover in comfort with our Liposuction &amp; Tummy Tuck Bodysuit. Designed for post-surgery recovery, this open-bust full-body compression garment features a hook-and-eye front closure, adjustable straps, and targeted support for the abdomen, waist &amp; back. Ideal for liposuction, tummy tuck , everyday wear and other cosmetic procedures, it reduces swelling, improves circulation, and helps shape your body during the healing process.</p>",
+      "images": [
+        {
+          "src": "/products/liposuction-tummy-tuck-bodysuit-girdle/01-08-IMG_2615.jpg",
+          "alt": "Liposuction & Tummy Tuck Bodysuit Girdle",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/liposuction-tummy-tuck-bodysuit-girdle/02-08-IMG_2607.jpg",
+          "alt": "Liposuction & Tummy Tuck Bodysuit Girdle",
+          "fit": "cover"
+        }
+      ],
+      "image": "/products/liposuction-tummy-tuck-bodysuit-girdle/01-08-IMG_2615.jpg",
+      "imageAlt": "Liposuction & Tummy Tuck Bodysuit Girdle",
+      "attributes": [
+        {
+          "name": "Black",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 1130,
+          "attributes": {
+            "Black": "S"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "S"
+        },
+        {
+          "id": 1131,
+          "attributes": {
+            "Black": "M"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "M"
+        },
+        {
+          "id": 1132,
+          "attributes": {
+            "Black": "L"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "L"
+        },
+        {
+          "id": 1133,
+          "attributes": {
+            "Black": "XL"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "XL"
+        },
+        {
+          "id": 1134,
+          "attributes": {
+            "Black": "2XL"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "2XL"
+        },
+        {
+          "id": 1135,
+          "attributes": {
+            "Black": "3XL"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "3XL"
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ]
+    },
+    {
+      "id": 1121,
+      "slug": "tswanelo-tummy-control-waist-sculpting-waist-trainer",
+      "name": "Tshwanelo Tummy Control & Waist Sculpting Waist Trainer",
+      "sourceUrl": "https://baddiebooty.co.za/product/tswanelo-tummy-control-waist-sculpting-waist-trainer/",
+      "price": 550,
+      "regularPrice": 550,
+      "salePrice": null,
+      "maxPrice": 550,
+      "onSale": false,
+      "inStock": true,
+      "purchasable": true,
+      "stockText": "",
+      "sku": "",
+      "bestseller": true,
+      "category": "daily-shapewear",
+      "categories": [
+        "best-sellers",
+        "daily-shapewear"
+      ],
+      "shortDescription": "<p>Flatten your tummy and sculpt your waist for instant hourglass curves.</p>",
+      "description": "<p>Snatch your waist instantly with the Tshwanelo Tummy Control &amp; Waist Sculpting Waist Trainer — designed for women who want a smoother waistline, flatter tummy and enhanced hourglass shape.</p>\n<p>This waist trainer provides strong, targeted compression to slim the midsection, support the back and improve posture while staying comfortable for daily use. Whether you&#8217;re working out, running errands or dressing up, it keeps your waist sculpted and your curves defined.</p>\n<p>Perfect For:</p>\n<ul>\n<li>\n<p>Daily waist training</p>\n</li>\n<li>\n<p>Tummy control &amp; back support</p>\n</li>\n<li>\n<p>Workout sweat enhancement</p>\n</li>\n<li>\n<p>Creating a natural hourglass silhouette</p>\n</li>\n</ul>\n<p>Key Benefits:<br />✔️ Flattens the tummy instantly<br />✔️ Snatches and sculpts the waist<br />✔️ Supports the back &amp; improves posture<br />✔️ Comfortable for workouts and daily wear<br />✔️ Smooths bulges under clothing</p>\n<p>Feel secure, sculpted and confident — the Tshwanelo Waist Trainer gives you the snatched shape you want with everyday comfort.</p>",
+      "images": [
+        {
+          "src": "/products/tswanelo-tummy-control-waist-sculpting-waist-trainer/01-08-IMG_2995.jpg",
+          "alt": "Tshwanelo Tummy Control & Waist Sculpting Waist Trainer",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/tswanelo-tummy-control-waist-sculpting-waist-trainer/02-08-IMG_2996.jpg",
+          "alt": "Tshwanelo Tummy Control & Waist Sculpting Waist Trainer",
+          "fit": "cover"
+        }
+      ],
+      "image": "/products/tswanelo-tummy-control-waist-sculpting-waist-trainer/01-08-IMG_2995.jpg",
+      "imageAlt": "Tshwanelo Tummy Control & Waist Sculpting Waist Trainer",
+      "attributes": [
+        {
+          "name": "Black",
+          "options": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 1122,
+          "attributes": {
+            "Black": "XS"
+          },
+          "price": 550,
+          "regularPrice": 550,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "XS"
+        },
+        {
+          "id": 1123,
+          "attributes": {
+            "Black": "S"
+          },
+          "price": 550,
+          "regularPrice": 550,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "S"
+        },
+        {
+          "id": 1124,
+          "attributes": {
+            "Black": "M"
+          },
+          "price": 550,
+          "regularPrice": 550,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "Available on back-order",
+          "sku": "",
+          "label": "M"
+        },
+        {
+          "id": 1125,
+          "attributes": {
+            "Black": "L"
+          },
+          "price": 550,
+          "regularPrice": 550,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "Available on back-order",
+          "sku": "",
+          "label": "L"
+        },
+        {
+          "id": 1126,
+          "attributes": {
+            "Black": "XL"
+          },
+          "price": 550,
+          "regularPrice": 550,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "Available on back-order",
+          "sku": "",
+          "label": "XL"
+        },
+        {
+          "id": 1138,
+          "attributes": {
+            "Black": "2XL"
+          },
+          "price": 550,
+          "regularPrice": 550,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "Available on back-order",
+          "sku": "",
+          "label": "2XL"
+        },
+        {
+          "id": 1138,
+          "attributes": {
+            "Black": "3XL"
+          },
+          "price": 550,
+          "regularPrice": 550,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "Available on back-order",
+          "sku": "",
+          "label": "3XL"
+        }
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ]
+    },
+    {
+      "id": 1101,
+      "slug": "bbl-optimized-design-hourglass-sculpt-faja",
+      "name": "BBL-Optimized Design Hourglass Sculpt Faja",
+      "sourceUrl": "https://baddiebooty.co.za/product/bbl-optimized-design-hourglass-sculpt-faja/",
+      "price": 1000,
+      "regularPrice": 1000,
+      "salePrice": null,
+      "maxPrice": 1000,
+      "onSale": false,
+      "inStock": false,
+      "purchasable": false,
+      "stockText": "Out of stock",
+      "sku": "",
+      "bestseller": true,
+      "category": "bbl-post-op-recovery",
+      "categories": [
+        "bbl-post-op-recovery",
+        "best-sellers"
+      ],
+      "shortDescription": "<h3>The BBL Optimized Hourglass Sculpt Faja</h3>\n<p>Snatched waist. Protected curves. No compromises.</p>\n<p>Specifically engineered for post-op recovery and silhouette maintenance, the Hourglass Sculpt Faja features our proprietary BBL Optimized Design. This garment delivers maximum stage-2 compression to the midsection for a microscopic waist, while utilizing ultra-stretch, zero-compression fabric over the hips and glutes. Protect your fat transfer and define your ratio with the only faja designed to &#8220;Cinch and Flare&#8221; without flattening your results.</p>\n<ul>\n<li>\n<p>BBL Optimized: Zero-pressure zones for hips and booty.</p>\n</li>\n<li>\n<p>The Ultra-Cinch: Triple-layer abdominal compression.</p>\n</li>\n<li>\n<p>Seamless Fit: Invisible under clothing with 3-row adjustable hooks.</p>\n</li>\n</ul>",
+      "description": "<p>The Ultimate Blueprint for the Snatched Silhouette.</p>\n<p>Elevate your recovery and define your curves with the Hourglass Sculpt Faja. Engineered specifically for the &#8220;Cinch &amp; Flare&#8221; look, this Stage 2 compression garment is designed for those who demand a microscopic waist without sacrificing hip volume.</p>\n<p>While traditional fajas provide uniform compression, the Hourglass Sculpt features Variable Compression Technology:</p>\n<ul>\n<li>\n<p>The Power-Cinch Core: Triple-layered medical grade fabric provides maximum compression to the midsection, flushing out fluids and shrinking the waistline.</p>\n</li>\n<li>\n<p>The Freedom-Flare Hips: Features a high-stretch, single-layer silk-blend over the hips and glutes. This ensures your newly transferred fat isn&#8217;t &#8220;crushed,&#8221; allowing for maximum projection and a wider hip profile.</p>\n</li>\n</ul>\n<p>Key Features:</p>\n<ul>\n<li>\n<p>BBL-Optimized Design: Extra room in the hips and butt with zero compression in those zones.</p>\n</li>\n<li>\n<p>High-Back Coverage: Smooths back fat and provides full postural support.</p>\n</li>\n<li>\n<p>3-Row Hook-and-Eye Closure: Adjustable sizing as your swelling goes down and your waist gets smaller.</p>\n</li>\n<li>\n<p>Designed to be worn under your favorite outfits without detection.</p>\n</li>\n</ul>",
+      "images": [
+        {
+          "src": "/products/bbl-optimized-design-hourglass-sculpt-faja/01-08-IMG_3019.jpg",
+          "alt": "BBL-Optimized Design Hourglass Sculpt Faja",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/bbl-optimized-design-hourglass-sculpt-faja/02-08-IMG_3020.jpg",
+          "alt": "BBL-Optimized Design Hourglass Sculpt Faja",
+          "fit": "cover"
+        }
+      ],
+      "image": "/products/bbl-optimized-design-hourglass-sculpt-faja/01-08-IMG_3019.jpg",
+      "imageAlt": "BBL-Optimized Design Hourglass Sculpt Faja",
+      "attributes": [
+        {
+          "name": "Black",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 1102,
+          "attributes": {
+            "Black": "S"
+          },
+          "price": 1000,
+          "regularPrice": 1000,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "S"
+        },
+        {
+          "id": 1103,
+          "attributes": {
+            "Black": "M"
+          },
+          "price": 1000,
+          "regularPrice": 1000,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "M"
+        },
+        {
+          "id": 1104,
+          "attributes": {
+            "Black": "L"
+          },
+          "price": 1000,
+          "regularPrice": 1000,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "L"
+        },
+        {
+          "id": 1105,
+          "attributes": {
+            "Black": "XL"
+          },
+          "price": 1000,
+          "regularPrice": 1000,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "XL"
+        },
+        {
+          "id": 1106,
+          "attributes": {
+            "Black": "2XL"
+          },
+          "price": 1000,
+          "regularPrice": 1000,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "2XL"
+        },
+        {
+          "id": 1107,
+          "attributes": {
+            "Black": "3XL"
+          },
+          "price": 1000,
+          "regularPrice": 1000,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "3XL"
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ]
+    },
+    {
+      "id": 1082,
+      "slug": "curva-semi-custom-moldeadora-colombiana",
+      "name": "Curva Semi-Custom Moldeadora Colombiana",
+      "sourceUrl": "https://baddiebooty.co.za/product/curva-semi-custom-moldeadora-colombiana/",
+      "price": 1000,
+      "regularPrice": 1000,
+      "salePrice": null,
+      "maxPrice": 1000,
+      "onSale": false,
+      "inStock": true,
+      "purchasable": true,
+      "stockText": "",
+      "sku": "",
+      "bestseller": true,
+      "category": "bbl-post-op-recovery",
+      "categories": [
+        "bbl-post-op-recovery",
+        "best-sellers"
+      ],
+      "shortDescription": "",
+      "description": "<p>Meet the Curva Semi-Custom Faja, designed for baddies who want a personalized fit . Whether you&#8217;re recovering from surgery or just want that everyday snatched waist, this faja hugs your curves in all the right places. Perfect for BBL, tummy tuck, liposuction, postpartum, or daily wear.</p>\n<p>Made with high-compression fabric, it shapes, supports, and smooths your silhouette while giving you the comfort and flexibility you need. Semi-custom sizing allows you to choose the best fit for your body type and height – because one size doesn&#8217;t fit all!</p>",
+      "images": [
+        {
+          "src": "/products/curva-semi-custom-moldeadora-colombiana/01-08-IMG_5273.jpg",
+          "alt": "Curva Semi-Custom Moldeadora Colombiana",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/curva-semi-custom-moldeadora-colombiana/02-08-Subject-7.png",
+          "alt": "Subject 7",
+          "fit": "cover"
+        }
+      ],
+      "image": "/products/curva-semi-custom-moldeadora-colombiana/01-08-IMG_5273.jpg",
+      "imageAlt": "Curva Semi-Custom Moldeadora Colombiana",
+      "attributes": [
+        {
+          "name": "Black",
+          "options": [
+            "2XS-S",
+            "XS-M",
+            "S-M",
+            "S-L",
+            "M-L",
+            "S-XL",
+            "M-XL",
+            "M-2XL",
+            "L-2XL",
+            "L-3XL",
+            "XL-3XL"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 1083,
+          "attributes": {
+            "Black": "2XS-S"
+          },
+          "price": 1000,
+          "regularPrice": 1000,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "2XS-S"
+        },
+        {
+          "id": 1084,
+          "attributes": {
+            "Black": "XS-M"
+          },
+          "price": 1000,
+          "regularPrice": 1000,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "XS-M"
+        },
+        {
+          "id": 1085,
+          "attributes": {
+            "Black": "S-M"
+          },
+          "price": 1000,
+          "regularPrice": 1000,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "S-M"
+        },
+        {
+          "id": 1086,
+          "attributes": {
+            "Black": "S-L"
+          },
+          "price": 1000,
+          "regularPrice": 1000,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "S-L"
+        },
+        {
+          "id": 1087,
+          "attributes": {
+            "Black": "M-L"
+          },
+          "price": 1000,
+          "regularPrice": 1000,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "M-L"
+        },
+        {
+          "id": 1088,
+          "attributes": {
+            "Black": "S-XL"
+          },
+          "price": 1000,
+          "regularPrice": 1000,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "S-XL"
+        },
+        {
+          "id": 1089,
+          "attributes": {
+            "Black": "M-XL"
+          },
+          "price": 1000,
+          "regularPrice": 1000,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "M-XL"
+        },
+        {
+          "id": 1090,
+          "attributes": {
+            "Black": "M-2XL"
+          },
+          "price": 1000,
+          "regularPrice": 1000,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "M-2XL"
+        },
+        {
+          "id": 1091,
+          "attributes": {
+            "Black": "L-2XL"
+          },
+          "price": 1000,
+          "regularPrice": 1000,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "L-2XL"
+        },
+        {
+          "id": 1092,
+          "attributes": {
+            "Black": "L-3XL"
+          },
+          "price": 1000,
+          "regularPrice": 1000,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "L-3XL"
+        },
+        {
+          "id": 1093,
+          "attributes": {
+            "Black": "XL-3XL"
+          },
+          "price": 1000,
+          "regularPrice": 1000,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "XL-3XL"
+        }
+      ],
+      "sizes": [
+        "2XS-S",
+        "XS-M",
+        "S-M",
+        "S-L",
+        "M-L",
+        "S-XL",
+        "M-XL",
+        "M-2XL",
+        "L-2XL",
+        "L-3XL",
+        "XL-3XL"
+      ]
+    },
+    {
+      "id": 1013,
+      "slug": "butt-lift-support-pillow",
+      "name": "Butt Lift Support Pillow",
+      "sourceUrl": "https://baddiebooty.co.za/product/butt-lift-support-pillow/",
+      "price": 950,
+      "regularPrice": 950,
+      "salePrice": null,
+      "maxPrice": 950,
+      "onSale": false,
+      "inStock": false,
+      "purchasable": false,
+      "stockText": "Out of stock",
+      "sku": "",
+      "bestseller": true,
+      "category": "bbl-accessories",
+      "categories": [
+        "bbl-accessories",
+        "best-sellers"
+      ],
+      "shortDescription": "",
+      "description": "<p>Features:<br />\n&#8211; Better Recovery: With the inner firm foam material, it decreases pressure on your butt by transferring it to your thighs, allows you to sit longer and promotes post-surgery recovery by using it.<br />\n&#8211; Firm Support: Firm foam with a slight softness to elevate the butt and relieve pressure onto the thigh area. Does not loose it s shape, flatten or sink after time or heavy use.<br />\n&#8211; Easy To Use: Simply put the Butt Lift Pillow on top of the surface then sitting on it. The silicone dots at the bottom will prevent you from slipping and make you feel safe.<br />\n&#8211; Multiple Using Scenes: used in most sitting situations to include leisure, travel, home and office or even during transit in between. Our pillow can be used on almost any type of chair anywhere.</p>",
+      "images": [
+        {
+          "src": "/products/butt-lift-support-pillow/01-03-IMG_3902.jpg",
+          "alt": "Screenshot",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/butt-lift-support-pillow/02-03-IMG_3151.jpg",
+          "alt": "Butt Lift Support Pillow",
+          "fit": "cover"
+        }
+      ],
+      "image": "/products/butt-lift-support-pillow/01-03-IMG_3902.jpg",
+      "imageAlt": "Screenshot",
+      "attributes": [],
+      "variants": [
+        {
+          "id": 1013,
+          "attributes": {},
+          "price": 950,
+          "regularPrice": 950,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "One size"
+        }
+      ],
+      "sizes": [
+        "One size"
+      ]
+    },
+    {
+      "id": 933,
+      "slug": "stage-1-full-body-post-surgery-bodysuit",
+      "name": "Full Body Post-Surgery Seamless Faja",
+      "sourceUrl": "https://baddiebooty.co.za/product/stage-1-full-body-post-surgery-bodysuit/",
+      "price": 800,
+      "regularPrice": 800,
+      "salePrice": null,
+      "maxPrice": 800,
+      "onSale": false,
+      "inStock": true,
+      "purchasable": true,
+      "stockText": "",
+      "sku": "",
+      "bestseller": true,
+      "category": "bbl-post-op-recovery",
+      "categories": [
+        "bbl-post-op-recovery",
+        "best-sellers"
+      ],
+      "shortDescription": "<p>First Stage Faja for Brazilian butt lift, Tummy tuck, Liposuction &amp; other Surgery procedures.</p>",
+      "description": "<p><strong>FULL BODY STAGE 1 FAJA</strong><br />\nAchieve instant curves with our one-piece bodysuit shapewear! Designed for full-body sculpting, it provides firm compression for the tummy, waist, and thighs while offering breast support and a natural butt-lifting effect. The perfect balance of control and comfort for everyday wear.</p>\n<p><strong>ULTRA-COMFORTABLE </strong><br />\nMade from top-grade, lightweight fabric with strong elasticity, this bodysuit is soft, breathable, and comfortable for all-day wear. With double-layer tummy control and no steel bones, it smooths your midsection without discomfort.</p>\n<p><strong>BUTT-LIFTING DESIGN</strong><br />\nThe high-waist thigh slimmer features a boyshort cut to sculpt your upper thighs and prevent rolling. Plus, it lifts and enhances your natural curves under any outfit!</p>\n<p><strong>CUSTOMIZABLE FIT WITH HOOK &amp; EYE CLOSURE</strong><br />\nEnjoy a tailored fit with 3 rows of adjustable hook-and-eye closures for targeted tummy compression. Wide, supportive shoulder straps with three rows of hooks ensure a snug yet comfortable feel. The removable breast support band enhances shaping and versatility.</p>\n<p><strong>TUMMY CONTROL &amp; WAIST SCULPTING</strong><br />\nWith a sleek, high-waist design and front-and-back double-layered fabric, this shaper flattens your stomach, reduces love handles, and defines your waistline for a smoother, slimmer look—instantly!</p>\n<p>&nbsp;</p>\n<p>BENEFITS:</p>\n<p>-Smooths your waist, tummy, and thighs for a sleek silhouette.– Double-layer compression helps flatten the belly and define the waist.</p>\n<p>-Enhances and lifts your natural curves for a rounder, fuller look.</p>\n<p>-Soft, stretchy, and comfortable for all-day wear.<br />\n-Provides shaping without discomfort or restriction.<br />\n-Supports recovery while keeping you comfortable.</p>\n<p>-Customize your compression level.<br />\n-Ensures a snug and supportive fit.<br />\n&#8211; Stays in place without rolling or bunching.</p>\n<p></p>",
+      "images": [
+        {
+          "src": "/products/stage-1-full-body-post-surgery-bodysuit/01-08-1.png",
+          "alt": "1",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/stage-1-full-body-post-surgery-bodysuit/02-02-5.png",
+          "alt": "5",
+          "fit": "cover"
+        }
+      ],
+      "image": "/products/stage-1-full-body-post-surgery-bodysuit/01-08-1.png",
+      "imageAlt": "1",
+      "attributes": [
+        {
+          "name": "Black",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 934,
+          "attributes": {
+            "Black": "S"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "S"
+        },
+        {
+          "id": 935,
+          "attributes": {
+            "Black": "M"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "M"
+        },
+        {
+          "id": 936,
+          "attributes": {
+            "Black": "L"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "L"
+        },
+        {
+          "id": 937,
+          "attributes": {
+            "Black": "XL"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "XL"
+        },
+        {
+          "id": 938,
+          "attributes": {
+            "Black": "2XL"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "2XL"
+        },
+        {
+          "id": 939,
+          "attributes": {
+            "Black": "3XL"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "3XL"
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ]
+    },
+    {
+      "id": 918,
+      "slug": "extreme-tummy-control-girdle-corset-bodysuit",
+      "name": "Extreme Tummy Control Girdle Corset Bodysuit",
+      "sourceUrl": "https://baddiebooty.co.za/product/extreme-tummy-control-girdle-corset-bodysuit/",
+      "price": 800,
+      "regularPrice": 800,
+      "salePrice": null,
+      "maxPrice": 800,
+      "onSale": false,
+      "inStock": true,
+      "purchasable": true,
+      "stockText": "",
+      "sku": "",
+      "bestseller": true,
+      "category": "bbl-post-op-recovery",
+      "categories": [
+        "bbl-post-op-recovery",
+        "best-sellers"
+      ],
+      "shortDescription": "",
+      "description": "<p>Take your body sculpting to the next level with our Extreme Tummy Control Girdle Corset—a high-compression waist trainer designed for advanced shaping and post-surgery recovery. Featuring 4 steel rods for firm structure and back support, adjustable straps for a customized fit, and 3 levels of hook closure for progressive compression, this girdle ensures maximum waist control and a smooth silhouette. The built-in glute-lifting design enhances your curves, making it perfect for post-op recovery, waist training, and daily wear. Experience unmatched support and definition with this premium Stage 3 faja!</p>\n<p>FEATURES:</p>\n<p>-Extreme Tummy Control – High-compression design for maximum waist snatching<br />\n-4 Steel Rods – Provides strong structure, back support &amp; prevents rolling<br />\n&#8211; 3-Level Hook Closure – Adjustable tightness for a customized fit<br />\n&#8211; Adjustable Straps – Ensures comfort &amp; personalized support<br />\n-Glute-Lifting Design – Enhances and shapes the buttocks naturally<br />\n-Stage 3 Compression – Ideal for post-op recovery, waist training &amp; body sculpting<br />\n-Breathable &amp; Durable Fabric – Ensures comfort for all-day wear</p>\n<p>Perfect for BBL recovery, tummy control, and achieving an hourglass figure!</p>\n<p>&nbsp;</p>",
+      "images": [
+        {
+          "src": "/products/extreme-tummy-control-girdle-corset-bodysuit/01-02-IMG_2809.jpg",
+          "alt": "Extreme Tummy Control Girdle Corset Bodysuit",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/extreme-tummy-control-girdle-corset-bodysuit/02-02-IMG_2807.jpg",
+          "alt": "Screenshot",
+          "fit": "cover"
+        }
+      ],
+      "image": "/products/extreme-tummy-control-girdle-corset-bodysuit/01-02-IMG_2809.jpg",
+      "imageAlt": "Extreme Tummy Control Girdle Corset Bodysuit",
+      "attributes": [
+        {
+          "name": "Black",
+          "options": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 1028,
+          "attributes": {
+            "Black": "XS"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "XS"
+        },
+        {
+          "id": 921,
+          "attributes": {
+            "Black": "S"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "S"
+        },
+        {
+          "id": 922,
+          "attributes": {
+            "Black": "M"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "M"
+        },
+        {
+          "id": 923,
+          "attributes": {
+            "Black": "L"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "L"
+        },
+        {
+          "id": 924,
+          "attributes": {
+            "Black": "XL"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "XL"
+        },
+        {
+          "id": 925,
+          "attributes": {
+            "Black": "2XL"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "2XL"
+        },
+        {
+          "id": 926,
+          "attributes": {
+            "Black": "3XL"
+          },
+          "price": 800,
+          "regularPrice": 800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "3XL"
+        }
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ]
+    },
+    {
+      "id": 906,
+      "slug": "high-waist-tummy-control-shaping-shorts-postpartum-everyday-compression",
+      "name": "High-Waist Tummy Control Shaping Shorts – Postpartum & Everyday Sculpting Wear",
+      "sourceUrl": "https://baddiebooty.co.za/product/high-waist-tummy-control-shaping-shorts-postpartum-everyday-compression/",
+      "price": 600,
+      "regularPrice": 600,
+      "salePrice": null,
+      "maxPrice": 600,
+      "onSale": false,
+      "inStock": true,
+      "purchasable": true,
+      "stockText": "Available on back-order",
+      "sku": "",
+      "bestseller": true,
+      "category": "daily-shapewear",
+      "categories": [
+        "best-sellers",
+        "daily-shapewear"
+      ],
+      "shortDescription": "",
+      "description": "<p>Get the perfect hourglass shape with our high-waist tummy control shaping shorts, designed to flatten your tummy, slim your waist, and lift your booty effortlessly. Whether you&#8217;re postpartum, post-surgery, or just want a sleek, sculpted look, these shorts provide firm yet comfortable compression for all-day wear.</p>\n<p>Why You&#8217;ll Love It:</p>\n<p>&#8211; Postpartum &amp; Tummy Support: Gently compresses and smooths your midsection for a snatched silhouette.<br />\n&#8211; Adjustable Compression: Three rows of hook-and-eye closures let you customize your fit.<br />\n&#8211; Stay-Put Design: Silicone strips keep the waistband from rolling down.<br />\n&#8211; Breathable &amp; Durable Fabric: Double-layer compression provides control while staying soft and breathable.<br />\n-Thigh-Slimming &amp; Booty-Lifting: Mid-thigh length sculpts your legs while enhancing your natural curves—no padding needed!</p>\n<p>&#8211; Squat-Proof &amp; Non-See-Through: Move with confidence, whether you&#8217;re working out, running errands, or dressing up.</p>\n<p>&nbsp;</p>\n<p>Perfect for:</p>\n<p>-Everyday shaping &amp; smoothing<br />\n-Postpartum recovery<br />\n-Post-surgery compression<br />\n-Styling under any outfit</p>\n<p>Feel snatched, supported, and unstoppable in Baddie Booty’s High-Waist Postpartum &amp; Everyday Shaping Shorts.</p>\n<p></p>",
+      "images": [
+        {
+          "src": "/products/high-waist-tummy-control-shaping-shorts-postpartum-everyday-compression/01-02-IMG_3021.jpg",
+          "alt": "High-Waist Tummy Control Shaping Shorts – Postpartum & Everyday Sculpting Wear",
+          "fit": "cover"
+        }
+      ],
+      "image": "/products/high-waist-tummy-control-shaping-shorts-postpartum-everyday-compression/01-02-IMG_3021.jpg",
+      "imageAlt": "High-Waist Tummy Control Shaping Shorts – Postpartum & Everyday Sculpting Wear",
+      "attributes": [
+        {
+          "name": "Black",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 912,
+          "attributes": {
+            "Black": "S"
+          },
+          "price": 600,
+          "regularPrice": 600,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "Available on back-order",
+          "sku": "",
+          "label": "S"
+        },
+        {
+          "id": 911,
+          "attributes": {
+            "Black": "M"
+          },
+          "price": 600,
+          "regularPrice": 600,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "Available on back-order",
+          "sku": "",
+          "label": "M"
+        },
+        {
+          "id": 910,
+          "attributes": {
+            "Black": "L"
+          },
+          "price": 600,
+          "regularPrice": 600,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "Available on back-order",
+          "sku": "",
+          "label": "L"
+        },
+        {
+          "id": 909,
+          "attributes": {
+            "Black": "XL"
+          },
+          "price": 600,
+          "regularPrice": 600,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "Available on back-order",
+          "sku": "",
+          "label": "XL"
+        },
+        {
+          "id": 908,
+          "attributes": {
+            "Black": "2XL"
+          },
+          "price": 600,
+          "regularPrice": 600,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "Available on back-order",
+          "sku": "",
+          "label": "2XL"
+        },
+        {
+          "id": 907,
+          "attributes": {
+            "Black": "3XL"
+          },
+          "price": 600,
+          "regularPrice": 600,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "Available on back-order",
+          "sku": "",
+          "label": "3XL"
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ]
+    },
+    {
+      "id": 809,
+      "slug": "high-compression-stage-3-faja-waist-trainer",
+      "name": "High Compression Stage 3 Faja Waist Trainer",
+      "sourceUrl": "https://baddiebooty.co.za/product/high-compression-stage-3-faja-waist-trainer/",
+      "price": 1190,
+      "regularPrice": 1190,
+      "salePrice": null,
+      "maxPrice": 1190,
+      "onSale": false,
+      "inStock": true,
+      "purchasable": true,
+      "stockText": "",
+      "sku": "",
+      "bestseller": true,
+      "category": "bbl-post-op-recovery",
+      "categories": [
+        "bbl-post-op-recovery",
+        "best-sellers"
+      ],
+      "shortDescription": "<p>High-compression post surgery support with steel bones for post-surgery recovery, waist training and Cinching.</p>",
+      "description": "<p>Our High Compression Stage 3 Faja, post-surgery support garment designed to provide maximum comfort and support during the recovery process. Featuring steel bones for added stability and support, this faja helps reducing swelling , bruising and discomfort, while promoting a smoother, faster recovery.</p>\n<p>The built-in waist trainer enhances definition and cinching, while the adjustable compression allows for custamizable support. The high-waisted design provides added support and coverage, and the breathable fabric ensure comfort and moisture-wicking.</p>\n<p>This Stage 3 Faja is recommended for the post-surgery recovery, waist training, Tummy tuck, Postpartum and other surgery procedures. It&#8217;s perfect for those who need high-compression support and comfort during healing process.</p>\n<p>Key Features:</p>\n<p>&#8211; High- compression fabric for maximum support and comfort<br />\n&#8211; Steel bones for added stability and support<br />\n&#8211; Built-in waist trainer for enhanced definition and cinching<br />\n&#8211; Adjustable hooks for customizable compression<br />\n&#8211; High-waisted design for added support and coverage<br />\n&#8211; Breathable fabric for comfort and moisture-wicking</p>\n<p>Benefits:</p>\n<p>&#8211; Reduces swelling , bruising ,and discomfort<br />\n&#8211; Promotes a smoother, faster recovery<br />\n&#8211; Provides high-compression support for post-surgery recovery<br />\n&#8211; Enhances definition and cinching with built-in waist trainer<br />\n&#8211; Adjustable compression for customizable support<br />\n&#8211; Comfortable and breathable fabric for all day wear<br />\n&#8211; Steel bones provide added stability and support for a secure fit</p>\n<p>If you&#8217;re looking for a high-compression , post-surgery support garment that provides maximum comfort and support, our Stage 3 Faja Waist Trainer is the perfect choice. with steel bones, built-in wait trainer, and adjustable compression, this faja will help you recover faster and feel more confident during the healing process</p>\n<p><img src=\"/products/high-compression-stage-3-faja-waist-trainer/03-08-IMG_0762.jpg\" alt=\"\" /></p>",
+      "images": [
+        {
+          "src": "/products/high-compression-stage-3-faja-waist-trainer/01-08-IMG_0760.jpg",
+          "alt": "High Compression Stage 3 Faja Waist Trainer",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/high-compression-stage-3-faja-waist-trainer/02-08-IMG_1566.jpg",
+          "alt": "High Compression Stage 3 Faja Waist Trainer",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/high-compression-stage-3-faja-waist-trainer/03-08-IMG_0762.jpg",
+          "alt": "High Compression Stage 3 Faja Waist Trainer",
+          "fit": "cover"
+        }
+      ],
+      "image": "/products/high-compression-stage-3-faja-waist-trainer/01-08-IMG_0760.jpg",
+      "imageAlt": "High Compression Stage 3 Faja Waist Trainer",
+      "attributes": [
+        {
+          "name": "Black",
+          "options": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 814,
+          "attributes": {
+            "Black": "XS"
+          },
+          "price": 1190,
+          "regularPrice": 1190,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "XS"
+        },
+        {
+          "id": 815,
+          "attributes": {
+            "Black": "S"
+          },
+          "price": 1190,
+          "regularPrice": 1190,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "S"
+        },
+        {
+          "id": 816,
+          "attributes": {
+            "Black": "M"
+          },
+          "price": 1190,
+          "regularPrice": 1190,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "M"
+        },
+        {
+          "id": 817,
+          "attributes": {
+            "Black": "L"
+          },
+          "price": 1190,
+          "regularPrice": 1190,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "L"
+        },
+        {
+          "id": 818,
+          "attributes": {
+            "Black": "XL"
+          },
+          "price": 1190,
+          "regularPrice": 1190,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "XL"
+        },
+        {
+          "id": 819,
+          "attributes": {
+            "Black": "2XL"
+          },
+          "price": 1190,
+          "regularPrice": 1190,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "2XL"
+        },
+        {
+          "id": 820,
+          "attributes": {
+            "Black": "3XL"
+          },
+          "price": 1190,
+          "regularPrice": 1190,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "3XL"
+        },
+        {
+          "id": 821,
+          "attributes": {
+            "Black": "4XL"
+          },
+          "price": 1190,
+          "regularPrice": 1190,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "4XL"
+        }
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ]
+    },
+    {
+      "id": 801,
+      "slug": "post-surgery-abdominal-compression-board",
+      "name": "Post Surgery Abdominal Compression Board",
+      "sourceUrl": "https://baddiebooty.co.za/product/post-surgery-abdominal-compression-board/",
+      "price": 600,
+      "regularPrice": 600,
+      "salePrice": null,
+      "maxPrice": 600,
+      "onSale": false,
+      "inStock": false,
+      "purchasable": false,
+      "stockText": "Out of stock",
+      "sku": "",
+      "bestseller": true,
+      "category": "bbl-accessories",
+      "categories": [
+        "bbl-accessories",
+        "best-sellers"
+      ],
+      "shortDescription": "<p>Support Your Core After Surgery or Childbirth.</p>",
+      "description": "<p>Speed up your recovery with our Abdominal Compression Board. Designed to provide optimal support and comfort,<br />\nOur board helps:</p>\n<p>-Reduce swelling<br />\n-Support core muscles<br />\n-Improve posture<br />\n-Enhance recovery</p>\n<p>Perfect for:<br />\n-Cesarean Section<br />\n-Tummy Tuck<br />\n-Postpartum support<br />\n-Fitness Training and exercise<br />\n-Abdominoplasty and other abdominal surgeries</p>\n<p>Features:<br />\n-Graduated compression for optimal support<br />\n-Breathable, lightweight material for comfortable wear<br />\n-Easy to use and clean</p>",
+      "images": [
+        {
+          "src": "/products/post-surgery-abdominal-compression-board/01-07-15.png",
+          "alt": "15",
+          "fit": "cover"
+        }
+      ],
+      "image": "/products/post-surgery-abdominal-compression-board/01-07-15.png",
+      "imageAlt": "15",
+      "attributes": [],
+      "variants": [
+        {
+          "id": 801,
+          "attributes": {},
+          "price": 600,
+          "regularPrice": 600,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "One size"
+        }
+      ],
+      "sizes": [
+        "One size"
+      ]
+    },
+    {
+      "id": 700,
+      "slug": "the-kerry-arm-thigh-post-surgery-compression-garment",
+      "name": "The Kerry Arm & Thigh Post- Surgery Compression Garment",
+      "sourceUrl": "https://baddiebooty.co.za/product/the-kerry-arm-thigh-post-surgery-compression-garment/",
+      "price": 2200,
+      "regularPrice": 2200,
+      "salePrice": null,
+      "maxPrice": 2200,
+      "onSale": false,
+      "inStock": true,
+      "purchasable": true,
+      "stockText": "",
+      "sku": "",
+      "bestseller": true,
+      "category": "bbl-post-op-recovery",
+      "categories": [
+        "bbl-post-op-recovery",
+        "best-sellers",
+        "daily-shapewear",
+        "raina-blended-wigs-and-luxury-scents",
+        "raina"
+      ],
+      "shortDescription": "<p>After arm liposuction, BBL, stomach lipo 360, or tummy tuck, your body needs the compression of a strong and breathable material to shape and maintain your curves. This stage 1-2 full bodysuit faja has full double layer to offer moderate compression and support. It sculpts your body and improves your posture at the same time. The built-in bra, long sleeve, and mid-thigh design are conceived to give you an hourglass figure in a comfy way.</p>",
+      "description": "<p>• 45% spandex &amp; 55% nylon + mesh<br />\n• Long sleeves<br />\n• Full double layer<br />\n• 3-row adjustable<br />\n• Back support<br />\n• Zipper crotch – easy bathroom access<br />\n• Lace anti-rolling grip</p>\n<p><img src=\"/products/the-kerry-arm-thigh-post-surgery-compression-garment/04-09-Faja-size-chart.jpg\" alt=\"\" /></p>",
+      "images": [
+        {
+          "src": "/products/the-kerry-arm-thigh-post-surgery-compression-garment/01-02-IMG_2616.jpg",
+          "alt": "The Kerry Arm & Thigh Post- Surgery Compression Garment",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/the-kerry-arm-thigh-post-surgery-compression-garment/02-02-IMG_2619.jpg",
+          "alt": "The Kerry Arm & Thigh Post- Surgery Compression Garment",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/the-kerry-arm-thigh-post-surgery-compression-garment/03-02-IMG_2626.jpg",
+          "alt": "The Kerry Arm & Thigh Post- Surgery Compression Garment",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/the-kerry-arm-thigh-post-surgery-compression-garment/04-09-Faja-size-chart.jpg",
+          "alt": "Size chart",
+          "fit": "contain"
+        }
+      ],
+      "image": "/products/the-kerry-arm-thigh-post-surgery-compression-garment/01-02-IMG_2616.jpg",
+      "imageAlt": "The Kerry Arm & Thigh Post- Surgery Compression Garment",
+      "attributes": [
+        {
+          "name": "BLACK",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 701,
+          "attributes": {
+            "BLACK": "S"
+          },
+          "price": 2200,
+          "regularPrice": 2200,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "S"
+        },
+        {
+          "id": 702,
+          "attributes": {
+            "BLACK": "M"
+          },
+          "price": 2200,
+          "regularPrice": 2200,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "M"
+        },
+        {
+          "id": 703,
+          "attributes": {
+            "BLACK": "L"
+          },
+          "price": 2200,
+          "regularPrice": 2200,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "L"
+        },
+        {
+          "id": 704,
+          "attributes": {
+            "BLACK": "XL"
+          },
+          "price": 2200,
+          "regularPrice": 2200,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "XL"
+        },
+        {
+          "id": 705,
+          "attributes": {
+            "BLACK": "2XL"
+          },
+          "price": 2200,
+          "regularPrice": 2200,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "2XL"
+        },
+        {
+          "id": 706,
+          "attributes": {
+            "BLACK": "3XL"
+          },
+          "price": 2200,
+          "regularPrice": 2200,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "3XL"
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ]
+    },
+    {
+      "id": 670,
+      "slug": "lipo-foam-back-board-bbl-lumbar-molder",
+      "name": "Lipo Foam Back Board, BBL Lumbar Molder.",
+      "sourceUrl": "https://baddiebooty.co.za/product/lipo-foam-back-board-bbl-lumbar-molder/",
+      "price": 600,
+      "regularPrice": 600,
+      "salePrice": null,
+      "maxPrice": 600,
+      "onSale": false,
+      "inStock": false,
+      "purchasable": false,
+      "stockText": "Out of stock",
+      "sku": "",
+      "bestseller": true,
+      "category": "bbl-accessories",
+      "categories": [
+        "bbl-accessories",
+        "best-sellers"
+      ],
+      "shortDescription": "<p>Back Compression Lipo Foam Board for BBL &amp; Liposuction Post Surgery Recovery.</p>",
+      "description": "<p>• BEST SOLUTION FOR POST-OP&#8211;Lipo foam back board, simple and effective recovery solution for anyone who has undergone liposuction and abdominal surgeries to have a more comfortable healing process &amp; provide best recovery by offering gentle compression over the healing zone. which will greatly minimize any pain, soreness, or discomfort after BBL, Post Op, Liposuction, C-Sections and Tummy Tuck.<br />\n• High Quality&#8211; After liposuction, you will need to rest and take it easy. BBL post surgery supplies are specially designed with high quality polystyrene to make recovery better &amp; more comfort. Aids in reduce fluid retention, skin folding, postoperative swelling, bruising, and scarring by placing smooth, even pressure over the suctioned area.<br />\n• SUPER SOFT &amp; COMFORT&#8211;Made of high quality polystyrene, which is super soft and elastic to keeps its original shape even after repeated use. Lipo foams post surgery helps to create a soft barrier between sensitive skin and compression garments without irritating or hurting your incision.<br />\n• PERFECT WITH BODY SHAPE&#8211; With ergonomic curve design, lipo board post surgery super fits your back to wear comfortably under most compression garment without protruding outwards. You could barely feel it was there! Perfect Combination with any medical-grade compression garments, assets shapewear bodysuit, recovery suit or other post surgery clothing. Provides invisible protection for your lumbar spine anytime, anywhere.</p>",
+      "images": [
+        {
+          "src": "/products/lipo-foam-back-board-bbl-lumbar-molder/01-01-17.png",
+          "alt": "17",
+          "fit": "cover"
+        }
+      ],
+      "image": "/products/lipo-foam-back-board-bbl-lumbar-molder/01-01-17.png",
+      "imageAlt": "17",
+      "attributes": [
+        {
+          "name": "Black",
+          "options": [
+            "one size"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 775,
+          "attributes": {
+            "Black": "one size"
+          },
+          "price": 600,
+          "regularPrice": 600,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "one size"
+        }
+      ],
+      "sizes": [
+        "one size"
+      ]
+    },
+    {
+      "id": 661,
+      "slug": "post-surgery-liposuction-ab-board",
+      "name": "Post Surgery Liposuction AB Board",
+      "sourceUrl": "https://baddiebooty.co.za/product/post-surgery-liposuction-ab-board/",
+      "price": 600,
+      "regularPrice": 600,
+      "salePrice": null,
+      "maxPrice": 600,
+      "onSale": false,
+      "inStock": true,
+      "purchasable": true,
+      "stockText": "Available on back-order",
+      "sku": "",
+      "bestseller": true,
+      "category": "bbl-accessories",
+      "categories": [
+        "bbl-accessories",
+        "best-sellers"
+      ],
+      "shortDescription": "<p>Lipo Foam Ab Board, Compression Lipo Board for Tummy Tuck &amp; Liposuction Post Surgery Recovery.</p>",
+      "description": "<p>• 【BEST SOLUTION FOR POST-OP】&#8211; Lipo foam ab board, simple and effective recovery solution for anyone who has undergone liposuction and abdominal surgeries to have a more comfortable healing process &amp; provide best recovery by offering gentle compression over the healing zone. which will greatly minimize any pain, soreness, or discomfort after Post Op, Liposuction, C-Sections and Tummy Tuck.<br />\n• 【SUPER SOFT &amp; COMFORT】&#8211; Made of high quality polystyrene, which is super soft and elastic to keeps its original shape even after repeated use. Ab board post surgery liposuction helps to create a soft barrier between sensitive skin and compression garments without irritating or hurting your incision.<br />\n• 【PERFECT WITH BODY SHAPE】&#8211; With ergonomic curve design, lipo board super fits your tummy to wear comfortably under most compression garment without protruding outwards. You could barely feel it was there! Perfect Combination with any medical-grade compression garments, assets shapewear bodysuit, recovery suit or other post surgery clothing. Lipo board post surgery Provides invisible protection for your lumbar spine anytime, anywhere.<br />\n• 【What You Get】 &#8212; 1* lipo foam board. (Size 11.8&#8221; x 12.8&#8221; x 0.5&#8221;) A necessary post-procedure accessory that makes Tummy Tuck/Liposuction recovery easier, safer, and more comfortable. Get your abdominal board today and you will love it!</p>",
+      "images": [
+        {
+          "src": "/products/post-surgery-liposuction-ab-board/01-01-IMG_5873.jpg",
+          "alt": "Post Surgery Liposuction AB Board",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/post-surgery-liposuction-ab-board/02-01-IMG_5871.jpg",
+          "alt": "Post Surgery Liposuction AB Board",
+          "fit": "cover"
+        }
+      ],
+      "image": "/products/post-surgery-liposuction-ab-board/01-01-IMG_5873.jpg",
+      "imageAlt": "Post Surgery Liposuction AB Board",
+      "attributes": [],
+      "variants": [
+        {
+          "id": 661,
+          "attributes": {},
+          "price": 600,
+          "regularPrice": 600,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "Available on back-order",
+          "sku": "",
+          "label": "One size"
+        }
+      ],
+      "sizes": [
+        "One size"
+      ]
+    },
+    {
+      "id": 651,
+      "slug": "lumbar-molder-bbl-back-board",
+      "name": "Lumbar Molder BBL Foam Back Board",
+      "sourceUrl": "https://baddiebooty.co.za/product/lumbar-molder-bbl-back-board/",
+      "price": 450,
+      "regularPrice": 450,
+      "salePrice": null,
+      "maxPrice": 450,
+      "onSale": false,
+      "inStock": true,
+      "purchasable": true,
+      "stockText": "",
+      "sku": "",
+      "bestseller": false,
+      "category": "bbl-accessories",
+      "categories": [
+        "bbl-accessories"
+      ],
+      "shortDescription": "<p>BBL Lumbar Molder. A necessary post-procedure accessory that makes BBL/Liposuction recovery easier, safer, and more comfortable.</p>",
+      "description": "<p>• BEST SOLUTION FOR POST-OP&#8211;Lipo foam back board, simple and effective recovery solution for anyone who has undergone liposuction and abdominal surgeries to have a more comfortable healing process &amp; provide best recovery by offering gentle compression over the healing zone. which will greatly minimize any pain, soreness, or discomfort after BBL, Post Op, Liposuction, C-Sections and Tummy Tuck.<br />\n• High Quality&#8211; After liposuction, you will need to rest and take it easy. BBL post surgery supplies are specially designed with high quality polystyrene to make recovery better &amp; more comfort. Aids in reduce fluid retention, skin folding, postoperative swelling, bruising, and scarring by placing smooth, even pressure over the suctioned area.<br />\n• SUPER SOFT &amp; COMFORT&#8211;Made of high quality polystyrene, which is super soft and elastic to keeps its original shape even after repeated use. Lipo foams post surgery helps to create a soft barrier between sensitive skin and compression garments without irritating or hurting your incision.<br />\n• PERFECT WITH BODY SHAPE&#8211; With ergonomic curve design, lipo board post surgery super fits your back to wear comfortably under most compression garment without protruding outwards. You could barely feel it was there! Perfect Combination with any medical-grade compression garments, assets shapewear bodysuit, recovery suit or other post surgery clothing. Provides invisible protection for your lumbar spine anytime, anywhere.</p>",
+      "images": [
+        {
+          "src": "/products/lumbar-molder-bbl-back-board/01-12-e684911a-b693-4003-b198-0c41ebe4c838.jpg",
+          "alt": "Lumbar Molder BBL Foam Back Board",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/lumbar-molder-bbl-back-board/02-12-IMG_8705.jpg",
+          "alt": "Lumbar Molder BBL Foam Back Board",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/lumbar-molder-bbl-back-board/03-12-IMG_8707.jpg",
+          "alt": "Lumbar Molder BBL Foam Back Board",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/lumbar-molder-bbl-back-board/04-12-IMG_8706.jpg",
+          "alt": "Lumbar Molder BBL Foam Back Board",
+          "fit": "cover"
+        }
+      ],
+      "image": "/products/lumbar-molder-bbl-back-board/01-12-e684911a-b693-4003-b198-0c41ebe4c838.jpg",
+      "imageAlt": "Lumbar Molder BBL Foam Back Board",
+      "attributes": [],
+      "variants": [
+        {
+          "id": 651,
+          "attributes": {},
+          "price": 450,
+          "regularPrice": 450,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "One size"
+        }
+      ],
+      "sizes": [
+        "One size"
+      ]
+    },
+    {
+      "id": 204,
+      "slug": "double-compression-9-steel-bone-waist-trainer",
+      "name": "Double Compression 9 Steel Bone Waist Trainer",
+      "sourceUrl": "https://baddiebooty.co.za/product/double-compression-9-steel-bone-waist-trainer/",
+      "price": 1500,
+      "regularPrice": 1500,
+      "salePrice": null,
+      "maxPrice": 1500,
+      "onSale": false,
+      "inStock": true,
+      "purchasable": true,
+      "stockText": "",
+      "sku": "",
+      "bestseller": false,
+      "category": "daily-shapewear",
+      "categories": [
+        "daily-shapewear"
+      ],
+      "shortDescription": "<ul>\n<li>80% Neoprene 20% Nylon</li>\n<li>3 Adjustable elastic band</li>\n<li>3-row hook and eye closure</li>\n<li>7 spiral steel bone</li>\n</ul>",
+      "description": "<p>Neoprene waist trimmer provides premium material: 80% Neoprene and 20% Nylon, it can increase the temperature of your abdomen quickly to burn fat, by allowing toxins to escape, helping you achieve the hourglass curves shape. Features a 3-row hook and eye closure to adjust level of compression and 7 steel bone to offer back support.</p>",
+      "images": [
+        {
+          "src": "/products/double-compression-9-steel-bone-waist-trainer/01-09-IMG_7502.jpg",
+          "alt": "Double Compression 9 Steel Bone Waist Trainer",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/double-compression-9-steel-bone-waist-trainer/02-09-IMG_7503.jpg",
+          "alt": "Double Compression 9 Steel Bone Waist Trainer",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/double-compression-9-steel-bone-waist-trainer/03-09-Black-1.jpg",
+          "alt": "Black 1",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/double-compression-9-steel-bone-waist-trainer/04-09-17-E-SIZE-CHART.jpg",
+          "alt": "17 E SIZE CHART",
+          "fit": "contain"
+        }
+      ],
+      "image": "/products/double-compression-9-steel-bone-waist-trainer/01-09-IMG_7502.jpg",
+      "imageAlt": "Double Compression 9 Steel Bone Waist Trainer",
+      "attributes": [
+        {
+          "name": "Size",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        },
+        {
+          "name": "Colour",
+          "options": [
+            "Black",
+            "Pink"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 220,
+          "attributes": {
+            "Size": "S",
+            "Colour": "Black"
+          },
+          "price": 1500,
+          "regularPrice": 1500,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "S / Black"
+        },
+        {
+          "id": 221,
+          "attributes": {
+            "Size": "S",
+            "Colour": "Pink"
+          },
+          "price": 1500,
+          "regularPrice": 1500,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "S / Pink"
+        },
+        {
+          "id": 222,
+          "attributes": {
+            "Size": "M",
+            "Colour": "Black"
+          },
+          "price": 1500,
+          "regularPrice": 1500,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "M / Black"
+        },
+        {
+          "id": 223,
+          "attributes": {
+            "Size": "M",
+            "Colour": "Pink"
+          },
+          "price": 1500,
+          "regularPrice": 1500,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "M / Pink"
+        },
+        {
+          "id": 224,
+          "attributes": {
+            "Size": "L",
+            "Colour": "Black"
+          },
+          "price": 1500,
+          "regularPrice": 1500,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "L / Black"
+        },
+        {
+          "id": 225,
+          "attributes": {
+            "Size": "L",
+            "Colour": "Pink"
+          },
+          "price": 1500,
+          "regularPrice": 1500,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "L / Pink"
+        },
+        {
+          "id": 226,
+          "attributes": {
+            "Size": "XL",
+            "Colour": "Black"
+          },
+          "price": 1500,
+          "regularPrice": 1500,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "XL / Black"
+        },
+        {
+          "id": 227,
+          "attributes": {
+            "Size": "XL",
+            "Colour": "Pink"
+          },
+          "price": 1500,
+          "regularPrice": 1500,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "XL / Pink"
+        },
+        {
+          "id": 228,
+          "attributes": {
+            "Size": "2XL",
+            "Colour": "Black"
+          },
+          "price": 1500,
+          "regularPrice": 1500,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "2XL / Black"
+        },
+        {
+          "id": 229,
+          "attributes": {
+            "Size": "2XL",
+            "Colour": "Pink"
+          },
+          "price": 1500,
+          "regularPrice": 1500,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "2XL / Pink"
+        },
+        {
+          "id": 637,
+          "attributes": {
+            "Size": "3XL",
+            "Colour": "Black"
+          },
+          "price": 1500,
+          "regularPrice": 1500,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "3XL / Black"
+        },
+        {
+          "id": 636,
+          "attributes": {
+            "Size": "3XL",
+            "Colour": "Pink"
+          },
+          "price": 1500,
+          "regularPrice": 1500,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "3XL / Pink"
+        }
+      ],
+      "sizes": [
+        "S / Black",
+        "S / Pink",
+        "M / Black",
+        "M / Pink",
+        "L / Black",
+        "L / Pink",
+        "XL / Black",
+        "XL / Pink",
+        "2XL / Black",
+        "2XL / Pink",
+        "3XL / Black",
+        "3XL / Pink"
+      ]
+    },
+    {
+      "id": 135,
+      "slug": "silicone-womens-portable-urinal-device",
+      "name": "Silicone Women’s Portable Urinal Device",
+      "sourceUrl": "https://baddiebooty.co.za/product/silicone-womens-portable-urinal-device/",
+      "price": 200,
+      "regularPrice": 200,
+      "salePrice": null,
+      "maxPrice": 200,
+      "onSale": false,
+      "inStock": false,
+      "purchasable": false,
+      "stockText": "Out of stock",
+      "sku": "",
+      "bestseller": false,
+      "category": "bbl-accessories",
+      "categories": [
+        "bbl-accessories"
+      ],
+      "shortDescription": "<p><strong>EASY PEE SILICONE URINATION DEVICE</strong></p>\n<ul>\n<li>Reusable</li>\n<li>Foldable</li>\n<li>On the go grip</li>\n<li>BPA free</li>\n<li>Prevents splashback and spills.</li>\n</ul>",
+      "description": "<p>Our Easy Pee Silicone Urination Device: Is made of high-quality silicone and does not irritate the skin or contain any harmful chemicals, it’s on the go grip allows you to easily use the device without taking off your faja, saves you time and energy and keeps you comfortable as you use the bathroom without sitting.</p>",
+      "images": [
+        {
+          "src": "/products/silicone-womens-portable-urinal-device/01-09-18.png",
+          "alt": "18",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/silicone-womens-portable-urinal-device/02-09-10-B.jpg",
+          "alt": "10 B",
+          "fit": "cover"
+        }
+      ],
+      "image": "/products/silicone-womens-portable-urinal-device/01-09-18.png",
+      "imageAlt": "18",
+      "attributes": [],
+      "variants": [
+        {
+          "id": 135,
+          "attributes": {},
+          "price": 200,
+          "regularPrice": 200,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "One size"
+        }
+      ],
+      "sizes": [
+        "One size"
+      ]
+    },
+    {
+      "id": 127,
+      "slug": "lipo-foam-sheets-for-post-surgery",
+      "name": "Post Surgery Lipo Foam Sheets",
+      "sourceUrl": "https://baddiebooty.co.za/product/lipo-foam-sheets-for-post-surgery/",
+      "price": 600,
+      "regularPrice": 600,
+      "salePrice": null,
+      "maxPrice": 600,
+      "onSale": false,
+      "inStock": true,
+      "purchasable": true,
+      "stockText": "",
+      "sku": "",
+      "bestseller": true,
+      "category": "bbl-accessories",
+      "categories": [
+        "bbl-accessories",
+        "best-sellers"
+      ],
+      "shortDescription": "<h3><strong>3 PACK LIPO FOAM SHEETS FOR POST-SURGERY RECOVERY</strong></h3>\n<ul>\n<li>Our lipo foam pads offer complete compression over the healing area ensuring an even pressure disruption for improved comfort and healing.</li>\n<li>The use of post-op foam flattens the skin evenly and provides compression which reduce bruising, swelling, absorbs fluids, and provide comfort.</li>\n</ul>",
+      "description": "<p>Lipo foam sheets are an essential post-op recovery aid for anyone who has undergone liposuction and abdominal surgeries such as tummy tucks and C-sections.</p>",
+      "images": [
+        {
+          "src": "/products/lipo-foam-sheets-for-post-surgery/01-09-IMG_1546.jpg",
+          "alt": "Post Surgery Lipo Foam Sheets",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/lipo-foam-sheets-for-post-surgery/02-09-8B.jpg",
+          "alt": "8B",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/lipo-foam-sheets-for-post-surgery/03-09-IMG_1544.jpg",
+          "alt": "Post Surgery Lipo Foam Sheets",
+          "fit": "cover"
+        }
+      ],
+      "image": "/products/lipo-foam-sheets-for-post-surgery/01-09-IMG_1546.jpg",
+      "imageAlt": "Post Surgery Lipo Foam Sheets",
+      "attributes": [
+        {
+          "name": "Colour",
+          "options": [
+            "Black",
+            "White"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 130,
+          "attributes": {
+            "Colour": "Black"
+          },
+          "price": 600,
+          "regularPrice": 600,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "Black"
+        },
+        {
+          "id": 131,
+          "attributes": {
+            "Colour": "White"
+          },
+          "price": 600,
+          "regularPrice": 600,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "White"
+        }
+      ],
+      "sizes": [
+        "Black",
+        "White"
+      ]
+    },
+    {
+      "id": 79,
+      "slug": "full-body-tummy-control-faja-moldeadora-colombianas",
+      "name": "Full Body Tummy Control Faja Moldeadora – Colombianas",
+      "sourceUrl": "https://baddiebooty.co.za/product/full-body-tummy-control-faja-moldeadora-colombianas/",
+      "price": 2800,
+      "regularPrice": 2800,
+      "salePrice": null,
+      "maxPrice": 2800,
+      "onSale": false,
+      "inStock": true,
+      "purchasable": true,
+      "stockText": "Available on back-order",
+      "sku": "",
+      "bestseller": true,
+      "category": "bbl-post-op-recovery",
+      "categories": [
+        "bbl-post-op-recovery",
+        "best-sellers"
+      ],
+      "shortDescription": "<h3>BBL POST-OP HIGH COMPRESSION STAGE 2 FAJAS COLOMBIANAS.</h3>\n<ul>\n<li>45% spandex &amp; 55% Nylon/mesh</li>\n<li>6 steel bone</li>\n<li>Full double layer</li>\n<li>3-row adjustable hooks</li>\n<li>3-row Wide adjustable shoulder strap</li>\n<li>Zipper crotch- easy bathroom access</li>\n<li>Back posture support</li>\n<li>Lace anti-rolling grip</li>\n</ul>",
+      "description": "<p>Recover and reshape with our Stage 2 Colombian Faja—a high-compression body shaper designed for post-surgery recovery and waist training. Crafted with 6 steel bones for added support and structure, this faja helps you achieve the perfect BBL, tummy tuck, liposuction, and postpartum results. The Stage 2 compression targets the waist and midsection, promoting smoother contours, faster recovery, and improved comfort during daily wear. Perfect for those who need firm compression and surgical recovery support.</p>\n<p>Benefits:</p>\n<ul>\n<li>6 Steel Bones – Provides superior support and prevents rolling, keeping the garment in place all day.</li>\n<li>Stage 2 Compression – Ideal for post-surgery recovery, offering the right balance of firmness without being too restrictive.</li>\n<li>BBL, Tummy Tuck, Liposuction &amp; Postpartum Recovery – Specifically designed to support healing and contour the body after surgeries or childbirth.</li>\n<li>Waist Training – Helps shape and slim the waistline for a defined silhouette while aiding in waist training.</li>\n<li>Breathable Fabric – Keeps you comfortable and cool during extended wear, promoting all-day use.</li>\n<li>Improved Circulation – Supports better blood flow to aid in healing after surgery.</li>\n<li>Targeted Compression – Helps flatten the abdomen, reduce swelling, and speed up recovery.</li>\n</ul>\n<p>Perfect for those recovering from BBL, liposuction, tummy tucks, or postpartum, this faja is your ultimate shaping companion!</p>\n<p>&nbsp;</p>",
+      "images": [
+        {
+          "src": "/products/full-body-tummy-control-faja-moldeadora-colombianas/01-09-IMG_2818.jpg",
+          "alt": "Full Body Tummy Control Faja Moldeadora – Colombianas",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/full-body-tummy-control-faja-moldeadora-colombianas/02-09-Faja-size-chart.jpg",
+          "alt": "Faja size chart",
+          "fit": "contain"
+        }
+      ],
+      "image": "/products/full-body-tummy-control-faja-moldeadora-colombianas/01-09-IMG_2818.jpg",
+      "imageAlt": "Full Body Tummy Control Faja Moldeadora – Colombianas",
+      "attributes": [
+        {
+          "name": "Size",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        },
+        {
+          "name": "Colour",
+          "options": [
+            "Black"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 80,
+          "attributes": {
+            "Size": "S",
+            "Colour": "Black"
+          },
+          "price": 2800,
+          "regularPrice": 2800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "Available on back-order",
+          "sku": "",
+          "label": "S / Black"
+        },
+        {
+          "id": 82,
+          "attributes": {
+            "Size": "M",
+            "Colour": "Black"
+          },
+          "price": 2800,
+          "regularPrice": 2800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "Available on back-order",
+          "sku": "",
+          "label": "M / Black"
+        },
+        {
+          "id": 84,
+          "attributes": {
+            "Size": "L",
+            "Colour": "Black"
+          },
+          "price": 2800,
+          "regularPrice": 2800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "Available on back-order",
+          "sku": "",
+          "label": "L / Black"
+        },
+        {
+          "id": 86,
+          "attributes": {
+            "Size": "XL",
+            "Colour": "Black"
+          },
+          "price": 2800,
+          "regularPrice": 2800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "Available on back-order",
+          "sku": "",
+          "label": "XL / Black"
+        },
+        {
+          "id": 463,
+          "attributes": {
+            "Size": "2XL",
+            "Colour": "Black"
+          },
+          "price": 2800,
+          "regularPrice": 2800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "Available on back-order",
+          "sku": "",
+          "label": "2XL / Black"
+        },
+        {
+          "id": 465,
+          "attributes": {
+            "Size": "3XL",
+            "Colour": "Black"
+          },
+          "price": 2800,
+          "regularPrice": 2800,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "Available on back-order",
+          "sku": "",
+          "label": "3XL / Black"
+        }
+      ],
+      "sizes": [
+        "S / Black",
+        "M / Black",
+        "L / Black",
+        "XL / Black",
+        "2XL / Black",
+        "3XL / Black"
+      ]
+    },
+    {
+      "id": 60,
+      "slug": "7-steel-bone-stage-2-fajas-moldeador-de-cuerpo-colombianas",
+      "name": "7 Steel Bone Fajas Moldeador De Cuerpo Colombianas",
+      "sourceUrl": "https://baddiebooty.co.za/product/7-steel-bone-stage-2-fajas-moldeador-de-cuerpo-colombianas/",
+      "price": 1900,
+      "regularPrice": 1900,
+      "salePrice": null,
+      "maxPrice": 1900,
+      "onSale": false,
+      "inStock": true,
+      "purchasable": true,
+      "stockText": "",
+      "sku": "",
+      "bestseller": true,
+      "category": "bbl-post-op-recovery",
+      "categories": [
+        "bbl-post-op-recovery",
+        "best-sellers"
+      ],
+      "shortDescription": "<h3><strong>BBL POST-SURGERY FAJAS MOLDEADOR DE CUERPO</strong></h3>\n<ul>\n<li>45% spandex &amp; 55% Nylon/mesh</li>\n<li>7 steel bones</li>\n<li>Full double layer</li>\n<li>3-row adjustable hooks</li>\n<li>3-row Wide adjustable shoulder strap</li>\n<li>Zipper crotch- easy bathroom access</li>\n<li>Back posture support</li>\n<li>Lace anti-rolling grip</li>\n</ul>",
+      "description": "<p>Baddie Booty stage 2 faja provides high compression on the waist and special sculpting technology to lift the booty. As your body recovers, so does your size.  Baddie Booty shaper faja   have 7 steel bone a zipper crotch and 3 levels of compression hooks to fit your new body and allow you to control the compression level based on your needs. This unique design is what gives you that beautiful figure.</p>",
+      "images": [
+        {
+          "src": "/products/7-steel-bone-stage-2-fajas-moldeador-de-cuerpo-colombianas/01-09-IMG_7773.jpg",
+          "alt": "7 Steel Bone Fajas Moldeador De Cuerpo Colombianas",
+          "fit": "cover"
+        },
+        {
+          "src": "/products/7-steel-bone-stage-2-fajas-moldeador-de-cuerpo-colombianas/02-09-Faja-size-chart.jpg",
+          "alt": "Faja size chart",
+          "fit": "contain"
+        }
+      ],
+      "image": "/products/7-steel-bone-stage-2-fajas-moldeador-de-cuerpo-colombianas/01-09-IMG_7773.jpg",
+      "imageAlt": "7 Steel Bone Fajas Moldeador De Cuerpo Colombianas",
+      "attributes": [
+        {
+          "name": "Size",
+          "options": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL"
+          ]
+        },
+        {
+          "name": "Colour",
+          "options": [
+            "Black"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 71,
+          "attributes": {
+            "Size": "S",
+            "Colour": "Black"
+          },
+          "price": 1900,
+          "regularPrice": 1900,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "S / Black"
+        },
+        {
+          "id": 73,
+          "attributes": {
+            "Size": "M",
+            "Colour": "Black"
+          },
+          "price": 1900,
+          "regularPrice": 1900,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "M / Black"
+        },
+        {
+          "id": 75,
+          "attributes": {
+            "Size": "L",
+            "Colour": "Black"
+          },
+          "price": 1900,
+          "regularPrice": 1900,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "L / Black"
+        },
+        {
+          "id": 77,
+          "attributes": {
+            "Size": "XL",
+            "Colour": "Black"
+          },
+          "price": 1900,
+          "regularPrice": 1900,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": false,
+          "purchasable": false,
+          "stockText": "Out of stock",
+          "sku": "",
+          "label": "XL / Black"
+        },
+        {
+          "id": 458,
+          "attributes": {
+            "Size": "2XL",
+            "Colour": "Black"
+          },
+          "price": 1900,
+          "regularPrice": 1900,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "2XL / Black"
+        },
+        {
+          "id": 460,
+          "attributes": {
+            "Size": "3XL",
+            "Colour": "Black"
+          },
+          "price": 1900,
+          "regularPrice": 1900,
+          "salePrice": null,
+          "onSale": false,
+          "inStock": true,
+          "purchasable": true,
+          "stockText": "",
+          "sku": "",
+          "label": "3XL / Black"
+        }
+      ],
+      "sizes": [
+        "S / Black",
+        "M / Black",
+        "L / Black",
+        "XL / Black",
+        "2XL / Black",
+        "3XL / Black"
+      ]
+    }
+  ],
+  "unmirrored": []
+}

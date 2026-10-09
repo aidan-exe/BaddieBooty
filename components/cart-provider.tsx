@@ -9,7 +9,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { getProduct, type Product } from "@/lib/products";
+import { getProduct, lineUnitPrice, type Product } from "@/lib/products";
 
 export const CART_STORAGE_KEY = "baddie-booty-cart-v1";
 const LEGACY_CART_STORAGE_KEY = "baddie-proposal-cart-v1";
@@ -132,7 +132,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
     () =>
       lines.reduce((sum, line) => {
         const product = getProduct(line.slug);
-        return sum + (product ? product.price * line.qty : 0);
+        return sum + (product ? lineUnitPrice(product, line.size) * line.qty : 0);
       }, 0),
     [lines],
   );

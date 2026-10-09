@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ProductCard } from "@/components/product-card";
-import { bestsellers } from "@/lib/products";
+import { bestsellers, getProduct } from "@/lib/products";
 import { site } from "@/lib/site";
 
 const benefits = [
@@ -24,22 +24,20 @@ const benefits = [
 ];
 
 const heroShots = [
-  {
-    href: "/shop/full-body-post-surgery-seamless-faja",
-    src: "/products/seamless-faja.png",
-    alt: "Full Body Post-Surgery Seamless Faja",
-  },
-  {
-    href: "/shop/post-surgical-compression-bra",
-    src: "/products/compression-bra.jpg",
-    alt: "Post-surgical compression bra",
-  },
-  {
-    href: "/shop/high-compression-stage-3-waist-trainer",
-    src: "/products/waist-trainer.jpg",
-    alt: "Stage 3 waist trainer",
-  },
-];
+  "stage-1-full-body-post-surgery-bodysuit",
+  "baddie-booty-post-surgical-compression-bra-posture-corrector",
+  "high-compression-stage-3-faja-waist-trainer",
+].flatMap((slug) => {
+  const product = getProduct(slug);
+  if (!product?.image) return [];
+  return [
+    {
+      href: `/shop/${product.slug}`,
+      src: product.image,
+      alt: product.imageAlt || product.name,
+    },
+  ];
+});
 
 export default function HomePage() {
   return (
