@@ -7,8 +7,10 @@ import {
   useEffect,
   useMemo,
   useState,
+  useSyncExternalStore,
   type ReactNode,
 } from "react";
+import { subscribeHydration } from "@/lib/browser-store";
 import { getProduct, lineUnitPrice, type Product } from "@/lib/products";
 
 export const CART_STORAGE_KEY = "baddie-booty-cart-v1";
@@ -46,34 +48,51 @@ function isLine(value: unknown): value is CartLine {
   );
 }
 
-function readStore(): CartLine[] {
+const serverLines: CartLine[] = [];
+let cartRaw: string | null = null;
+let cartLines: CartLine[] = serverLines;
+const cartListeners = new Set<() => void>();
+
+function parseLines(raw: string | null): CartLine[] {
+  if (!raw) return serverLines;
   try {
-    const raw =
-      localStorage.getItem(CART_STORAGE_KEY) ??
-      localStorage.getItem(LEGACY_CART_STORAGE_KEY);
-    if (!raw) return [];
     const parsed: unknown = JSON.parse(raw);
-    if (!Array.isArray(parsed)) return [];
+    if (!Array.isArray(parsed)) return serverLines;
     return parsed.filter(isLine).filter((line) => line.qty > 0 && getProduct(line.slug));
   } catch {
-    return [];
+    return serverLines;
   }
 }
 
+function readCartLines() {
+  if (localStorage.getItem(CART_STORAGE_KEY) === null) {
+    const legacy = localStorage.getItem(LEGACY_CART_STORAGE_KEY);
+    if (legacy !== null) localStorage.setItem(CART_STORAGE_KEY, legacy);
+  }
+  const raw = localStorage.getItem(CART_STORAGE_KEY);
+  if (raw === cartRaw) return cartLines;
+  cartRaw = raw;
+  cartLines = parseLines(raw);
+  return cartLines;
+}
+
+function subscribeCart(listener: () => void) {
+  cartListeners.add(listener);
+  return () => cartListeners.delete(listener);
+}
+
+function writeCartLines(lines: CartLine[]) {
+  const raw = JSON.stringify(lines);
+  localStorage.setItem(CART_STORAGE_KEY, raw);
+  cartRaw = raw;
+  cartLines = lines;
+  cartListeners.forEach((listener) => listener());
+}
+
 export function CartProvider({ children }: { children: ReactNode }) {
-  const [lines, setLines] = useState<CartLine[]>([]);
-  const [ready, setReady] = useState(false);
+  const lines = useSyncExternalStore(subscribeCart, readCartLines, () => serverLines);
+  const ready = useSyncExternalStore(subscribeHydration, () => true, () => false);
   const [drawerOpen, setDrawerOpen] = useState(false);
-
-  useEffect(() => {
-    setLines(readStore());
-    setReady(true);
-  }, []);
-
-  useEffect(() => {
-    if (!ready) return;
-    localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(lines));
-  }, [lines, ready]);
 
   useEffect(() => {
     if (!drawerOpen) return;
@@ -90,38 +109,33 @@ export function CartProvider({ children }: { children: ReactNode }) {
   }, [drawerOpen]);
 
   const addItem = useCallback((slug: string, size: string, qty = 1) => {
-    setLines((current) => {
-      const match = current.find((line) => line.slug === slug && line.size === size);
-      if (match) {
-        return current.map((line) =>
-          line.slug === slug && line.size === size
-            ? { ...line, qty: line.qty + qty }
-            : line,
-        );
-      }
-      return [...current, { slug, size, qty }];
-    });
+    const current = readCartLines();
+    const match = current.find((line) => line.slug === slug && line.size === size);
+    const next = match
+      ? current.map((line) =>
+          line.slug === slug && line.size === size ? { ...line, qty: line.qty + qty } : line,
+        )
+      : [...current, { slug, size, qty }];
+    writeCartLines(next);
     setDrawerOpen(true);
   }, []);
 
   const setQty = useCallback((slug: string, size: string, qty: number) => {
-    setLines((current) => {
-      if (qty <= 0) {
-        return current.filter((line) => !(line.slug === slug && line.size === size));
-      }
-      return current.map((line) =>
-        line.slug === slug && line.size === size ? { ...line, qty } : line,
-      );
-    });
-  }, []);
-
-  const removeItem = useCallback((slug: string, size: string) => {
-    setLines((current) =>
-      current.filter((line) => !(line.slug === slug && line.size === size)),
+    const current = readCartLines();
+    writeCartLines(
+      qty <= 0
+        ? current.filter((line) => !(line.slug === slug && line.size === size))
+        : current.map((line) =>
+            line.slug === slug && line.size === size ? { ...line, qty } : line,
+          ),
     );
   }, []);
 
-  const clear = useCallback(() => setLines([]), []);
+  const removeItem = useCallback((slug: string, size: string) => {
+    writeCartLines(readCartLines().filter((line) => !(line.slug === slug && line.size === size)));
+  }, []);
+
+  const clear = useCallback(() => writeCartLines([]), []);
 
   const itemCount = useMemo(
     () => lines.reduce((sum, line) => sum + line.qty, 0),
