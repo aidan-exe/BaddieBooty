@@ -3,9 +3,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useSyncExternalStore } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 import { useCart } from "@/components/cart-provider";
-import { RECEIPT_KEY, subscribeHydration } from "@/lib/browser-store";
+import {
+  RECEIPT_KEY,
+  consumeClearGrant,
+  markBagCleared,
+  payfastReferrer,
+  readClearedOrder,
+  subscribeClearState,
+  subscribeHydration,
+} from "@/lib/browser-store";
 import { formatZarCents, site } from "@/lib/site";
 
 type Receipt = {
@@ -41,12 +49,31 @@ function readReceiptSnapshot() {
   return receiptCached;
 }
 
+function readPayfastReferrer() {
+  return payfastReferrer(document.referrer);
+}
+
 export function CheckoutResult({ mode }: { mode: "success" | "cancel" | "failed" }) {
   const params = useSearchParams();
   const orderId = params.get("order");
-  const { clear } = useCart();
+  const { clear, ready, itemCount } = useCart();
   const stored = useSyncExternalStore(subscribeHydration, readReceiptSnapshot, () => null);
+  const fromPayfast = useSyncExternalStore(subscribeHydration, readPayfastReferrer, () => false);
+  const clearedOrder = useSyncExternalStore(subscribeClearState, readClearedOrder, () => null);
   const receipt = stored?.orderId === orderId ? stored : null;
+  const cleared = clearedOrder === orderId && orderId !== null;
+
+  useEffect(() => {
+    if (!orderId) return;
+    if (mode === "cancel" || mode === "failed") {
+      consumeClearGrant(orderId);
+      return;
+    }
+    if (!ready || !fromPayfast) return;
+    if (!consumeClearGrant(orderId)) return;
+    clear();
+    markBagCleared(orderId);
+  }, [mode, orderId, ready, fromPayfast, clear]);
 
   if (mode === "cancel") {
     return (
@@ -77,7 +104,8 @@ export function CheckoutResult({ mode }: { mode: "success" | "cancel" | "failed"
         {receipt ? `Thanks, ${receipt.firstName}.` : "Back from PayFast"}
       </h1>
       <p className="mt-3 text-sm leading-6 text-muted">
-        PayFast sent you back to this page. Your bag is unchanged.
+        PayFast sent you back to this page.
+        {cleared ? " The bag from this payment is cleared." : ""}
         {receipt
           ? ` We will email ${receipt.email} if PayFast notifies the shop about ${receipt.orderId}.`
           : orderId
@@ -138,7 +166,7 @@ export function CheckoutResult({ mode }: { mode: "success" | "cancel" | "failed"
         >
           WhatsApp the studio
         </a>
-        {receipt ? (
+        {receipt && ready && itemCount > 0 && !fromPayfast ? (
           <button
             type="button"
             onClick={() => clear()}

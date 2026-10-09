@@ -6,7 +6,7 @@ import { FormEvent, useMemo, useState, useSyncExternalStore } from "react";
 import { AddressFields } from "@/components/address-fields";
 import { useCart } from "@/components/cart-provider";
 import { CheckoutTrustMarks } from "@/components/payment-marks";
-import { RECEIPT_KEY, subscribeHydration } from "@/lib/browser-store";
+import { RECEIPT_KEY, subscribeHydration, writeClearGrant } from "@/lib/browser-store";
 import {
   CHECKOUT_STORAGE_KEY,
   emptyCheckoutDraft,
@@ -243,6 +243,7 @@ export function CheckoutForm({
           totalCents: quote.totalCents,
         }),
       );
+      writeClearGrant(payload.orderId);
 
       const form = document.createElement("form");
       form.method = "POST";

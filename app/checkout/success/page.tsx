@@ -4,7 +4,7 @@ import { CheckoutResult } from "@/components/checkout-result";
 
 export const metadata: Metadata = {
   title: "Returned from PayFast",
-  description: "PayFast sent you back to Baddie Booty. Your bag is unchanged.",
+  description: "PayFast sent you back to Baddie Booty.",
 };
 
 export default function CheckoutSuccessPage() {
