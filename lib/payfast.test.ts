@@ -66,6 +66,8 @@ test("binds the cart snapshot to the amount and leaves the shared sandbox form u
   const chunks = ["661*1*One size"];
   const mac = cartSnapshotMac({
     secret,
+    merchantId: "10000100",
+    orderId: "BB-1",
     amountCents: 72000,
     shippingId: "flat_rate",
     couponCode: "",
@@ -73,12 +75,36 @@ test("binds the cart snapshot to the amount and leaves the shared sandbox form u
   });
   const tampered = cartSnapshotMac({
     secret,
+    merchantId: "10000100",
+    orderId: "BB-1",
     amountCents: 1000,
     shippingId: "flat_rate",
     couponCode: "",
     chunks,
   });
+  const replayed = cartSnapshotMac({
+    secret,
+    merchantId: "10000100",
+    orderId: "BB-2",
+    amountCents: 72000,
+    shippingId: "flat_rate",
+    couponCode: "",
+    chunks,
+  });
   assert.notEqual(mac, tampered);
+  assert.notEqual(mac, replayed);
+  assert.notEqual(
+    mac,
+    cartSnapshotMac({
+      secret,
+      merchantId: "20000200",
+      orderId: "BB-1",
+      amountCents: 72000,
+      shippingId: "flat_rate",
+      couponCode: "",
+      chunks,
+    }),
+  );
   assert.equal(splitShippingField(`flat_rate|${mac}`)?.shippingId, "flat_rate");
   assert.equal(splitShippingField("flat_rate"), null);
 

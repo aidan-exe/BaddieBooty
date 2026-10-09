@@ -78,6 +78,8 @@ export async function POST(request: Request) {
     shippingField && signedCents !== null
       ? cartSnapshotMac({
           secret: config.snapshotSecret,
+          merchantId: record.merchant_id ?? "",
+          orderId: record.m_payment_id ?? "",
           amountCents: signedCents,
           shippingId: shippingField.shippingId,
           couponCode: record.custom_str2 ?? "",

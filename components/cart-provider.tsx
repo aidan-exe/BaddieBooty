@@ -10,6 +10,7 @@ import {
   useSyncExternalStore,
   type ReactNode,
 } from "react";
+import { subscribeHydration } from "@/lib/browser-store";
 import { getProduct, lineUnitPrice, type Product } from "@/lib/products";
 
 export const CART_STORAGE_KEY = "baddie-booty-cart-v1";
@@ -86,10 +87,6 @@ function writeCartLines(lines: CartLine[]) {
   cartRaw = raw;
   cartLines = lines;
   cartListeners.forEach((listener) => listener());
-}
-
-function subscribeHydration() {
-  return () => {};
 }
 
 export function CartProvider({ children }: { children: ReactNode }) {

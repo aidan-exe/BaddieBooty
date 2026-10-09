@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useSyncExternalStore } from "react";
+import { useCart } from "@/components/cart-provider";
+import { RECEIPT_KEY, subscribeHydration } from "@/lib/browser-store";
 import { formatZarCents, site } from "@/lib/site";
-
-const RECEIPT_KEY = "baddie-booty-checkout-receipt-v1";
 
 type Receipt = {
   orderId: string;
@@ -41,13 +41,10 @@ function readReceiptSnapshot() {
   return receiptCached;
 }
 
-function subscribeHydration() {
-  return () => {};
-}
-
 export function CheckoutResult({ mode }: { mode: "success" | "cancel" | "failed" }) {
   const params = useSearchParams();
   const orderId = params.get("order");
+  const { clear } = useCart();
   const stored = useSyncExternalStore(subscribeHydration, readReceiptSnapshot, () => null);
   const receipt = stored?.orderId === orderId ? stored : null;
 
@@ -141,6 +138,15 @@ export function CheckoutResult({ mode }: { mode: "success" | "cancel" | "failed"
         >
           WhatsApp the studio
         </a>
+        {receipt ? (
+          <button
+            type="button"
+            onClick={() => clear()}
+            className="inline-flex min-h-10 items-center justify-center rounded-full border border-ink/10 px-5 text-sm font-semibold"
+          >
+            Clear bag
+          </button>
+        ) : null}
       </div>
     </div>
   );

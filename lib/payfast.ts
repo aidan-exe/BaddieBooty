@@ -147,13 +147,17 @@ export function payfastCheckoutStatus():
 
 export function cartSnapshotMac(input: {
   secret: string;
+  merchantId: string;
+  orderId: string;
   amountCents: number;
   shippingId: string;
   couponCode: string;
   chunks: readonly string[];
 }) {
   const payload = [
-    "v1",
+    "v2",
+    input.merchantId,
+    input.orderId,
     String(input.amountCents),
     input.shippingId,
     input.couponCode,
@@ -269,6 +273,8 @@ export function buildPaymentFields(input: {
     custom_int1: String(input.amountCents),
     custom_str1: `${input.shippingId}|${cartSnapshotMac({
       secret: input.config.snapshotSecret,
+      merchantId: input.config.merchantId,
+      orderId: input.orderId,
       amountCents: input.amountCents,
       shippingId: input.shippingId,
       couponCode: input.couponCode ?? "",

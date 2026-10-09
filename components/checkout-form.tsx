@@ -6,6 +6,7 @@ import { FormEvent, useMemo, useState, useSyncExternalStore } from "react";
 import { AddressFields } from "@/components/address-fields";
 import { useCart } from "@/components/cart-provider";
 import { CheckoutTrustMarks } from "@/components/payment-marks";
+import { RECEIPT_KEY, subscribeHydration } from "@/lib/browser-store";
 import {
   CHECKOUT_STORAGE_KEY,
   emptyCheckoutDraft,
@@ -16,8 +17,6 @@ import {
 import { findCoupon, shippingMethods } from "@/lib/pricing";
 import { quoteFromCart, type Quote } from "@/lib/quote";
 import { formatZarCents } from "@/lib/site";
-
-const RECEIPT_KEY = "baddie-booty-checkout-receipt-v1";
 
 const control =
   "min-h-11 w-full rounded-xl border bg-white px-3 text-base font-normal text-ink outline-none ring-brand/30 placeholder:text-muted/70 focus:ring-2";
@@ -93,10 +92,6 @@ function writePersisted(next: PersistedCheckout) {
   persistedRaw = raw;
   persistedValue = next;
   persistedListeners.forEach((listener) => listener());
-}
-
-function subscribeHydration() {
-  return () => {};
 }
 
 function visibleError(
