@@ -106,3 +106,29 @@ body {
   max-width: 100%;
   border-radius: 1rem;
 }
+
+details.checkout-summary > summary {
+  list-style: none;
+}
+
+details.checkout-summary > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.checkout-summary[open] .checkout-chevron {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 1024px) {
+  details.checkout-summary > summary {
+    pointer-events: none;
+  }
+
+  details.checkout-summary:not([open]) > .checkout-summary-body {
+    display: block;
+  }
+
+  .checkout-chevron {
+    display: none;
+  }
+}

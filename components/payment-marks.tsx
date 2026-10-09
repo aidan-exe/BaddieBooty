@@ -8,7 +8,7 @@ export function PaymentMarks() {
         <VisaMark />
       </li>
       <li>
-        <MastercardMark />
+        <MastercardMark id="footer" />
       </li>
       <li>
         <EftMark />
@@ -41,19 +41,56 @@ function VisaMark() {
   );
 }
 
-function MastercardMark() {
+function MastercardMark({ id }: { id: string }) {
+  const clipId = `${id}-mastercard-overlap`;
   return (
     <svg viewBox="0 0 52 32" className={card} role="img" aria-label="Mastercard">
       <rect width="52" height="32" rx="5" fill="#ffffff" />
       <circle cx="21" cy="16" r="8" fill="#EB001B" />
       <circle cx="31" cy="16" r="8" fill="#F79E1B" />
-      <circle cx="21" cy="16" r="8" fill="#FF5F00" clipPath="url(#mastercard-overlap)" />
+      <circle cx="21" cy="16" r="8" fill="#FF5F00" clipPath={`url(#${clipId})`} />
       <defs>
-        <clipPath id="mastercard-overlap">
+        <clipPath id={clipId}>
           <circle cx="31" cy="16" r="8" />
         </clipPath>
       </defs>
     </svg>
+  );
+}
+
+function PayFastMark() {
+  return (
+    <svg viewBox="0 0 78 32" className={card} role="img" aria-label="PayFast">
+      <rect width="78" height="32" rx="5" fill="#ffffff" />
+      <text
+        x="39"
+        y="21"
+        textAnchor="middle"
+        fill="#111111"
+        fontFamily="Arial, Helvetica, sans-serif"
+        fontWeight="800"
+        fontSize="13"
+        letterSpacing="-0.4"
+      >
+        payfast
+      </text>
+    </svg>
+  );
+}
+
+export function CheckoutTrustMarks() {
+  return (
+    <ul className="flex flex-wrap items-center gap-2" aria-label="PayFast, Visa, and Mastercard">
+      <li>
+        <PayFastMark />
+      </li>
+      <li>
+        <VisaMark />
+      </li>
+      <li>
+        <MastercardMark id="checkout" />
+      </li>
+    </ul>
   );
 }
 

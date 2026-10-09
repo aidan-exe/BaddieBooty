@@ -26,3 +26,12 @@ export function formatZar(amount: number) {
     maximumFractionDigits: 0,
   }).format(amount);
 }
+
+export function formatZarCents(cents: number) {
+  return new Intl.NumberFormat("en-ZA", {
+    style: "currency",
+    currency: "ZAR",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(cents / 100);
+}

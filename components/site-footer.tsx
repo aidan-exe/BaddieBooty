@@ -60,6 +60,11 @@ export function SiteFooter() {
                 {site.email}
               </a>
             </li>
+            <li>
+              <Link href="/privacy" className="hover:text-lavender">
+                Privacy
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
