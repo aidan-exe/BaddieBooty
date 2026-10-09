@@ -1,4 +1,4 @@
-import { createHash, timingSafeEqual } from "node:crypto";
+import { createHash, createHmac, timingSafeEqual } from "node:crypto";
 import { resolve4 } from "node:dns/promises";
 
 function formatPayfastAmount(cents: number) {
@@ -12,7 +12,8 @@ function formatPayfastAmount(cents: number) {
 
 export const SANDBOX_MERCHANT_ID = "10000100";
 export const SANDBOX_MERCHANT_KEY = "46f0cd694581a";
-export const SANDBOX_PASSPHRASE = "jt7NOE43FZPn";
+
+const MIN_SNAPSHOT_SECRET_LENGTH = 16;
 
 const PAYFAST_HOSTS = [
   "www.payfast.co.za",
@@ -72,24 +73,49 @@ export type PayfastConfig = {
   merchantId: string;
   merchantKey: string;
   passphrase: string;
+  snapshotSecret: string;
   processUrl: string;
   validateUrl: string;
 };
 
 export function isPayfastSandbox() {
-  return (process.env.PAYFAST_SANDBOX ?? "true").trim().toLowerCase() !== "false";
+  const raw = process.env.PAYFAST_SANDBOX;
+  if (process.env.VERCEL_ENV === "production") {
+    const value = raw?.trim().toLowerCase();
+    if (value !== "true" && value !== "false") {
+      throw new PayfastConfigError("PAYFAST_SANDBOX must be set to true or false in production.");
+    }
+    return value === "true";
+  }
+  return (raw ?? "true").trim().toLowerCase() !== "false";
 }
 
 export function getPayfastConfig(): PayfastConfig {
   const sandbox = isPayfastSandbox();
-  const merchantId =
-    process.env.PAYFAST_MERCHANT_ID?.trim() || (sandbox ? SANDBOX_MERCHANT_ID : "");
-  const merchantKey =
-    process.env.PAYFAST_MERCHANT_KEY?.trim() || (sandbox ? SANDBOX_MERCHANT_KEY : "");
-  // The public sandbox merchant accepts an unsigned form. PayFast's published
-  // sample passphrase is rejected by that merchant, so it is not the default.
-  const passphrase =
-    process.env.PAYFAST_PASSPHRASE !== undefined ? process.env.PAYFAST_PASSPHRASE.trim() : "";
+  const configuredId = process.env.PAYFAST_MERCHANT_ID?.trim() ?? "";
+  const configuredKey = process.env.PAYFAST_MERCHANT_KEY?.trim() ?? "";
+  // Empty only for the shared sandbox merchant 10000100, which rejects signed
+  // forms. A merchant's own sandbox account uses the passphrase on that account.
+  const passphrase = process.env.PAYFAST_PASSPHRASE?.trim() ?? "";
+  const snapshotSecret = process.env.PAYFAST_SNAPSHOT_SECRET?.trim() ?? "";
+
+  if (snapshotSecret.length < MIN_SNAPSHOT_SECRET_LENGTH) {
+    throw new PayfastConfigError("PAYFAST_SNAPSHOT_SECRET is not set.");
+  }
+
+  let merchantId = configuredId;
+  let merchantKey = configuredKey;
+  if (sandbox) {
+    merchantId = merchantId || SANDBOX_MERCHANT_ID;
+    merchantKey = merchantKey || SANDBOX_MERCHANT_KEY;
+  } else {
+    if (!merchantId || !merchantKey || !passphrase) {
+      throw new PayfastConfigError("Live PayFast needs a merchant id, key, and passphrase.");
+    }
+    if (merchantId === SANDBOX_MERCHANT_ID) {
+      throw new PayfastConfigError("Live PayFast cannot use the public sandbox merchant id.");
+    }
+  }
 
   if (!merchantId || !merchantKey) {
     throw new PayfastConfigError("PayFast merchant credentials are not configured.");
@@ -101,9 +127,50 @@ export function getPayfastConfig(): PayfastConfig {
     merchantId,
     merchantKey,
     passphrase,
+    snapshotSecret,
     processUrl: `https://${host}/eng/process`,
     validateUrl: `https://${host}/eng/query/validate`,
   };
+}
+
+export function payfastCheckoutStatus():
+  | { available: true; sandbox: boolean }
+  | { available: false; sandbox: false } {
+  try {
+    const config = getPayfastConfig();
+    return { available: true, sandbox: config.sandbox };
+  } catch (error) {
+    if (error instanceof PayfastConfigError) return { available: false, sandbox: false };
+    throw error;
+  }
+}
+
+export function cartSnapshotMac(input: {
+  secret: string;
+  amountCents: number;
+  shippingId: string;
+  couponCode: string;
+  chunks: readonly string[];
+}) {
+  const payload = [
+    "v1",
+    String(input.amountCents),
+    input.shippingId,
+    input.couponCode,
+    input.chunks[0] ?? "",
+    input.chunks[1] ?? "",
+    input.chunks[2] ?? "",
+  ].join("\n");
+  return createHmac("sha256", input.secret).update(payload).digest("hex");
+}
+
+export function splitShippingField(value: string): { shippingId: string; mac: string } | null {
+  const index = value.lastIndexOf("|");
+  if (index <= 0) return null;
+  const shippingId = value.slice(0, index);
+  const mac = value.slice(index + 1);
+  if (!/^[a-f0-9]{64}$/.test(mac)) return null;
+  return { shippingId, mac };
 }
 
 /** PHP `urlencode`: spaces as `+`, uppercase hex, unreserved characters left as-is. */
@@ -200,7 +267,13 @@ export function buildPaymentFields(input: {
     item_name: `Baddie Booty ${input.orderId}`.slice(0, 100),
     item_description: input.itemDescription.slice(0, 255),
     custom_int1: String(input.amountCents),
-    custom_str1: input.shippingId,
+    custom_str1: `${input.shippingId}|${cartSnapshotMac({
+      secret: input.config.snapshotSecret,
+      amountCents: input.amountCents,
+      shippingId: input.shippingId,
+      couponCode: input.couponCode ?? "",
+      chunks: input.snapshot,
+    })}`,
     custom_str2: input.couponCode ?? "",
     custom_str3: input.snapshot[0] ?? "",
     custom_str4: input.snapshot[1] ?? "",
@@ -213,7 +286,10 @@ export function buildPaymentFields(input: {
   const fields: PayfastField[] = ordered
     .filter(([, value]) => value.trim() !== "")
     .map(([name, value]) => ({ name: name as PayfastFieldName, value: value.trim() }));
-  if (input.config.passphrase) {
+  if (!input.config.sandbox && !input.config.passphrase) {
+    throw new PayfastConfigError("Live PayFast requires a passphrase.");
+  }
+  if (input.config.passphrase || !input.config.sandbox) {
     const { signature } = signatureForFields(ordered, input.config.passphrase, true);
     fields.push({ name: "signature", value: signature });
   }

@@ -6,6 +6,7 @@ import {
   encodeCartSnapshot,
   findCoupon,
   formatPayfastAmount,
+  mergeQty,
   parsePayfastAmount,
 } from "./pricing.ts";
 
@@ -18,12 +19,27 @@ test("formats PayFast amounts with two decimals", () => {
   assert.equal(parsePayfastAmount("10.999"), null);
 });
 
-test("applies the stub percent coupon to merchandise only", () => {
-  const coupon = findCoupon("baddie10");
-  assert.ok(coupon);
+test("applies a percent coupon to merchandise only and has no live codes", () => {
+  const coupon = { code: "EXAMPLE", type: "percent" as const, amount: 10, label: "10% off" };
   assert.equal(discountCents(69900, coupon), 6990);
   assert.equal(discountCents(0, coupon), 0);
-  assert.equal(findCoupon("NOPE"), null);
+  assert.equal(findCoupon("EXAMPLE"), null);
+  assert.equal(findCoupon(""), null);
+});
+
+test("merges duplicate lines before a quantity cap would see them", () => {
+  const lines = [
+    { productId: 1, qty: 15, label: "S" },
+    { productId: 1, qty: 6, label: "S" },
+    { productId: 1, qty: 2, label: "M" },
+  ];
+  assert.deepEqual(
+    mergeQty(lines, (left, right) => left.productId === right.productId && left.label === right.label),
+    [
+      { productId: 1, qty: 21, label: "S" },
+      { productId: 1, qty: 2, label: "M" },
+    ],
+  );
 });
 
 test("round-trips a cart snapshot and splits long carts", () => {

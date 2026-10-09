@@ -3,13 +3,13 @@ import { Suspense } from "react";
 import { CheckoutResult } from "@/components/checkout-result";
 
 export const metadata: Metadata = {
-  title: "Order received",
-  description: "PayFast has returned you from the Baddie Booty payment page.",
+  title: "Returned from PayFast",
+  description: "PayFast sent you back to Baddie Booty. Your bag is unchanged.",
 };
 
 export default function CheckoutSuccessPage() {
   return (
-    <Suspense fallback={<p className="px-5 py-10 text-center text-sm text-muted">Loading order…</p>}>
+    <Suspense fallback={<p className="px-5 py-10 text-center text-sm text-muted">Loading…</p>}>
       <CheckoutResult mode="success" />
     </Suspense>
   );

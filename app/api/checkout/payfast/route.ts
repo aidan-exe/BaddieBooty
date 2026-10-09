@@ -50,7 +50,7 @@ export async function POST(request: Request) {
   } catch (error) {
     const message = error instanceof PayfastConfigError ? error.message : "PayFast is not configured.";
     console.error("baddie-order", message);
-    return Response.json({ error: "PayFast is not configured." }, { status: 500 });
+    return Response.json({ error: "Payments are unavailable right now." }, { status: 503 });
   }
 
   const orderId = createOrderId();

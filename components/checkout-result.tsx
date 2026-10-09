@@ -3,8 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useSyncExternalStore } from "react";
-import { useCart } from "@/components/cart-provider";
+import { useSyncExternalStore } from "react";
 import { formatZarCents, site } from "@/lib/site";
 
 const RECEIPT_KEY = "baddie-booty-checkout-receipt-v1";
@@ -49,14 +48,8 @@ function subscribeHydration() {
 export function CheckoutResult({ mode }: { mode: "success" | "cancel" | "failed" }) {
   const params = useSearchParams();
   const orderId = params.get("order");
-  const { clear, ready } = useCart();
   const stored = useSyncExternalStore(subscribeHydration, readReceiptSnapshot, () => null);
   const receipt = stored?.orderId === orderId ? stored : null;
-
-  useEffect(() => {
-    if (mode !== "success" || !ready || !receipt) return;
-    clear();
-  }, [mode, ready, receipt, clear]);
 
   if (mode === "cancel") {
     return (
@@ -82,19 +75,21 @@ export function CheckoutResult({ mode }: { mode: "success" | "cancel" | "failed"
 
   return (
     <div className="mx-auto max-w-xl px-5 py-10">
-      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand">Order received</p>
+      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand">Returned from PayFast</p>
       <h1 className="mt-2 font-display text-3xl">
-        {receipt ? `Thank you, ${receipt.firstName}.` : "Payment return"}
+        {receipt ? `Thanks, ${receipt.firstName}.` : "Back from PayFast"}
       </h1>
       <p className="mt-3 text-sm leading-6 text-muted">
+        PayFast sent you back to this page. Your bag is unchanged.
         {receipt
-          ? `PayFast sent you back from the payment page. We pack order ${receipt.orderId} in Durban once PayFast confirms the payment, then email tracking to ${receipt.email}.`
+          ? ` We will email ${receipt.email} if PayFast notifies the shop about ${receipt.orderId}.`
           : orderId
-            ? `If PayFast sent you here, the order reference is ${orderId}. We will email you once the payment is confirmed.`
-            : "If PayFast sent you here, we will email you once the payment is confirmed."}
+            ? ` Reference ${orderId}.`
+            : ""}
       </p>
       {receipt ? (
         <div className="mt-6 space-y-3 rounded-2xl border border-sand bg-cream p-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">Sent to PayFast</p>
           <ul className="space-y-3">
             {receipt.lines.map((line) => (
               <li key={`${line.name}-${line.size}`} className="flex gap-3">

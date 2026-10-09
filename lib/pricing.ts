@@ -24,20 +24,30 @@ export type Coupon = {
 };
 
 /**
- * Local stand-in. The public Woo Store API on baddiebooty.co.za exposes no coupon codes.
- * Replace this list when the studio shares the live codes.
+ * Studio coupon codes. Empty until a real WooCommerce code is added here.
+ * `code` matches ignoring case. `amount` is percent points, or whole rands when type is "fixed".
+ * Discounts apply to merchandise only.
  */
-export const coupons: Coupon[] = [
-  {
-    code: "BADDIE10",
-    type: "percent",
-    amount: 10,
-    label: "10% off",
-  },
-];
+export const coupons: Coupon[] = [];
 
 const MIN_PAYFAST_CENTS = 500;
 const SNAPSHOT_CHUNK = 255;
+
+export function mergeQty<T extends { qty: number }>(
+  lines: T[],
+  same: (left: T, right: T) => boolean,
+): T[] {
+  const merged: T[] = [];
+  for (const line of lines) {
+    const existing = merged.find((item) => same(item, line));
+    if (!existing) {
+      merged.push({ ...line });
+      continue;
+    }
+    existing.qty += line.qty;
+  }
+  return merged;
+}
 
 export function findCoupon(code: string): Coupon | null {
   const normalized = code.trim().toUpperCase();

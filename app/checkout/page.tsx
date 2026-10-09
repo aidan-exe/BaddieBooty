@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { CheckoutForm } from "@/components/checkout-form";
-import { isPayfastSandbox } from "@/lib/payfast";
+import { payfastCheckoutStatus } from "@/lib/payfast";
 
 export const dynamic = "force-dynamic";
 
@@ -10,5 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function CheckoutPage() {
-  return <CheckoutForm sandbox={isPayfastSandbox()} />;
+  const payments = payfastCheckoutStatus();
+  return <CheckoutForm sandbox={payments.sandbox} paymentsAvailable={payments.available} />;
 }

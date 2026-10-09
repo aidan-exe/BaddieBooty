@@ -111,7 +111,13 @@ function visibleError(
   return undefined;
 }
 
-export function CheckoutForm({ sandbox }: { sandbox: boolean }) {
+export function CheckoutForm({
+  sandbox,
+  paymentsAvailable,
+}: {
+  sandbox: boolean;
+  paymentsAvailable: boolean;
+}) {
   const { lines, itemCount, ready } = useCart();
   const hydrated = useSyncExternalStore(subscribeHydration, () => true, () => false);
   const persisted = useSyncExternalStore(subscribePersisted, readPersisted, () => emptyPersisted);
@@ -139,7 +145,7 @@ export function CheckoutForm({ sandbox }: { sandbox: boolean }) {
     shownErrors[key] = message;
   }
   if ((submitted || touched.coupon) && couponInvalid) {
-    shownErrors.coupon = "That coupon code isn't valid.";
+    shownErrors.coupon = "That is not a valid code.";
   }
   if ((submitted || touched.notes) && fieldErrors.notes) {
     shownErrors.notes = fieldErrors.notes;
@@ -172,6 +178,11 @@ export function CheckoutForm({ sandbox }: { sandbox: boolean }) {
     setFormError("");
     setServerErrors({});
 
+    if (!paymentsAvailable) {
+      setFormError("Payments are unavailable right now.");
+      return;
+    }
+
     if (!customerCheck.ok || !quoted.ok || couponInvalid) {
       const firstKey = !customerCheck.ok
         ? Object.keys(customerCheck.errors)[0]
@@ -186,7 +197,7 @@ export function CheckoutForm({ sandbox }: { sandbox: boolean }) {
         node?.focus();
       }
       if (!quoted.ok) setFormError(quoted.error);
-      else if (couponInvalid) setFormError("That coupon code isn't valid.");
+      else if (couponInvalid) setFormError("That is not a valid code.");
       else setFormError("Check the highlighted fields.");
       return;
     }
@@ -518,11 +529,16 @@ export function CheckoutForm({ sandbox }: { sandbox: boolean }) {
               <div className="mt-4">
                 <CheckoutTrustMarks />
               </div>
-              {sandbox ? (
+              {paymentsAvailable && sandbox ? (
                 <p className="mt-3 text-xs leading-5 text-muted">
                   Sandbox mode: PayFast will not take a real payment.
                 </p>
               ) : null}
+              {paymentsAvailable ? null : (
+                <p role="alert" className="mt-3 text-sm leading-5 text-red-800">
+                  Payments are unavailable right now.
+                </p>
+              )}
             </div>
             <p className="text-xs leading-5 text-muted">
               Your personal data will be used to process your order, support your experience
@@ -534,12 +550,14 @@ export function CheckoutForm({ sandbox }: { sandbox: boolean }) {
             </p>
             <button
               type="submit"
-              disabled={submitting || !quoted.ok}
+              disabled={submitting || !quoted.ok || !paymentsAvailable}
               className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-brand px-6 text-sm font-semibold text-white hover:bg-brand-header disabled:cursor-not-allowed disabled:opacity-60"
             >
               {submitting
                 ? "Redirecting to PayFast…"
-                : `Place order${quote ? ` · ${formatZarCents(quote.totalCents)}` : ""}`}
+                : paymentsAvailable
+                  ? `Place order${quote ? ` · ${formatZarCents(quote.totalCents)}` : ""}`
+                  : "Payments unavailable"}
             </button>
           </section>
         </div>

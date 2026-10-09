@@ -1,12 +1,17 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import {
+  buildPaymentFields,
+  cartSnapshotMac,
+  getPayfastConfig,
   isPayfastRangeIp,
   md5Hex,
   parseUrlEncoded,
+  PayfastConfigError,
   phpUrlEncode,
   safeEqual,
   signatureForFields,
+  splitShippingField,
 } from "./payfast.ts";
 
 test("matches PHP urlencode and the documented signature example", () => {
@@ -54,6 +59,119 @@ test("skips blank payment fields and verifies an ITN in received order", () => {
   const check = signatureForFields(signed, "jt7NOE43FZPn", false);
   assert.equal(safeEqual(check.signature, signature), true);
   assert.equal(parseUrlEncoded(body).find((pair) => pair.key === "amount_gross")?.value, "10.00");
+});
+
+test("binds the cart snapshot to the amount and leaves the shared sandbox form unsigned", () => {
+  const secret = "test-snapshot-secret-value";
+  const chunks = ["661*1*One size"];
+  const mac = cartSnapshotMac({
+    secret,
+    amountCents: 72000,
+    shippingId: "flat_rate",
+    couponCode: "",
+    chunks,
+  });
+  const tampered = cartSnapshotMac({
+    secret,
+    amountCents: 1000,
+    shippingId: "flat_rate",
+    couponCode: "",
+    chunks,
+  });
+  assert.notEqual(mac, tampered);
+  assert.equal(splitShippingField(`flat_rate|${mac}`)?.shippingId, "flat_rate");
+  assert.equal(splitShippingField("flat_rate"), null);
+
+  const fields = buildPaymentFields({
+    config: {
+      sandbox: true,
+      merchantId: "10000100",
+      merchantKey: "46f0cd694581a",
+      passphrase: "",
+      snapshotSecret: secret,
+      processUrl: "https://sandbox.payfast.co.za/eng/process",
+      validateUrl: "https://sandbox.payfast.co.za/eng/query/validate",
+    },
+    origin: "http://localhost:3000",
+    orderId: "BB-1",
+    amountCents: 72000,
+    firstName: "Tiara",
+    lastName: "Naidoo",
+    email: "tiara@example.com",
+    phone: "0821234567",
+    itemDescription: "Board",
+    shippingId: "flat_rate",
+    couponCode: null,
+    snapshot: chunks,
+    confirmationEmail: "Tiara@baddiebooty.co.za",
+  });
+  assert.equal(fields.some((field) => field.name === "signature"), false);
+  const shipping = fields.find((field) => field.name === "custom_str1")?.value ?? "";
+  assert.equal(splitShippingField(shipping)?.mac, mac);
+});
+
+test("fails closed when production or live PayFast is not configured", () => {
+  const keys = [
+    "VERCEL_ENV",
+    "PAYFAST_SANDBOX",
+    "PAYFAST_MERCHANT_ID",
+    "PAYFAST_MERCHANT_KEY",
+    "PAYFAST_PASSPHRASE",
+    "PAYFAST_SNAPSHOT_SECRET",
+  ] as const;
+  const previous = new Map(keys.map((key) => [key, process.env[key]]));
+  function apply(values: Partial<Record<(typeof keys)[number], string>>) {
+    for (const key of keys) {
+      const value = values[key];
+      if (value === undefined) delete process.env[key];
+      else process.env[key] = value;
+    }
+  }
+  try {
+    apply({ PAYFAST_SNAPSHOT_SECRET: "test-snapshot-secret-value", VERCEL_ENV: "production" });
+    assert.throws(() => getPayfastConfig(), PayfastConfigError);
+
+    apply({
+      VERCEL_ENV: "production",
+      PAYFAST_SANDBOX: "false",
+      PAYFAST_MERCHANT_ID: "10000100",
+      PAYFAST_MERCHANT_KEY: "live-key",
+      PAYFAST_PASSPHRASE: "live-pass",
+      PAYFAST_SNAPSHOT_SECRET: "test-snapshot-secret-value",
+    });
+    assert.throws(() => getPayfastConfig(), (error: unknown) => {
+      assert.ok(error instanceof PayfastConfigError);
+      assert.match(error.message, /public sandbox merchant/);
+      return true;
+    });
+
+    apply({
+      VERCEL_ENV: "production",
+      PAYFAST_SANDBOX: "false",
+      PAYFAST_MERCHANT_ID: "20000200",
+      PAYFAST_MERCHANT_KEY: "live-key",
+      PAYFAST_PASSPHRASE: "",
+      PAYFAST_SNAPSHOT_SECRET: "test-snapshot-secret-value",
+    });
+    assert.throws(() => getPayfastConfig(), PayfastConfigError);
+
+    apply({ VERCEL_ENV: "preview", PAYFAST_SNAPSHOT_SECRET: "short" });
+    assert.throws(() => getPayfastConfig(), PayfastConfigError);
+
+    apply({
+      VERCEL_ENV: "preview",
+      PAYFAST_SNAPSHOT_SECRET: "test-snapshot-secret-value",
+    });
+    const sandbox = getPayfastConfig();
+    assert.equal(sandbox.sandbox, true);
+    assert.equal(sandbox.merchantId, "10000100");
+    assert.equal(sandbox.passphrase, "");
+  } finally {
+    for (const [key, value] of previous) {
+      if (value === undefined) delete process.env[key];
+      else process.env[key] = value;
+    }
+  }
 });
 
 test("recognises PayFast published source ranges", () => {

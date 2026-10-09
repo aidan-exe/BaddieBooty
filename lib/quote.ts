@@ -5,6 +5,7 @@ import {
   discountCents,
   encodeCartSnapshot,
   findCoupon,
+  mergeQty,
   shippingById,
   type ShippingId,
 } from "./pricing";
@@ -66,7 +67,7 @@ function finishQuote(
 
   const trimmedCoupon = couponCode.trim();
   const coupon = trimmedCoupon ? findCoupon(trimmedCoupon) : null;
-  if (trimmedCoupon && !coupon) return { ok: false, error: "That coupon code isn't valid." };
+  if (trimmedCoupon && !coupon) return { ok: false, error: "That is not a valid code." };
 
   if (requireStock) {
     for (const line of lines) {
@@ -141,7 +142,8 @@ export function parseCartLines(input: unknown): CartRequestLine[] | null {
 
 export function quoteFromCart(lines: CartRequestLine[], shippingId: string, couponCode: string) {
   const priced: QuoteLine[] = [];
-  for (const line of lines) {
+  const merged = mergeQty(lines, (left, right) => left.slug === right.slug && left.size === right.size);
+  for (const line of merged) {
     const product = getProduct(line.slug);
     if (!product) return { ok: false as const, error: "A piece in your bag is no longer in the shop." };
     const pricedLine = lineFromProduct(product, line.size, line.qty);
@@ -154,7 +156,9 @@ export function quoteFromCart(lines: CartRequestLine[], shippingId: string, coup
 export function quoteFromSnapshot(chunks: string[], shippingId: string, couponCode: string) {
   let decoded;
   try {
-    decoded = decodeCartSnapshot(chunks);
+    decoded = mergeQty(decodeCartSnapshot(chunks), (left, right) => {
+      return left.productId === right.productId && left.label === right.label;
+    });
   } catch {
     return { ok: false as const, error: "The payment did not include a readable order." };
   }

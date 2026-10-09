@@ -7,8 +7,10 @@ import {
   itnRecord,
   parseUrlEncoded,
   readClientIp,
+  cartSnapshotMac,
   safeEqual,
   signatureForFields,
+  splitShippingField,
 } from "@/lib/payfast";
 import { parsePayfastAmount } from "@/lib/pricing";
 import { quoteFromSnapshot } from "@/lib/quote";
@@ -57,7 +59,7 @@ export async function POST(request: Request) {
   const { record, signature: postedSignature } = itnRecord(pairs);
   const orderId = record.m_payment_id || "unknown";
 
-  if (config.passphrase) {
+  if (!config.sandbox || config.passphrase) {
     if (!postedSignature || !safeEqual(signature, postedSignature.toLowerCase())) {
       await reject(orderId, "signature");
       return new Response("Invalid signature", { status: 200 });
@@ -69,6 +71,24 @@ export async function POST(request: Request) {
     return new Response("Merchant mismatch", { status: 200 });
   }
 
+  const shippingField = splitShippingField(record.custom_str1 ?? "");
+  const signedCents = /^\d+$/.test(record.custom_int1 ?? "") ? Number(record.custom_int1) : null;
+  const chunks = [record.custom_str3 ?? "", record.custom_str4 ?? "", record.custom_str5 ?? ""];
+  const mac =
+    shippingField && signedCents !== null
+      ? cartSnapshotMac({
+          secret: config.snapshotSecret,
+          amountCents: signedCents,
+          shippingId: shippingField.shippingId,
+          couponCode: record.custom_str2 ?? "",
+          chunks,
+        })
+      : "";
+  if (!shippingField || signedCents === null || !safeEqual(mac, shippingField.mac)) {
+    await reject(orderId, "snapshot");
+    return new Response("Invalid order", { status: 200 });
+  }
+
   const sourceIp = readClientIp(request.headers);
   if (!(await isPayfastSourceIp(sourceIp))) {
     await reject(orderId, "source", { sourceIp });
@@ -76,8 +96,8 @@ export async function POST(request: Request) {
   }
 
   const quoted = quoteFromSnapshot(
-    [record.custom_str3, record.custom_str4, record.custom_str5].filter(Boolean),
-    record.custom_str1 ?? "",
+    chunks.filter(Boolean),
+    shippingField.shippingId,
     record.custom_str2 ?? "",
   );
   if (!quoted.ok) {
@@ -86,7 +106,6 @@ export async function POST(request: Request) {
   }
   const quote = quoted.quote;
   const grossCents = parsePayfastAmount(record.amount_gross ?? "");
-  const signedCents = /^\d+$/.test(record.custom_int1 ?? "") ? Number(record.custom_int1) : null;
   if (
     grossCents === null ||
     signedCents === null ||
